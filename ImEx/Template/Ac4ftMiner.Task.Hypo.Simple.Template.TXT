@@ -1,0 +1,8 @@
+TaskName: <?LM:MB:Task?>
+
+<!-- Hypothesis -->
+
+ID	Rule
+<?LM:Loop:Task.Hypothesis?>
+<?LM:MB:Task.Hypothesis.HypothesisID?>	<?LM:MB:Task.Hypothesis.Name?>
+<?LM:EndLoop:Task.Hypothesis?>

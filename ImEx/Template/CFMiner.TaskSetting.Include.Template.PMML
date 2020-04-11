@@ -1,0 +1,75 @@
+    <!-- Include Template: CFMiner.TaskSetting.Include.Template -->
+    <!-- Version: 2017-12-14 -->
+
+    <TaskSetting>
+      <Extension name="LISp-Miner">
+        <TaskGroup><?LM:MB:Task.TaskGroup?></TaskGroup>
+        <TaskState><?LM:MB:Task.GenerationStatus?></TaskState>
+        <NumberOfVerifications><?LM:MB:Task.GenerationNrOfTests?></NumberOfVerifications>
+        <TaskStartTime><?LM:MB:Task.GenerationStartTime?></TaskStartTime>
+        <TaskDuration><?LM:MB:Task.GenerationTime?></TaskDuration>
+        <HypothesesCountMax><?LM:MB:Task.HypothesesCountMax?></HypothesesCountMax>
+        <TaskNotice><?LM:MB:Task.Notice?></TaskNotice>
+      </Extension>
+
+//    <!-- CF Attributes -->
+      <CFAttributesSettings>
+        <?LM:Loop:Task.CFAntecedentD?>      
+        <CFPartialGroupSetting 
+           id="CFCedentD_<?LM:MB:Task.CFAntecedentD.CFCedentDID?>">         
+          <Name><?LM:MB:Task.CFAntecedentD.Name?></Name>
+//<!--    <Extension name="CedentType" value="<?LM:MB:Task.CFAntecedentD.CedentType?>"/> -->
+          <?LM:Loop:Task.CFAntecedentD.CFLiteralSettings?>
+          <CFAttributeSetting 
+             id="CFLiteralD_<?LM:MB:Task.CFAntecedentD.CFLiteralSettings.CFLiteralDID?>">         
+            <Name><?LM:MB:Task.CFAntecedentD.CFLiteralSettings?></Name>
+            <FieldRef><?LM:MB:Task.CFAntecedentD.CFLiteralSettings.Quantity?></FieldRef>
+//          <Extension name="LiteralPosition" value="<?LM:MB:Task.CFAntecedentD.CFLiteralSettings.Ord?>"/>
+          </CFAttributeSetting>
+        <?LM:EndLoop:Task.CFAntecedentD.CFLiteralSettings?>
+        </CFPartialGroupSetting>
+        <?LM:EndLoop:Task.CFAntecedentD?>
+      </CFAttributesSettings>
+
+//    <!-- Condition -->
+      <?LM:IFF:Task.FTConditionBagSettings.LiteralCount:0:Not?>
+      <?LM:Include:Task.FTCedentSettings.Include.Template.PMML?>
+
+      <ConditionSetting>Derived_FTCedentBagD_<?LM:MB:Task.FTConditionBagSettings.FTCedentBagDID?></ConditionSetting>
+      <?LM:EndIFF:Task.FTConditionBagSettings.LiteralCount?>
+
+
+//    <!-- Quantifier Settings -->
+      <InterestMeasureSetting>
+        <?LM:Loop:Task.Quantifier?>
+        <InterestMeasureThreshold id="<?LM:MB:Task.Quantifier.CFQuantifierID?>">
+          <Extension name="LongName"><?LM:MB:Task.Quantifier.CFQuantifierType?></Extension>
+          <Extension name="Description"><?LM:MB:Task.Quantifier.CFQuantifierType.Notice?></Extension>
+          <Extension name="Order"><?LM:MB:Task.Quantifier.Ord?></Extension>
+          <InterestMeasure><?LM:MB:Task.Quantifier.CFQuantifierType.ShortName?></InterestMeasure>
+          <FromCol><?LM:MB:Task.Quantifier.FromCol?></FromCol>
+          <ToCol><?LM:MB:Task.Quantifier.ToCol?></ToCol>
+          <FrequencyValueType><?LM:MB:Task.Quantifier.CFQuantifierSourceType.ShortName?></FrequencyValueType>
+          <CompareType><?LM:MB:Task.Quantifier.CompareType?></CompareType>
+          <Value><?LM:MB:Task.Quantifier.ValuePar?></Value>
+          <ValueType><?LM:MB:Task.Quantifier.CFQuantifierValueType?></ValueType>
+          <?LM:IFF:Task.Quantifier.CFQuantifierStep:A?>
+          <StepCountType><?LM:MB:Task.Quantifier.CFQuantifierStepCountType?></StepCountType>
+          <StepSize><?LM:MB:Task.Quantifier.StepSize?></StepSize>
+          <StepSizeType><?LM:MB:Task.Quantifier.CFQuantifierStepSizeType?></StepSizeType>
+          <?LM:EndIFF:Task.Quantifier.CFQuantifierStep?>
+          <Threshold><?LM:MB:Task.Quantifier.Threshold?></Threshold>
+//        <Formula><?LM:MB:Task.Quantifier.Formula?></Formula>
+//	  <!-- CF Frequency -->
+//	  <!-- Primary IM -->
+          <PrimaryIMFlag><?LM:MB:Task.Quantifier.PrimaryIM?></PrimaryIMFlag>
+          <?LM:IFF:Task.Quantifier.PrimaryIMNormalize:A?>
+          <PrimaryIMNormalizeFlag><?LM:MB:Task.Quantifier.PrimaryIMNormalize?></PrimaryIMNormalizeFlag>
+          <PrimaryIMNormalizeMin><?LM:MB:Task.Quantifier.PrimaryIMNormalizeMin?></PrimaryIMNormalizeMin>
+          <PrimaryIMNormalizeMax><?LM:MB:Task.Quantifier.PrimaryIMNormalizeMin?></PrimaryIMNormalizeMax>
+          <?LM:EndIFF:Task.Quantifier.PrimaryIMNormalize?>
+        </InterestMeasureThreshold>    
+        <?LM:EndLoop:Task.Quantifier?>
+      </InterestMeasureSetting>
+
+    </TaskSetting>

@@ -1,0 +1,33 @@
+    <!-- Include Template: CFMiner.Task.Hypothesis.Include.Template -->
+    <!-- Version: 2017-12-14 -->
+
+    <!-- Hypothesis -->
+
+      <?LM:Loop:Task.Hypothesis?>
+      <CFMinerRule id="<?LM:MB:Task.Hypothesis.HypothesisID?>"
+        attribute="<?LM:MB:Task.Hypothesis.CFLiteralSettings.Quantity?>"
+        <?LM:IFF:Task.Hypothesis.FTConditionBagI#Count:0:Not?>
+        condition="DBA_Condition_<?LM:MB:Task.Hypothesis.HypothesisID?>"
+        <?LM:EndIFF:Task.Hypothesis.FTConditionBagI#Count?>
+      >
+        <Text><?LM:MB:Task.Hypothesis.Name?></Text>
+ 
+//      <!-- InterestMeasures -->
+        <?LM:Loop:Task.Hypothesis.InterestMeasure?>
+        <IMValue imSettingRef="<?LM:MB:Task.Hypothesis.InterestMeasure.CFQuantifierID?>" name="<?LM:MB:Task.Hypothesis.InterestMeasure.ShortName?>"><?LM:MB:Task.Hypothesis.InterestMeasure.Value?></IMValue>
+        <?LM:EndLoop:Task.Hypothesis.InterestMeasure?>
+
+//      <!-- Quantifier values -->
+        <?LM:Loop:Task.Hypothesis.QuantifierValue?>
+        <IMValue name="<?LM:MB:Task.Hypothesis.QuantifierValue.Name?>"><?LM:MB:Task.Hypothesis.QuantifierValue.Value?></IMValue>
+        <?LM:EndLoop:Task.Hypothesis.QuantifierValue?>
+
+//      <!-- Frequency table -->
+        <Columns><?LM:MB:Task.Hypothesis.Cols?></Columns>
+	<Frequencies>
+          <?LM:Loop:Task.Hypothesis.CFFrequencyI?>
+          <Frequency column="<?LM:MB:Task.Hypothesis.CFFrequencyI.Column?>" category="<?LM:MB:Task.Hypothesis.CFFrequencyI.Category?>" value="<?LM:MB:Task.Hypothesis.CFFrequencyI.Frequency?>"></Frequency>
+          <?LM:EndLoop:Task.Hypothesis.CFFrequencyI?>
+	</Frequencies>
+       </CFMinerRule>
+       <?LM:EndLoop:Task.Hypothesis?>

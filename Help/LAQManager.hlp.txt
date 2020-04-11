@@ -1,0 +1,2 @@
+Window title	URL
+Default	LAQManager.htm

@@ -1,0 +1,27 @@
+          <!-- Include Template: ETreeMiner.ETree.Recurse.Include.Template -->
+	  <!-- Version: 2017-12-14 -->
+//
+          <MCCluster id="MCCluster_<?LM:MB:LastRef.MCCluster.MCClusterID?>"
+                 ClusterLevel="<?LM:MB:LastRef.MCCluster.ClusterLevel?>"
+                 ClusterIndex="<?LM:MB:LastRef.MCCluster.ClusterIndex?>"
+                 Freq="<?LM:MB:LastRef.MCCluster.Freq?>"
+                 IntraDistanceAvg="<?LM:MB:LastRef.MCCluster.IntraDistanceAvg?>"
+                 IntraDistanceMin="<?LM:MB:LastRef.MCCluster.IntraDistanceMin?>"
+                 IntraDistanceMax="<?LM:MB:LastRef.MCCluster.IntraDistanceMax?>"
+          >
+            <?LM:IFF:LastRef.MCCluster.IsTopLevel:N?>
+            <MCParentCluster>MCluster_<?LM:MB:LastRef.MCCluster.MCParentClusterID?></MCParentCluster>
+            <?LM:EndIFF:LastRef.MCCluster.IsTopLevel?>
+            <MCVector>
+            <?LM:Loop:LastRef.MCCluster.MCVector?>
+               <MCVectorValue Attribute="<?LM:MB:LastRef.MCCluster.MCVector.MCLiteralSettings.Quantity?>" Value="<?LM:MB:LastRef.MCCluster.MCVector.ValuePar?>"/>
+            <?LM:EndLoop:LastRef.MCCluster.MCVector?>
+            </MCVector>
+	    <?LM:IFF:LastRef.MCCluster.MCCluster#Count:0:Not?>
+            <MCSubClusterArray>
+            <?LM:Loop:LastRef.MCCluster.MCCluster?>
+                <?LM:Include:MClusterMiner.MCluster.Recurse.Include.Template.PMML:6?>
+            <?LM:EndLoop:LastRef.MCCluster.MCCluster?>
+            </MCSubClusterArray>
+	    <?LM:EndIFF:LastRef.MCCluster.MCCluster#Count?>
+          </MCCluster>

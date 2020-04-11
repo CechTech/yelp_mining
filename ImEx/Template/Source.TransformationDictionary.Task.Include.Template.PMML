@@ -1,0 +1,95 @@
+  <!-- Include Template: Source.TransformationDictionary.Task.Include.Template -->
+  <!-- Version: 2015-08-01 -->
+
+  <TransformationDictionary>
+    <?LM:Loop:Task.Quantity?>
+    <DerivedField 
+      name= "<?LM:MB:Task.Quantity?>"
+      dataType="string" 
+      <?LM:IFF:Task.Quantity.DerivedFieldTransformation:MapValues?>
+      optype="ordinal"
+      <?LM:EndIFF:Task.Quantity.DerivedFieldTransformation?>
+      <?LM:IFF:Task.Quantity.DerivedFieldTransformation:Discretize?>
+      optype="continuous"
+      <?LM:EndIFF:Task.Quantity.DerivedFieldTransformation?>
+    >
+      <Extension name="ParentGroup" value="<?LM:MB:Task.Quantity.ParentGroup?>"/>
+      <Extension name="ShortName" value="<?LM:MB:Task.Quantity.ShortName?>"/>
+//      <!-- MapValue -->
+      <?LM:IFF:Task.Quantity.DerivedFieldTransformation:MapValues?>
+      <MapValues outputColumn="field"
+        <?LM:IFF:Task.Quantity.IncludeNULLCategory::Not?>
+        mapMissingTo="<?LM:MB:Task.Quantity.IncludeNULLCategory?>"
+        <?LM:EndIFF:Task.Quantity.IncludeNULLCategory?>
+      >
+        <FieldColumnPair column="column" field="<?LM:MB:Task.Quantity.Attribute?>"/>
+        <InlineTable>
+          <?LM:Loop:Task.Quantity.Category?>
+          <Extension name="Frequency" value="<?LM:MB:Task.Quantity.Category.Frequency?>" extender="<?LM:MB:Task.Quantity.Category?>"/>
+          <?LM:EndLoop:Task.Quantity.Category?>
+          <?LM:Loop:Task.Quantity.Category?>
+          <?LM:Loop:Task.Quantity.Category.Enum?>
+          <row>
+            <column><?LM:MB:Task.Quantity.Category.Enum?></column>
+            <field><?LM:MB:Task.Quantity.Category?></field>
+          </row>
+          <?LM:EndLoop:Task.Quantity.Category.Enum?>
+//          <!-- NULL -->
+          <?LM:IFF:Task.Quantity.Category.IncludeNULL:Yes?>
+          <row>
+            <column>NULL</column>
+            <field><?LM:MB:Task.Quantity.Category?></field>
+          </row>
+          <?LM:EndIFF:Task.Quantity.Category.IncludeNULL?>
+          <?LM:EndLoop:Task.Quantity.Category?>
+        </InlineTable>
+      </MapValues>
+      <?LM:EndIFF:Task.Quantity.DerivedFieldTransformation?>
+//      <!-- Discretize -->
+      <?LM:IFF:Task.Quantity.DerivedFieldTransformation:Discretize?>
+      <Discretize field="<?LM:MB:Task.Quantity.Attribute?>"
+        <?LM:IFF:Task.Quantity.IncludeNULLCategory::Not?>
+        mapMissingTo="<?LM:MB:Task.Quantity.IncludeNULLCategory?>"
+        <?LM:EndIFF:Task.Quantity.IncludeNULLCategory?>
+      >
+//      <!-- Frequencies -->
+        <?LM:Loop:Task.Quantity.Category?>
+        <Extension name="Frequency" value="<?LM:MB:Task.Quantity.Category.Frequency?>" extender="<?LM:MB:Task.Quantity.Category?>"/>
+        <?LM:EndLoop:Task.Quantity.Category?>
+//      <!-- DiscretizeBin -->
+        <?LM:Loop:Task.Quantity.Category?>
+//      <!-- Interval -->
+        <?LM:IFF:Task.Quantity.Category.CategorySubType:Interval?>
+        <?LM:Loop:Task.Quantity.Category.Interval?>
+        <DiscretizeBin binValue="<?LM:MB:Task.Quantity.Category?>">
+            <Interval 
+              closure="<?LM:MB:Task.Quantity.Category.Interval.Closure?>" 
+              leftMargin="<?LM:MB:Task.Quantity.Category.Interval.FromValue?>" 
+              rightMargin="<?LM:MB:Task.Quantity.Category.Interval.ToValue?>" 
+            />
+        </DiscretizeBin>
+        <?LM:EndLoop:Task.Quantity.Category.Interval?>
+        <?LM:EndIFF:Task.Quantity.Category.CategorySubType?>
+//      <!-- Enum -->
+        <?LM:IFF:Task.Quantity.Category.CategorySubType:Enumeration?>
+        <?LM:Loop:Task.Quantity.Category.Enum?>
+        <DiscretizeBin binValue="<?LM:MB:Task.Quantity.Category?>">
+//          <Extension name="Enumeration" value="<?LM:MB:Task.Quantity.Category.Enum?>"/>
+          <Interval closure="closedClosed" leftMargin="<?LM:MB:Task.Quantity.Category.Enum?>" rightMargin="<?LM:MB:Task.Quantity.Category.Enum?>"/>
+        </DiscretizeBin>
+        <?LM:EndLoop:Task.Quantity.Category.Enum?>
+        <?LM:EndIFF:Task.Quantity.Category.CategorySubType?>
+//       <!-- NULL -->
+        <?LM:IFF:Task.Quantity.Category.IncludeNULL:Yes?>
+        <DiscretizeBin binValue="<?LM:MB:Task.Quantity.Category?>">
+          <Extension name="Enumeration" value="NULL"/>
+        </DiscretizeBin>
+        <?LM:EndIFF:Task.Quantity.Category.IncludeNULL?>
+        <?LM:EndLoop:Task.Quantity.Category?>
+      </Discretize>
+      <?LM:EndIFF:Task.Quantity.DerivedFieldTransformation?>
+
+    </DerivedField>
+    <?LM:EndLoop:Task.Quantity?>
+  </TransformationDictionary>
+//

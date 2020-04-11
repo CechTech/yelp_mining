@@ -1,0 +1,37 @@
+  <!-- Include Template: Source.DataDictionary.Task.Include.Template -->
+  <!-- Version: 2012-01-04 -->
+
+  <DataDictionary numberOfFields="<?LM:MB:Task.Attribute#Count?>">
+    <?LM:Loop:Task.Attribute?>
+    <DataField 
+      name="<?LM:MB:Task.Attribute?>" 
+      optype="<?LM:MB:Task.Attribute.Cardinality?>" 
+//      columnType="<?LM:MB:Task.Attribute.AttributeSubType?>"
+      dataType="<?LM:MB:Task.Attribute.ValueSubType?>"
+    >
+      <?LM:IFF:Task.Attribute.Cardinality:Cardinal?>
+      <Extension name="Avg" value="<?LM:MB:Task.Attribute.ValueAvg?>" extender="Avg"/>
+      <?LM:IFF:Task.Attribute.ValueVariability:-1:Not?>
+      <Extension name="StDev" value="<?LM:MB:Task.Attribute.ValueVariability?>" extender="StDev"/>
+      <?LM:EndIFF:Task.Attribute.ValueVariability?>
+      <Interval leftMargin="<?LM:MB:Task.Attribute.ValueMin?>" rightMargin="<?LM:MB:Task.Attribute.ValueMax?>" closure="closedClosed"/>      
+      <?LM:EndIFF:Task.Attribute.Cardinality?>
+//    <!-- DistinctValues -->
+      <?LM:IFF:Task.Attribute.PrimaryKey:No?>
+      <?LM:IFF:Task.Attribute.Cardinality:Cardinal:Not?>
+      <Extension name="maxItems" value="<?LM:MB:Task.Attribute.DistinctValuesMax?>"/>
+        <?LM:Loop:Task.Attribute.DistinctValue?>
+        <Value value="<?LM:MB:Task.Attribute.DistinctValue.Value?>">
+          <Extension name="Frequency" value="<?LM:MB:Task.Attribute.DistinctValue.Frequency?>" extender="<?LM:MB:Task.Attribute.DistinctValue.Value?>"/>
+        </Value>
+        <?LM:EndLoop:Task.Attribute.DistinctValue?>
+      <?LM:EndIFF:Task.Attribute.Cardinality?>
+      <?LM:EndIFF:Task.Attribute.PrimaryKey?>
+      <?LM:IFF:Task.Attribute.PrimaryKey:Yes?>
+      <Extension name="PrimaryKey" value="Yes" extender="PrimaryKey"/>
+      <Extension name="PrimaryKeyPosition" value="<?LM:MB:Task.Attribute.PrimaryKeyPosition?>" extender="PrimaryKeyPosition"/>
+      <?LM:EndIFF:Task.Attribute.PrimaryKey?>
+    </DataField>
+    <?LM:EndLoop:Task.Attribute?>
+  </DataDictionary>
+//

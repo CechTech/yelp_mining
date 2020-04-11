@@ -1,0 +1,17 @@
+<data:DataDescription xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://keg.vse.cz/ns/datadescription0_2 http://sewebar.vse.cz/schemas/DataDescription0_2.xsd"
+ xmlns:data="http://keg.vse.cz/ns/datadescription0_2">
+  <Dictionary completeness="All" sourceFormat="PMML" sourceDictType="TransformationDictionary" id="1">
+//  <Identifier  name="dataset"><?LM:MB:Task.Matrix?></Identifier>
+    <Identifier  name="metabase"><?LM:System:Metabase?></Identifier>
+    <?LM:Loop:Quantity?>
+    <Field dataType="string">
+	  <Name><?LM:MB:Quantity?></Name>
+	  <DataSet><?LM:MB:Quantity.Attribute.Matrix?></DataSet>
+          <?LM:Loop:Quantity.Category?>
+          <Category><?LM:MB:Quantity.Category?></Category>
+          <?LM:EndLoop:Quantity.Category?>
+        </Field>
+    <?LM:EndLoop:Quantity?>
+  </Dictionary>
+</data:DataDescription>

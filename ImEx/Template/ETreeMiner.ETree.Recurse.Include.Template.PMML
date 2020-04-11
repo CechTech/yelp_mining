@@ -1,0 +1,27 @@
+          <!-- Include Template: ETreeMiner.ETree.Recurse.Include.Template -->
+          <!-- Version: 2017-12-14 -->
+//
+          <ETSplit SplitLevel="<?LM:MB:LastRef.ETSplit.SplitLevel?>"
+		   SplitIndex="<?LM:MB:LastRef.ETSplit.SplitIndex?>"
+		   FreqQuality="<?LM:MB:LastRef.ETSplit.FreqQuality?>"
+		   Attribute="<?LM:MB:LastRef.ETSplit.ETLiteralSettings.Quantity?>"
+		   SplitSignificanceCoef="<?LM:MB:LastRef.ETSplit.SplitSignificanceCoef?>"
+          >
+            <?LM:IFF:LastRef.ETSplit.IsTopLevel:N?>
+            <ETParentBranch>ETBranch_<?LM:MB:LastRef.ETSplit.ETParentBranchID?></ETParentBranch>
+            <?LM:EndIFF:LastRef.ETSplit.IsTopLevel?>
+            <ETBranchArray>
+            <?LM:Loop:LastRef.ETSplit.ETBranch?>
+              <ETBranch id="ETBranch_<?LM:MB:LastRef.ETSplit.ETBranch.ETBranchID?>"
+                        BranchCategory="<?LM:MB:LastRef.ETSplit.ETBranch.BranchCategory?>"
+                        FreqBranch="<?LM:MB:LastRef.ETSplit.ETBranch.FreqBranch?>"
+                        ClassCategory="<?LM:MB:LastRef.ETSplit.ETBranch.ClassCategory?>"
+                        FreqClass="<?LM:MB:LastRef.ETSplit.ETBranch.FreqClass?>"
+              >
+                <?LM:Loop:LastRef.ETSplit.ETBranch.ETSplit?>
+                <?LM:Include:ETreeMiner.ETree.Recurse.Include.Template.PMML:6?>
+                <?LM:EndLoop:LastRef.ETSplit.ETBranch.ETSplit?>
+              </ETBranch>
+            <?LM:EndLoop:LastRef.ETSplit.ETBranch?>
+            </ETBranchArray>
+          </ETSplit>

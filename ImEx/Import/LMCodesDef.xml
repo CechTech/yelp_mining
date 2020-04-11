@@ -1,0 +1,2588 @@
+<?xml version="1.0"?>
+<LMVersion>27.18.07 of 9 Oct 2019</LMVersion>
+<CodeTable name="ACQuantifierSourceType">
+ <Item id="1">
+  <Name>&#39;State before&#39; frequencies</Name>
+  <KeyName>Before</KeyName>
+  <ShortName>Before</ShortName>
+  <Description>Quantifier test applied to the state-before set data only</Description>
+ </Item>
+ <Item id="2">
+  <Name>&#39;State after&#39; frequencies</Name>
+  <KeyName>After</KeyName>
+  <ShortName>After</ShortName>
+  <Description>Quantifier test applied to the state-after set data only</Description>
+ </Item>
+ <Item id="3">
+  <Name>Delta of absolute frequencies values</Name>
+  <KeyName>DiffAbs</KeyName>
+  <ShortName>FreqDeltaAbs</ShortName>
+  <Description>Quantifier test applied to the 4ft-table computed by substracting of corresponding frequencies</Description>
+ </Item>
+ <Item id="4">
+  <Name>Delta of relative frequencies values</Name>
+  <KeyName>DiffRel</KeyName>
+  <ShortName>FreqDeltaRel</ShortName>
+  <Description>Quantifier test applied to the 4ft-table computed by substracting of corresponding relative frequencies</Description>
+ </Item>
+ <Item id="5">
+  <Name>Difference of interest-measures</Name>
+  <KeyName>ValDiff</KeyName>
+  <ShortName>DiffVal</ShortName>
+  <Description>Test applied to the difference of interest-measures computed separately from each frequency table</Description>
+ </Item>
+ <Item id="6">
+  <Name>Absolute difference of interest-measures</Name>
+  <KeyName>ValDiffAbs</KeyName>
+  <ShortName>DiffValAbs</ShortName>
+  <Description>Test applied to the absolute difference of interest-measures computed separately from each frequency table</Description>
+ </Item>
+ <Item id="7">
+  <Name>Ratio of interest-measures</Name>
+  <KeyName>ValRatio</KeyName>
+  <ShortName>RatioVal</ShortName>
+  <Description>Test applied to the ratio of interest-measures computed separately from each frequency table</Description>
+ </Item>
+ <Item id="8">
+  <Name>Higher of two ratios of interest-measures</Name>
+  <KeyName>ValRatioMax</KeyName>
+  <ShortName>RatioValMax</ShortName>
+  <Description>Test applied to the higher of two ratios of interest-measures (after/before or before/after)</Description>
+ </Item>
+</CodeTable>
+<CodeTable name="ActionStateType">
+ <Item id="2">
+  <Name>Before</Name>
+  <KeyName>Before</KeyName>
+  <ShortName>B</ShortName>
+  <Description>State before action</Description>
+ </Item>
+ <Item id="3">
+  <Name>After</Name>
+  <KeyName>After</KeyName>
+  <ShortName>A</ShortName>
+  <Description>State after action</Description>
+ </Item>
+</CodeTable>
+<CodeTable name="ActionType">
+ <Item id="2">
+  <Name>Stable</Name>
+  <KeyName>Stable</KeyName>
+  <ShortName>S</ShortName>
+  <Description>Stable with no action</Description>
+ </Item>
+ <Item id="3">
+  <Name>Variable</Name>
+  <KeyName>Variable</KeyName>
+  <ShortName>V</ShortName>
+  <Description>Variable with action possible</Description>
+ </Item>
+</CodeTable>
+<CodeTable name="AFQuantifierType">
+ <Item id="1">
+  <Name>Sum of frequencies</Name>
+  <KeyName>Sum</KeyName>
+  <ShortName>SUM</ShortName>
+  <Description>Sum of frequencies from source contingency table</Description>
+ </Item>
+ <Item id="2">
+  <Name>Min frequency</Name>
+  <KeyName>Min</KeyName>
+  <ShortName>MIN</ShortName>
+  <Description>Minimal frequency from source contingency table</Description>
+ </Item>
+ <Item id="3">
+  <Name>Max frequency</Name>
+  <KeyName>Max</KeyName>
+  <ShortName>MAX</ShortName>
+  <Description>Maximal frequency from source contingency table</Description>
+ </Item>
+ <Item id="4">
+  <Name>p-Implication</Name>
+  <KeyName>PImplication</KeyName>
+  <ShortName>PIM</ShortName>
+  <Description>a/(a+b) &gt;= p ... at least 100*p [%] of objects satisfying A satisfy also S</Description>
+ </Item>
+ <Item id="28">
+  <Name>Average Difference Dependence</Name>
+  <KeyName>AverageDifference</KeyName>
+  <ShortName>ADF</ShortName>
+  <Description>Relative difference in number of objects satisfying S among objects satisfying A to number objects saysfying S in the whole data matrix. Paramater p in &lt;-1;inf), similar to the Lift(X-&gt;Y)= P(Y|X)/P(Y). It holds p= P(Y|X)/P(Y)-1.</Description>
+ </Item>
+ <Item id="5">
+  <Name>Above Average Dependence</Name>
+  <KeyName>AboveAverage</KeyName>
+  <ShortName>AAD</ShortName>
+  <Description>Among objects satisfying A, there are at least 100*p [%] more objects satisfying S than there are objects satisfying S in the whole data matrix. Parameter p in &lt;0;inf).</Description>
+ </Item>
+ <Item id="6">
+  <Name>Below Average Dependence</Name>
+  <KeyName>BelowAverage</KeyName>
+  <ShortName>BAD</ShortName>
+  <Description>Among objects satisfying A, there are at least 100*p [%] less objects satisfying S than there are objects satisfying S in the whole data matrix. Parameter p in &lt;0;1&gt;.</Description>
+ </Item>
+ <Item id="29">
+  <Name>Outside Average Dependence</Name>
+  <KeyName>OAD</KeyName>
+  <ShortName>OAD</ShortName>
+  <Description>Among objects satisfying A, there is at least 100*p [%] more or less objects satisfying S than there are objects satisfying S in the whole data matrix. Parameter p in &lt;0;1&gt;.</Description>
+ </Item>
+ <Item id="7">
+  <Name>Lower Critical Implication</Name>
+  <KeyName>LowerCriticalImplication</KeyName>
+  <ShortName>LCI</ShortName>
+  <Description>-</Description>
+ </Item>
+ <Item id="8">
+  <Name>Upper Critical Implication</Name>
+  <KeyName>UpperCriticalImplication</KeyName>
+  <ShortName>UCI</ShortName>
+  <Description>-</Description>
+ </Item>
+ <Item id="9">
+  <Name>Double p-Implication</Name>
+  <KeyName>DoublePImplication</KeyName>
+  <ShortName>DPIM</ShortName>
+  <Description>-</Description>
+ </Item>
+ <Item id="10">
+  <Name>Double Lower Critical Implication</Name>
+  <KeyName>DoubleLowerCriticalImplication</KeyName>
+  <ShortName>DLCI</ShortName>
+  <Description>-</Description>
+ </Item>
+ <Item id="11">
+  <Name>Double Upper Critical Implication</Name>
+  <KeyName>DoubleUpperCriticalImplication</KeyName>
+  <ShortName>DUCI</ShortName>
+  <Description>-</Description>
+ </Item>
+ <Item id="12">
+  <Name>p-Equivalence</Name>
+  <KeyName>FoundedEquivalence</KeyName>
+  <ShortName>PEQ</ShortName>
+  <Description>-</Description>
+ </Item>
+ <Item id="13">
+  <Name>Lower Critical Equivalence</Name>
+  <KeyName>LowerCriticalEquivalence</KeyName>
+  <ShortName>LCE</ShortName>
+  <Description>-</Description>
+ </Item>
+ <Item id="14">
+  <Name>Upper Critical Equivalence</Name>
+  <KeyName>UpperCriticalEquivalence</KeyName>
+  <ShortName>UCE</ShortName>
+  <Description>-</Description>
+ </Item>
+ <Item id="15">
+  <Name>Simple Deviation</Name>
+  <KeyName>SimpleDeviation</KeyName>
+  <ShortName>SID</ShortName>
+  <Description>-</Description>
+ </Item>
+ <Item id="16">
+  <Name>Fisher quantifier</Name>
+  <KeyName>Fisher</KeyName>
+  <ShortName>FSH</ShortName>
+  <Description>-</Description>
+ </Item>
+ <Item id="17">
+  <Name>Chi-Squared quantifier</Name>
+  <KeyName>ChiSq</KeyName>
+  <ShortName>CHI</ShortName>
+  <Description>-</Description>
+ </Item>
+ <Item id="18">
+  <Name>A-quantifier</Name>
+  <KeyName>AQ</KeyName>
+  <ShortName>A-Q</ShortName>
+  <Description>-</Description>
+ </Item>
+ <Item id="19">
+  <Name>E-quantifier</Name>
+  <KeyName>EQ</KeyName>
+  <ShortName>E-Q</ShortName>
+  <Description>-</Description>
+ </Item>
+ <Item id="20">
+  <Name>a-frequency</Name>
+  <KeyName>afrequency</KeyName>
+  <ShortName>a (BASE)</ShortName>
+  <Description>a-frequency (BASE) from source contingency table</Description>
+ </Item>
+</CodeTable>
+<CodeTable name="AFQuantifierValueType">
+ <Item id="4">
+  <Name>Absolute number</Name>
+  <KeyName>Abs</KeyName>
+  <ShortName>Abs</ShortName>
+  <Description>Absolute number. Threshold value is left as given.</Description>
+ </Item>
+ <Item id="1">
+  <Name>Relative [%] to act condition</Name>
+  <KeyName>RelCondition</KeyName>
+  <ShortName>%Cond</ShortName>
+  <Description>Relative to number of rows matching condition. Threshold value [%] is multiplied by (number of rows matching condition)/100</Description>
+ </Item>
+ <Item id="2">
+  <Name>Relative [%] to all objects</Name>
+  <KeyName>RelAll</KeyName>
+  <ShortName>%All</ShortName>
+  <Description>Relative to number of all rows in the data matrix. Threshold value [%] is multiplied by (number of rows in the whole matrix)/100</Description>
+ </Item>
+ <Item id="3">
+  <Name>Relative [%] to max frequency</Name>
+  <KeyName>RelMax</KeyName>
+  <ShortName>%Max</ShortName>
+  <Description>Relative to maximal value in the current contingency table. Threshold value [%] is multiplied by (the highest frequency)/100</Description>
+ </Item>
+</CodeTable>
+<CodeTable name="AggregateType">
+ <Item id="1">
+  <Name>Count(*)</Name>
+  <KeyName>COUNT</KeyName>
+  <ShortName>COUNT</ShortName>
+  <Description>Number of rows in group.</Description>
+ </Item>
+ <Item id="2">
+  <Name>Sum</Name>
+  <KeyName>SUM</KeyName>
+  <ShortName>SUM</ShortName>
+  <Description>Sum of values in group. Each category is represented by its index.</Description>
+ </Item>
+ <Item id="3">
+  <Name>Minimum</Name>
+  <KeyName>MIN</KeyName>
+  <ShortName>MIN</ShortName>
+  <Description>Minimum value in group. Each category is represented by its index.</Description>
+ </Item>
+ <Item id="4">
+  <Name>Maximum</Name>
+  <KeyName>MAX</KeyName>
+  <ShortName>MAX</ShortName>
+  <Description>Maximum value in group. Each category is represented by its index.</Description>
+ </Item>
+ <Item id="5">
+  <Name>Average</Name>
+  <KeyName>AVG</KeyName>
+  <ShortName>AVG</ShortName>
+  <Description>Average value in group. Each category is represented by its index.</Description>
+ </Item>
+</CodeTable>
+<CodeTable name="BoolOpType">
+ <Item id="1">
+  <Name>Conjunction</Name>
+  <KeyName>Conjunction</KeyName>
+  <ShortName>Con</ShortName>
+  <Description>Logical operation of conjunction</Description>
+ </Item>
+ <Item id="2">
+  <Name>Disjunction</Name>
+  <KeyName>Disjunction</KeyName>
+  <ShortName>Dis</ShortName>
+  <Description>Logical operation of disjunction</Description>
+ </Item>
+</CodeTable>
+<CodeTable name="BoolType">
+ <Item id="1">
+  <Name>No boolean</Name>
+  <KeyName>NotSet</KeyName>
+  <ShortName>-</ShortName>
+  <Description>Not boolean category</Description>
+ </Item>
+ <Item id="2">
+  <Name>True</Name>
+  <KeyName>True</KeyName>
+  <ShortName>T</ShortName>
+  <Description>Category representing &#39;TRUE&#39; values</Description>
+ </Item>
+ <Item id="3">
+  <Name>False</Name>
+  <KeyName>False</KeyName>
+  <ShortName>F</ShortName>
+  <Description>Category representing &#39;FALSE&#39; values</Description>
+ </Item>
+</CodeTable>
+<CodeTable name="BracketType">
+ <Item id="1">
+  <Name>Sharp</Name>
+  <KeyName>Sharp</KeyName>
+  <ShortName>sharp</ShortName>
+  <Description>Include border value</Description>
+ </Item>
+ <Item id="2">
+  <Name>No sharp</Name>
+  <KeyName>Round</KeyName>
+  <ShortName>no-sharp</ShortName>
+  <Description>Don&#39;t include border value</Description>
+ </Item>
+</CodeTable>
+<CodeTable name="CategorySubType">
+ <Item id="1">
+  <Name>Enumeration</Name>
+  <KeyName>Enumeration</KeyName>
+  <ShortName>enum</ShortName>
+  <Description>Enumeration of values</Description>
+ </Item>
+ <Item id="2">
+  <Name>Interval</Name>
+  <KeyName>Interval</KeyName>
+  <ShortName>int</ShortName>
+  <Description>Interval of values</Description>
+ </Item>
+ <Item id="3">
+  <Name>Fuzzy interval</Name>
+  <KeyName>FuzzyInterval</KeyName>
+  <ShortName>fuzzy</ShortName>
+  <Description>Fuzzy intervals</Description>
+ </Item>
+</CodeTable>
+<CodeTable name="CedentType">
+ <Item id="2">
+  <Name>Antecedent</Name>
+  <KeyName>Antecedent</KeyName>
+  <ShortName>A</ShortName>
+  <Description>Left 4ft-cedent</Description>
+ </Item>
+ <Item id="3">
+  <Name>Succedent</Name>
+  <KeyName>Succedent</KeyName>
+  <ShortName>S</ShortName>
+  <Description>Right 4ft-cedent</Description>
+ </Item>
+ <Item id="4">
+  <Name>Condition</Name>
+  <KeyName>Condition</KeyName>
+  <ShortName>C</ShortName>
+  <Description>Condition</Description>
+ </Item>
+ <Item id="5">
+  <Name>First set</Name>
+  <KeyName>FirstSet</KeyName>
+  <ShortName>1</ShortName>
+  <Description>First set for difference</Description>
+ </Item>
+ <Item id="6">
+  <Name>Second set</Name>
+  <KeyName>SecondSet</KeyName>
+  <ShortName>2</ShortName>
+  <Description>Second set for difference</Description>
+ </Item>
+ <Item id="7">
+  <Name>Variable antecedent</Name>
+  <KeyName>AntecedentVar</KeyName>
+  <ShortName>Av</ShortName>
+  <Description>Action in antecedent</Description>
+ </Item>
+ <Item id="8">
+  <Name>Variable succedent</Name>
+  <KeyName>SuccedentVar</KeyName>
+  <ShortName>Sv</ShortName>
+  <Description>Action in succedent</Description>
+ </Item>
+ <Item id="9">
+  <Name>Histogram attribute</Name>
+  <KeyName>CFAttribute</KeyName>
+  <ShortName>CFA</ShortName>
+  <Description>Attribute used for calculation of CF-histogram</Description>
+ </Item>
+ <Item id="10">
+  <Name>Row attribute</Name>
+  <KeyName>KLAttributeRow</KeyName>
+  <ShortName>Row</ShortName>
+  <Description>Row attribute for KL-table</Description>
+ </Item>
+ <Item id="11">
+  <Name>Col attribute</Name>
+  <KeyName>KLAttributeCol</KeyName>
+  <ShortName>Col</ShortName>
+  <Description>Column attribut for KL-table</Description>
+ </Item>
+ <Item id="12">
+  <Name>ETree Attribute</Name>
+  <KeyName>ETAttribute</KeyName>
+  <ShortName>ETA</ShortName>
+  <Description>Attribute used in tree</Description>
+ </Item>
+ <Item id="13">
+  <Name>Class Attribute</Name>
+  <KeyName>ETClass</KeyName>
+  <ShortName>Class</ShortName>
+  <Description>Target class attribute</Description>
+ </Item>
+ <Item id="14">
+  <Name>Vector Attribute</Name>
+  <KeyName>MCAttribute</KeyName>
+  <ShortName>MCA</ShortName>
+  <Description>Attribute used in clustering</Description>
+ </Item>
+ <Item id="15">
+  <Name>MI Conditioned be</Name>
+  <KeyName>ConditionedBy</KeyName>
+  <ShortName>MIC</ShortName>
+  <Description>Condition for a mutual influence truthfullness scope</Description>
+ </Item>
+ <Item id="16">
+  <Name>MI Not influenced by</Name>
+  <KeyName>NotInfluencedBy</KeyName>
+  <ShortName>MINotInfl</ShortName>
+  <Description>Condition not influencing a mutual influence truthfullness</Description>
+ </Item>
+</CodeTable>
+<CodeTable name="CFQuantifierHistogramValueType">
+ <Item id="1">
+  <Name>Absolute number</Name>
+  <KeyName>Abs</KeyName>
+  <ShortName>Abs</ShortName>
+  <Description>Absolute frequencies. Frequencies in histogram are left as given.</Description>
+ </Item>
+ <Item id="2">
+  <Name>Relative [%] to act condition</Name>
+  <KeyName>RelCondition</KeyName>
+  <ShortName>%Cond</ShortName>
+  <Description>Relative frequencies to number of rows matching condition. Frequencies are divided by number of rows matching condition and multiplied by 100.</Description>
+ </Item>
+ <Item id="3">
+  <Name>Relative [%] for each category</Name>
+  <KeyName>RelCategory</KeyName>
+  <ShortName>%Cat</ShortName>
+  <Description>Relative frequencies for each category (number of rows matching condition to number of all). Each frequency is divided by the corresponding frequency in the whole matrix and multiplied by 100.</Description>
+ </Item>
+</CodeTable>
+<CodeTable name="CFQuantifierStepCountType">
+ <Item id="1">
+  <Name>Absolute number</Name>
+  <KeyName>Abs</KeyName>
+  <ShortName>Abs</ShortName>
+  <Description>Absolute number of steps. Count value is left as given.</Description>
+ </Item>
+ <Item id="2">
+  <Name>Relative [%] to act range</Name>
+  <KeyName>RelRange</KeyName>
+  <ShortName>%Rang</ShortName>
+  <Description>Relative to number of categories in the currently selected range- 1. Count value is multiplied by (&#39;number of categories in current range minus 1&#39;)/100</Description>
+ </Item>
+ <Item id="3">
+  <Name>Relative [%] to all categories</Name>
+  <KeyName>RelAll</KeyName>
+  <ShortName>%All</ShortName>
+  <Description>Relative to number of all categories minus 1. Count value is multiplied by (&#39;total number of categories minus 1&#39;)/100</Description>
+ </Item>
+</CodeTable>
+<CodeTable name="CFQuantifierStepSizeType">
+ <Item id="1">
+  <Name>Absolute number</Name>
+  <KeyName>Abs</KeyName>
+  <ShortName>Abs</ShortName>
+  <Description>Change in frequency as an absolute number. Minimal step size is left as given.</Description>
+ </Item>
+ <Item id="2">
+  <Name>Relative [%] to previous frequency</Name>
+  <KeyName>RelFrequencyPrev</KeyName>
+  <ShortName>%PREV</ShortName>
+  <Description>Relative to the previous frequency. Minimal step size is multiplied by (frequency of the previous category)/100</Description>
+ </Item>
+ <Item id="3">
+  <Name>Relative [%] to all objects</Name>
+  <KeyName>RelAll</KeyName>
+  <ShortName>%All</ShortName>
+  <Description>Relative to number of all rows in the data matrix. Minimal step size is multiplied by (number of rows in the whole matrix)/100</Description>
+ </Item>
+ <Item id="4">
+  <Name>Relative [%] to act condition</Name>
+  <KeyName>RelCondition</KeyName>
+  <ShortName>%Cond</ShortName>
+  <Description>Relative to number of rows matching condition. Minimal step size is multiplied by (number of rows matching condition)/100</Description>
+ </Item>
+ <Item id="5">
+  <Name>Relative [%] to max frequency</Name>
+  <KeyName>RelFrequencyMax</KeyName>
+  <ShortName>%Max</ShortName>
+  <Description>Relative to maximal frequency in the currently processed histogram. Minimal step size is multiplied by (the highest frequency in the whole histogram)/100</Description>
+ </Item>
+</CodeTable>
+<CodeTable name="CFQuantifierType">
+ <Item id="1">
+  <Name>Sum of frequencies</Name>
+  <KeyName>Sum</KeyName>
+  <ShortName>SUM</ShortName>
+  <Description>Sum of frequencies from range of categories</Description>
+ </Item>
+ <Item id="2">
+  <Name>Min frequency</Name>
+  <KeyName>Min</KeyName>
+  <ShortName>MIN</ShortName>
+  <Description>Minimal frequency from range of categories</Description>
+ </Item>
+ <Item id="3">
+  <Name>Max frequency</Name>
+  <KeyName>Max</KeyName>
+  <ShortName>MAX</ShortName>
+  <Description>Maximal frequency from range of categories</Description>
+ </Item>
+ <Item id="4">
+  <Name>Average frequency</Name>
+  <KeyName>Avg</KeyName>
+  <ShortName>AVG</ShortName>
+  <Description>Average frequency from range of categories</Description>
+ </Item>
+ <Item id="5">
+  <Name>Some frequency</Name>
+  <KeyName>Some</KeyName>
+  <ShortName>SOME</ShortName>
+  <Description>At least one frequency from range of categories</Description>
+ </Item>
+ <Item id="8">
+  <Name>Variation ratio</Name>
+  <KeyName>VariationRatio</KeyName>
+  <ShortName>VNRA</ShortName>
+  <Description>Variation ratio = 1-f(modal)</Description>
+ </Item>
+ <Item id="9">
+  <Name>Nominal variation (norm)</Name>
+  <KeyName>NominalVariation</KeyName>
+  <ShortName>NVN</ShortName>
+  <Description>Nominal variation (norm) = suma(f_i*(1-f_i)) * K/(K-1), where f_i is frequency of the i-th category and K is number of categories</Description>
+ </Item>
+ <Item id="10">
+  <Name>Discrete ordinary variation (norm)</Name>
+  <KeyName>DiscreteOrdinaryVariation</KeyName>
+  <ShortName>DOVN</ShortName>
+  <Description>Discrete Ordinary Variation (norm) = 2*suma(F_i*(1-F_i))* 2/(K-1), where F_i is cumulative relative frequency of the i-th category and K is number of categories</Description>
+ </Item>
+ <Item id="19">
+  <Name>Median-category index (absolute)</Name>
+  <KeyName>MedianIA</KeyName>
+  <ShortName>MedIA</ShortName>
+  <Description>Index (absolute &lt;1;K&gt;) of the median category</Description>
+ </Item>
+ <Item id="20">
+  <Name>Median-category index (relative)</Name>
+  <KeyName>MedianIR</KeyName>
+  <ShortName>MedIA</ShortName>
+  <Description>Index (relative &lt;0;1&gt;) of the median category</Description>
+ </Item>
+ <Item id="11">
+  <Name>Arithmetic average</Name>
+  <KeyName>ArithmeticAverage</KeyName>
+  <ShortName>AVGA</ShortName>
+  <Description>Arithmetic average of cardinal values. Only for cardinal attributes.</Description>
+ </Item>
+ <Item id="12">
+  <Name>Geometric average</Name>
+  <KeyName>GeometricAverge</KeyName>
+  <ShortName>AVGG</ShortName>
+  <Description>Geometric average of cardinal values. Only for cardinal attributes.</Description>
+ </Item>
+ <Item id="13">
+  <Name>Variance</Name>
+  <KeyName>Variance</KeyName>
+  <ShortName>VARI</ShortName>
+  <Description>Variance of cardinal values. Only for cardinal attributes.</Description>
+ </Item>
+ <Item id="14">
+  <Name>Standard deviation</Name>
+  <KeyName>StDev</KeyName>
+  <ShortName>STDEV</ShortName>
+  <Description>Standard deviation of cardinal values. Only for cardinal attributes.</Description>
+ </Item>
+ <Item id="15">
+  <Name>Skewness</Name>
+  <KeyName>Skewness</KeyName>
+  <ShortName>SKEW</ShortName>
+  <Description>Skewness of distribution of cardinal values. Only for cardinal attributes.</Description>
+ </Item>
+ <Item id="16">
+  <Name>Asymetry</Name>
+  <KeyName>Asymetry</KeyName>
+  <ShortName>ASYM</ShortName>
+  <Description>Asymetry coeficient of distribution of cardinal values. Only for cardinal attributes.</Description>
+ </Item>
+ <Item id="17">
+  <Name>Steps-up</Name>
+  <KeyName>StepsUp</KeyName>
+  <ShortName>S-UP</ShortName>
+  <Description>Number of steps-up in frequency of adjectant categories from given range in histogram</Description>
+ </Item>
+ <Item id="18">
+  <Name>Steps-down</Name>
+  <KeyName>StepsDown</KeyName>
+  <ShortName>S-DN</ShortName>
+  <Description>Number of steps-down in frequency of adjectant categories from given range in histogram</Description>
+ </Item>
+ <Item id="21">
+  <Name>PattDiffSum</Name>
+  <KeyName>PattDiffSum</KeyName>
+  <ShortName>PDSUM</ShortName>
+  <Description>Sum of absolute values of differences of frequencies in the histogram and a given pattern</Description>
+ </Item>
+ <Item id="22">
+  <Name>PattDiffMin</Name>
+  <KeyName>PattDiffMin</KeyName>
+  <ShortName>PDMIN</ShortName>
+  <Description>The minimal of absolute values of differences of frequencies in the histogram and a given pattern</Description>
+ </Item>
+ <Item id="23">
+  <Name>PattDiffMax</Name>
+  <KeyName>PattDiffMax</KeyName>
+  <ShortName>PDMAX</ShortName>
+  <Description>The maximal of absolute values of differences of frequencies in the histogram and a given pattern</Description>
+ </Item>
+ <Item id="6">
+  <Name>Variation from pattern</Name>
+  <KeyName>Var</KeyName>
+  <ShortName>VAR</ShortName>
+  <Description>Total variation from given pattern</Description>
+ </Item>
+</CodeTable>
+<CodeTable name="CFQuantifierValueType">
+ <Item id="4">
+  <Name>Absolute number</Name>
+  <KeyName>Abs</KeyName>
+  <ShortName>Abs</ShortName>
+  <Description>Absolute number. Threshold value is left as given.</Description>
+ </Item>
+ <Item id="1">
+  <Name>Relative [%] to act condition</Name>
+  <KeyName>RelCondition</KeyName>
+  <ShortName>%Cond</ShortName>
+  <Description>Relative to number of rows matching condition. Threshold value [%] is multiplied by (number of rows matching condition)/100</Description>
+ </Item>
+ <Item id="2">
+  <Name>Relative [%] to all objects</Name>
+  <KeyName>RelAll</KeyName>
+  <ShortName>%All</ShortName>
+  <Description>Relative to number of all rows in the data matrix. Threshold value [%] is multiplied by (number of rows in the whole matrix)/100</Description>
+ </Item>
+ <Item id="3">
+  <Name>Relative [%] to max frequency</Name>
+  <KeyName>RelFrequencyMax</KeyName>
+  <ShortName>%Max</ShortName>
+  <Description>Relative to maximal frequency in the whole histogram. Threshold value [%] is multiplied by (the highest frequency in the whole histogram)/100</Description>
+ </Item>
+</CodeTable>
+<CodeTable name="CoefficientType">
+ <Item id="1">
+  <Name>Subsets</Name>
+  <KeyName>Subset</KeyName>
+  <ShortName>subset</ShortName>
+  <Description>All the subsets of categories from minimal up to maximal length</Description>
+ </Item>
+ <Item id="2">
+  <Name>One category</Name>
+  <KeyName>OneCategory</KeyName>
+  <ShortName>one</ShortName>
+  <Description>Only one selected category appears in literal</Description>
+ </Item>
+ <Item id="3">
+  <Name>Sequences</Name>
+  <KeyName>Sequence</KeyName>
+  <ShortName>seq</ShortName>
+  <Description>All the consecutive sequencies of categories from minimal up to maximal length</Description>
+ </Item>
+ <Item id="10">
+  <Name>Cyclical sequences</Name>
+  <KeyName>CyclicalSequence</KeyName>
+  <ShortName>seqc</ShortName>
+  <Description>Same as the sequence plus overlapping combinations of first and last categories</Description>
+ </Item>
+ <Item id="4">
+  <Name>Cuts</Name>
+  <KeyName>Cuts</KeyName>
+  <ShortName>cuts</ShortName>
+  <Description>All the cuts of categories from minimal up to maximal length</Description>
+ </Item>
+ <Item id="5">
+  <Name>Left cuts</Name>
+  <KeyName>LeftCut</KeyName>
+  <ShortName>lcut</ShortName>
+  <Description>All the left cuts of categories from minimal up to maximal length</Description>
+ </Item>
+ <Item id="6">
+  <Name>Right cuts</Name>
+  <KeyName>RightCut</KeyName>
+  <ShortName>rcut</ShortName>
+  <Description>All the right cuts of categories from minimal up to maximal length</Description>
+ </Item>
+</CodeTable>
+<CodeTable name="CompareType">
+ <Item id="1">
+  <Name>Equal</Name>
+  <KeyName>Equal</KeyName>
+  <ShortName>=</ShortName>
+  <Description>Equal value</Description>
+ </Item>
+ <Item id="2">
+  <Name>Less than</Name>
+  <KeyName>Less</KeyName>
+  <ShortName>&lt;</ShortName>
+  <Description>Less than</Description>
+ </Item>
+ <Item id="3">
+  <Name>Less than or equal</Name>
+  <KeyName>LessOrEqual</KeyName>
+  <ShortName>&lt;=</ShortName>
+  <Description>Less than or equal</Description>
+ </Item>
+ <Item id="4">
+  <Name>Greater than</Name>
+  <KeyName>Greater</KeyName>
+  <ShortName>&gt;</ShortName>
+  <Description>Greater than</Description>
+ </Item>
+ <Item id="5">
+  <Name>Greater than or equal</Name>
+  <KeyName>GreaterOrEqual</KeyName>
+  <ShortName>&gt;=</ShortName>
+  <Description>Greater than or equal</Description>
+ </Item>
+ <Item id="6">
+  <Name>Not equal</Name>
+  <KeyName>NotEqual</KeyName>
+  <ShortName>&lt;&gt;</ShortName>
+  <Description>Not equal value</Description>
+ </Item>
+</CodeTable>
+<CodeTable name="DataColumnSubType">
+ <Item id="1">
+  <Name>Ordinary DB field</Name>
+  <KeyName>Ordinary</KeyName>
+  <ShortName>DB</ShortName>
+  <Description>Ordinary database column</Description>
+ </Item>
+ <Item id="2">
+  <Name>Derived</Name>
+  <KeyName>Derived</KeyName>
+  <ShortName>Expr.</ShortName>
+  <Description>Derived column by expression</Description>
+ </Item>
+ <Item id="7">
+  <Name>SQL-query</Name>
+  <KeyName>SQLQuery</KeyName>
+  <ShortName>SQLQuery</ShortName>
+  <Description>Column computed as an SQL query</Description>
+ </Item>
+ <Item id="8">
+  <Name>Geo</Name>
+  <KeyName>Geo</KeyName>
+  <ShortName>Geo</ShortName>
+  <Description>Column computed as a geographical relation of a point to a set of points or polygons</Description>
+ </Item>
+ <Item id="4">
+  <Name>Date-time partial value</Name>
+  <KeyName>DatePart</KeyName>
+  <ShortName>D/T Part</ShortName>
+  <Description>A single partial value derived from the DateTime column</Description>
+ </Item>
+ <Item id="3">
+  <Name>Multi-column field</Name>
+  <KeyName>MCField</KeyName>
+  <ShortName>MC Field</ShortName>
+  <Description>One field of a multi-column</Description>
+ </Item>
+ <Item id="5">
+  <Name>Task-results derived value</Name>
+  <KeyName>Hypothesis</KeyName>
+  <ShortName>Hypo</ShortName>
+  <Description>Derived column based on results of a hypothesis</Description>
+ </Item>
+ <Item id="6">
+  <Name>Task-results derived value</Name>
+  <KeyName>PCA</KeyName>
+  <ShortName>PCA</ShortName>
+  <Description>One component of a Principal component analysis</Description>
+ </Item>
+</CodeTable>
+<CodeTable name="DataCharacterType">
+ <Item id="2">
+  <Name>Nominal</Name>
+  <KeyName>Nominal</KeyName>
+  <ShortName>N</ShortName>
+  <Description>Nominal values</Description>
+ </Item>
+ <Item id="3">
+  <Name>Ordinal</Name>
+  <KeyName>Ordinal</KeyName>
+  <ShortName>O</ShortName>
+  <Description>Ordinal values with an order defined</Description>
+ </Item>
+ <Item id="4">
+  <Name>Cardinal</Name>
+  <KeyName>Cardinal</KeyName>
+  <ShortName>C</ShortName>
+  <Description>Cardinal values with a distance defined</Description>
+ </Item>
+ <Item id="1">
+  <Name>Not set</Name>
+  <KeyName>NotSet</KeyName>
+  <ShortName>-</ShortName>
+  <Description>Unknown character of values</Description>
+ </Item>
+</CodeTable>
+<CodeTable name="DataTableSubType">
+ <Item id="1">
+  <Name>Stored table</Name>
+  <KeyName>Table</KeyName>
+  <ShortName>Table</ShortName>
+  <Description>Data statically stored in database table</Description>
+ </Item>
+ <Item id="2">
+  <Name>Dynamic view</Name>
+  <KeyName>View</KeyName>
+  <ShortName>View</ShortName>
+  <Description>Dynamically created view from (multiple) database tables</Description>
+ </Item>
+</CodeTable>
+<CodeTable name="DatePartSubType">
+ <Item id="2">
+  <Name>Year</Name>
+  <KeyName>Year</KeyName>
+  <ShortName>Y</ShortName>
+  <Description>Year-value of the date</Description>
+ </Item>
+ <Item id="3">
+  <Name>Month</Name>
+  <KeyName>Month</KeyName>
+  <ShortName>M</ShortName>
+  <Description>Month-value of the date</Description>
+ </Item>
+ <Item id="4">
+  <Name>Day</Name>
+  <KeyName>Day</KeyName>
+  <ShortName>D</ShortName>
+  <Description>Day-value from of the date</Description>
+ </Item>
+ <Item id="5">
+  <Name>Hour</Name>
+  <KeyName>Hour</KeyName>
+  <ShortName>h</ShortName>
+  <Description>Hour-value of the time</Description>
+ </Item>
+ <Item id="6">
+  <Name>Min</Name>
+  <KeyName>Min</KeyName>
+  <ShortName>min</ShortName>
+  <Description>Minutes-value of the time</Description>
+ </Item>
+ <Item id="7">
+  <Name>Sec</Name>
+  <KeyName>Sec</KeyName>
+  <ShortName>sec</ShortName>
+  <Description>Seconds-value of the time</Description>
+ </Item>
+ <Item id="8">
+  <Name>DayOfWeek</Name>
+  <KeyName>DayOfWeek</KeyName>
+  <ShortName>DoW</ShortName>
+  <Description>Day of the week of the date</Description>
+ </Item>
+ <Item id="9">
+  <Name>DayOfYear</Name>
+  <KeyName>DayOfYear</KeyName>
+  <ShortName>DoY</ShortName>
+  <Description>Day of the year of the date</Description>
+ </Item>
+ <Item id="10">
+  <Name>WeekOfYear</Name>
+  <KeyName>WeekOfYear</KeyName>
+  <ShortName>WoY</ShortName>
+  <Description>Week of the year of the date</Description>
+ </Item>
+ <Item id="11">
+  <Name>Quarter</Name>
+  <KeyName>Quarter</KeyName>
+  <ShortName>Q</ShortName>
+  <Description>Quarter of the year of the date</Description>
+ </Item>
+ <Item id="12">
+  <Name>DayOfRange</Name>
+  <KeyName>DayOfRange</KeyName>
+  <ShortName>DoR</ShortName>
+  <Description>Day index within the min-max range of dates in the corresponding column</Description>
+ </Item>
+ <Item id="13">
+  <Name>MonthOfRange</Name>
+  <KeyName>MonthOfRange</KeyName>
+  <ShortName>MoR</ShortName>
+  <Description>Month index within the min-max range of dates in the corresponding column</Description>
+ </Item>
+ <Item id="1">
+  <Name>Not set</Name>
+  <KeyName>NotSet</KeyName>
+  <ShortName>-</ShortName>
+  <Description>Not applicable to this attribute</Description>
+ </Item>
+</CodeTable>
+<CodeTable name="DCQuantifierStepCountType">
+ <Item id="1">
+  <Name>Absolute number</Name>
+  <KeyName>Abs</KeyName>
+  <ShortName>Abs</ShortName>
+  <Description>Absolute number of steps. Count value is left as given.</Description>
+ </Item>
+ <Item id="2">
+  <Name>Relative [%] to act range</Name>
+  <KeyName>RelRange</KeyName>
+  <ShortName>%Rang</ShortName>
+  <Description>Relative to number of categories in the currently selected range- 1. Count value is multiplied by (&#39;number of categories in current range minus 1&#39;)/100</Description>
+ </Item>
+ <Item id="3">
+  <Name>Relative [%] to all categories</Name>
+  <KeyName>RelAll</KeyName>
+  <ShortName>%All</ShortName>
+  <Description>Relative to number of all categories minus 1. Count value is multiplied by (&#39;total number of categories minus 1&#39;)/100</Description>
+ </Item>
+</CodeTable>
+<CodeTable name="DCQuantifierStepSizeType">
+ <Item id="1">
+  <Name>Absolute number</Name>
+  <KeyName>Abs</KeyName>
+  <ShortName>Abs</ShortName>
+  <Description>Change in frequency as an absolute number. Minimal step size is left as given.</Description>
+ </Item>
+ <Item id="2">
+  <Name>Relative [%] to previous frequency</Name>
+  <KeyName>RelFrequencyPrev</KeyName>
+  <ShortName>%PREV</ShortName>
+  <Description>Relative to the previous frequency. Minimal step size is multiplied by (frequency of the previous category)/100</Description>
+ </Item>
+ <Item id="3">
+  <Name>Relative [%] to all objects</Name>
+  <KeyName>RelAll</KeyName>
+  <ShortName>%All</ShortName>
+  <Description>Relative to number of all rows in the data matrix. Minimal step size is multiplied by (number of rows in the whole matrix)/100</Description>
+ </Item>
+ <Item id="4">
+  <Name>Relative [%] to act condition</Name>
+  <KeyName>RelCondition</KeyName>
+  <ShortName>%Cond</ShortName>
+  <Description>Relative to number of rows matching condition. Minimal step size is multiplied by (number of rows matching condition)/100</Description>
+ </Item>
+ <Item id="5">
+  <Name>Relative [%] to max frequency</Name>
+  <KeyName>RelFrequencyMax</KeyName>
+  <ShortName>%Max</ShortName>
+  <Description>Relative to maximal frequency in the currently processed histogram. Minimal step size is multiplied by (the highest frequency in the whole histogram)/100</Description>
+ </Item>
+</CodeTable>
+<CodeTable name="DCQuantifierType">
+ <Item id="1">
+  <Name>Sum of frequencies</Name>
+  <KeyName>Sum</KeyName>
+  <ShortName>SUM</ShortName>
+  <Description>Sum of frequencies from range of categories</Description>
+ </Item>
+ <Item id="2">
+  <Name>Min frequency</Name>
+  <KeyName>Min</KeyName>
+  <ShortName>MIN</ShortName>
+  <Description>Minimal frequency from range of categories</Description>
+ </Item>
+ <Item id="3">
+  <Name>Max frequency</Name>
+  <KeyName>Max</KeyName>
+  <ShortName>MAX</ShortName>
+  <Description>Maximal frequency from range of categories</Description>
+ </Item>
+ <Item id="4">
+  <Name>Average frequency</Name>
+  <KeyName>Avg</KeyName>
+  <ShortName>AVG</ShortName>
+  <Description>Average frequency from range of categories</Description>
+ </Item>
+ <Item id="5">
+  <Name>Some frequency</Name>
+  <KeyName>Some</KeyName>
+  <ShortName>SOME</ShortName>
+  <Description>At least one frequency from range categories</Description>
+ </Item>
+ <Item id="8">
+  <Name>Variation ratio</Name>
+  <KeyName>VariationRatio</KeyName>
+  <ShortName>VNRA</ShortName>
+  <Description>Variation ratio = 1-f(modal)</Description>
+ </Item>
+ <Item id="9">
+  <Name>Nominal variation (norm)</Name>
+  <KeyName>NominalVariation</KeyName>
+  <ShortName>NVN</ShortName>
+  <Description>Nominal variation (norm) = suma(f(i)*(1-f(i))) * K/(K-1)</Description>
+ </Item>
+ <Item id="10">
+  <Name>Discrete ordinary variation (norm)</Name>
+  <KeyName>DiscreteOrdinaryVariation</KeyName>
+  <ShortName>DOVN</ShortName>
+  <Description>Discrete Ordinary Variation (norm) = 2*suma(F(i)*(1-F(i))* 2/(K-1)</Description>
+ </Item>
+ <Item id="11">
+  <Name>Arithmetic average</Name>
+  <KeyName>ArithmeticAverage</KeyName>
+  <ShortName>AVGA</ShortName>
+  <Description>Arithmetic average of cardinal values</Description>
+ </Item>
+ <Item id="12">
+  <Name>Geometric average</Name>
+  <KeyName>GeometricAverage</KeyName>
+  <ShortName>AVGG</ShortName>
+  <Description>Geometric average of cardinal values</Description>
+ </Item>
+ <Item id="13">
+  <Name>Variance</Name>
+  <KeyName>Variance</KeyName>
+  <ShortName>VARI</ShortName>
+  <Description>Variance of cardinal values</Description>
+ </Item>
+ <Item id="14">
+  <Name>Standard deviation</Name>
+  <KeyName>StandardDeviation</KeyName>
+  <ShortName>STDEV</ShortName>
+  <Description>Standard deviation of cardinal values</Description>
+ </Item>
+ <Item id="15">
+  <Name>Skewness</Name>
+  <KeyName>Skewness</KeyName>
+  <ShortName>SKEW</ShortName>
+  <Description>Skewness of distribution of cardinal values</Description>
+ </Item>
+ <Item id="16">
+  <Name>Asymetry</Name>
+  <KeyName>Asymetry</KeyName>
+  <ShortName>ASYM</ShortName>
+  <Description>Asymetry coeficient of distribution of cardinal values</Description>
+ </Item>
+ <Item id="17">
+  <Name>Steps-up</Name>
+  <KeyName>StepsUp</KeyName>
+  <ShortName>S-UP</ShortName>
+  <Description>Number of steps-up in frequency of adjectant categories in histogram</Description>
+ </Item>
+ <Item id="18">
+  <Name>Steps-down</Name>
+  <KeyName>StepsDown</KeyName>
+  <ShortName>S-DN</ShortName>
+  <Description>Number of steps-down in frequency of adjectant categories in histogram</Description>
+ </Item>
+ <Item id="6">
+  <Name>Variation from pattern</Name>
+  <KeyName>Var</KeyName>
+  <ShortName>VAR</ShortName>
+  <Description>Total variation from given pattern</Description>
+ </Item>
+</CodeTable>
+<CodeTable name="DCQuantifierValueType">
+ <Item id="4">
+  <Name>Absolute number</Name>
+  <KeyName>Abs</KeyName>
+  <ShortName>Abs</ShortName>
+  <Description>Absolute number. Threshold value is left as given.</Description>
+ </Item>
+ <Item id="1">
+  <Name>Relative [%] to act condition</Name>
+  <KeyName>RelCondition</KeyName>
+  <ShortName>%Cond</ShortName>
+  <Description>Relative to number of rows matching condition. Threshold value [%] is multiplied by (number of rows matching condition)/100</Description>
+ </Item>
+ <Item id="2">
+  <Name>Relative [%] to all objects</Name>
+  <KeyName>RelAll</KeyName>
+  <ShortName>%All</ShortName>
+  <Description>Relative to number of all rows in the data matrix. Threshold value [%] is multiplied by (number of rows in the whole matrix)/100</Description>
+ </Item>
+ <Item id="3">
+  <Name>Relative [%] to max frequency</Name>
+  <KeyName>RelFrequencyMax</KeyName>
+  <ShortName>%Max</ShortName>
+  <Description>Relative to maximal value in the current contingency table. Threshold value [%] is multiplied by (the highest frequency in the whole histogram)/100</Description>
+ </Item>
+</CodeTable>
+<CodeTable name="DFQuantifierType">
+ <Item id="1">
+  <Name>Sum of frequencies</Name>
+  <KeyName>Sum</KeyName>
+  <ShortName>SUM</ShortName>
+  <Description>Sum of frequencies from source contingency table</Description>
+ </Item>
+ <Item id="2">
+  <Name>Min frequency</Name>
+  <KeyName>Min</KeyName>
+  <ShortName>MIN</ShortName>
+  <Description>Minimal frequency from source contingency table</Description>
+ </Item>
+ <Item id="3">
+  <Name>Max frequency</Name>
+  <KeyName>Max</KeyName>
+  <ShortName>MAX</ShortName>
+  <Description>Maximal frequency from source contingency table</Description>
+ </Item>
+ <Item id="4">
+  <Name>p-Implication</Name>
+  <KeyName>PImplication</KeyName>
+  <ShortName>PIM</ShortName>
+  <Description>a/(a+b) &gt;= p ... at least 100*p [%] of objects satisfying A satisfy also S</Description>
+ </Item>
+ <Item id="28">
+  <Name>Average Difference Dependence</Name>
+  <KeyName>AverageDifference</KeyName>
+  <ShortName>ADF</ShortName>
+  <Description>Relative difference in number of objects satisfying S among objects satisfying A to number objects saysfying S in the whole data matrix. Paramater p in &lt;-1;inf), similar to the Lift(X-&gt;Y)= P(Y|X)/P(Y). It holds p= P(Y|X)/P(Y)-1.</Description>
+ </Item>
+ <Item id="5">
+  <Name>Above Average Dependence</Name>
+  <KeyName>AboveAverage</KeyName>
+  <ShortName>AAD</ShortName>
+  <Description>Among objects satisfying A there are at least 100*p [%] more objects satisfying S than there are objects satisfying S in the whole data matrix. Parameter p in &lt;0;inf).</Description>
+ </Item>
+ <Item id="6">
+  <Name>Below Average Dependence</Name>
+  <KeyName>BelowAverage</KeyName>
+  <ShortName>BAD</ShortName>
+  <Description>Among objects satisfying A there are at least 100*p [%] less objects satisfying S than there are objects satisfying S in the whole data matrix. Parameter p in &lt;0;1&gt;.</Description>
+ </Item>
+ <Item id="29">
+  <Name>Outside Average Dependence</Name>
+  <KeyName>OAD</KeyName>
+  <ShortName>OAD</ShortName>
+  <Description>Among objects satisfying A, there is at least 100*p [%] more or less objects satisfying S than there are objects satisfying S in the whole data matrix. Parameter p in &lt;0;1&gt;.</Description>
+ </Item>
+ <Item id="7">
+  <Name>Lower Critical Implication</Name>
+  <KeyName>LowerCriticalImplication</KeyName>
+  <ShortName>LCI</ShortName>
+  <Description>The binomical test rejects on the level alpha the null hypothesis P(S|A)&lt;=p in favour of alternative P(S|A)&gt;p</Description>
+ </Item>
+ <Item id="8">
+  <Name>Upper Critical Implication</Name>
+  <KeyName>UpperCriticalImplication</KeyName>
+  <ShortName>UCI</ShortName>
+  <Description>The binomical test does not reject on the level alpha the null hypothesis P(S|A)&lt;=p in favour of alternative P(S|A)&gt;p</Description>
+ </Item>
+ <Item id="9">
+  <Name>Double p-Implication</Name>
+  <KeyName>DoublePImplication</KeyName>
+  <ShortName>DPIM</ShortName>
+  <Description>a/(a+b+c) &gt;= p ... at least 100*p [%] of objects satisfying A or S satisfy both A and S</Description>
+ </Item>
+ <Item id="10">
+  <Name>Double Lower Critical Implication</Name>
+  <KeyName>DoubleLowerCriticalImplication</KeyName>
+  <ShortName>DLCI</ShortName>
+  <Description>The binomical test rejects on the level alpha the null hypothesis P(AandS|AorS)&lt;=p in favour of alternative P(AandS|AorS)&gt;p</Description>
+ </Item>
+ <Item id="11">
+  <Name>Double Upper Critical Implication</Name>
+  <KeyName>DoubleUpperCriticalImplication</KeyName>
+  <ShortName>DUCI</ShortName>
+  <Description>The binomical test does not reject on the level alpha the null hypothesis P(AandS|AorS)&lt;=p in favour of alternative P(AandS|AorS)&gt;p</Description>
+ </Item>
+ <Item id="12">
+  <Name>p-Equivalence</Name>
+  <KeyName>PEquivalence</KeyName>
+  <ShortName>PEQ</ShortName>
+  <Description>(a+d)/n &gt;= p ... at least 100*p [%] objects have the same truth value for A and S</Description>
+ </Item>
+ <Item id="13">
+  <Name>Lower Critical Equivalence</Name>
+  <KeyName>LowerCriticalEquivalence</KeyName>
+  <ShortName>LCE</ShortName>
+  <Description>The binomical test rejects on the level alpha the null hypothesis P(A and S have the same truth value)&lt;=p in favour of alternative P(A and S have the same truth value)&gt;p</Description>
+ </Item>
+ <Item id="14">
+  <Name>Upper Critical Equivalence</Name>
+  <KeyName>UpperCriticalEquivalence</KeyName>
+  <ShortName>UCE</ShortName>
+  <Description>The binomical test does not reject on the level alpha the null hypothesis P(A and S have the same truth value)&lt;=p in favour of alternative P(A and S have the same truth value)&gt;p</Description>
+ </Item>
+ <Item id="15">
+  <Name>Simple Deviation</Name>
+  <KeyName>SimpleDeviation</KeyName>
+  <ShortName>SID</ShortName>
+  <Description>a*d &gt; exp(sigma)*b*c</Description>
+ </Item>
+ <Item id="16">
+  <Name>Fisher quantifier</Name>
+  <KeyName>Fisher</KeyName>
+  <ShortName>FSH</ShortName>
+  <Description>The one-sided Fisher test rejects on the level alpha the null hypothesis of independence of A and S in favour of the alternative of their positive logarithmic interaction</Description>
+ </Item>
+ <Item id="17">
+  <Name>Chi-Squared quantifier</Name>
+  <KeyName>ChiSq</KeyName>
+  <ShortName>CHI</ShortName>
+  <Description>The one-sided Fisher test asymptotically rejects on the level alpha the null hypothesis of independence of A and S in favour of the alternative of their positive logarithmic interaction</Description>
+ </Item>
+ <Item id="18">
+  <Name>A-quantifier</Name>
+  <KeyName>AQ</KeyName>
+  <ShortName>A-Q</ShortName>
+  <Description>-</Description>
+ </Item>
+ <Item id="19">
+  <Name>E-quantifier</Name>
+  <KeyName>EQ</KeyName>
+  <ShortName>E-Q</ShortName>
+  <Description>-</Description>
+ </Item>
+ <Item id="20">
+  <Name>a-frequency</Name>
+  <KeyName>afrequency</KeyName>
+  <ShortName>a (BASE)</ShortName>
+  <Description>a-frequency (BASE) from source contingency table</Description>
+ </Item>
+</CodeTable>
+<CodeTable name="DFQuantifierValueType">
+ <Item id="4">
+  <Name>Absolute number</Name>
+  <KeyName>Abs</KeyName>
+  <ShortName>Abs</ShortName>
+  <Description>Absolute number. Threshold value is left as given.</Description>
+ </Item>
+ <Item id="1">
+  <Name>Relative [%] to act condition</Name>
+  <KeyName>RelCondition</KeyName>
+  <ShortName>%Cond</ShortName>
+  <Description>Relative to number of rows matching condition. Threshold value [%] is multiplied by (number of rows matching condition)/100</Description>
+ </Item>
+ <Item id="2">
+  <Name>Relative [%] to all objects</Name>
+  <KeyName>RelAll</KeyName>
+  <ShortName>%All</ShortName>
+  <Description>Relative to number of all rows in the data matrix. Threshold value [%] is multiplied by (number of rows in the whole matrix)/100</Description>
+ </Item>
+ <Item id="3">
+  <Name>Relative [%] to max frequency</Name>
+  <KeyName>RelFrequencyMax</KeyName>
+  <ShortName>%Max</ShortName>
+  <Description>Relative to maximal value in the current contingency table. Threshold value [%] is multiplied by (the highest frequency)/100</Description>
+ </Item>
+</CodeTable>
+<CodeTable name="DKQuantifierType">
+ <Item id="1">
+  <Name>Sum of frequencies</Name>
+  <KeyName>Sum</KeyName>
+  <ShortName>SUM</ShortName>
+  <Description>Sum of frequencies from given part of source contingency table</Description>
+ </Item>
+ <Item id="4">
+  <Name>Min frequency</Name>
+  <KeyName>Min</KeyName>
+  <ShortName>MIN</ShortName>
+  <Description>Minimal frequency from given part of source contingency table</Description>
+ </Item>
+ <Item id="5">
+  <Name>Max frequency</Name>
+  <KeyName>Max</KeyName>
+  <ShortName>MAX</ShortName>
+  <Description>Maximal frequency from given part of source contingency table</Description>
+ </Item>
+ <Item id="6">
+  <Name>Average frequency</Name>
+  <KeyName>Avg</KeyName>
+  <ShortName>AVG</ShortName>
+  <Description>Average frequency from given part of source contingency table</Description>
+ </Item>
+ <Item id="7">
+  <Name>Some frequency</Name>
+  <KeyName>Some</KeyName>
+  <ShortName>SOME</ShortName>
+  <Description>At least one frequency from given part of source contingency table</Description>
+ </Item>
+ <Item id="16">
+  <Name>Cramer&#39;s V coefficient</Name>
+  <KeyName>CramerV</KeyName>
+  <ShortName>CRAMV</ShortName>
+  <Description>Cramer&#39;s V (association of two nominal variables) in &lt;0;1&gt; (the farther is value from 0 the more dependant)</Description>
+ </Item>
+ <Item id="14">
+  <Name>Kendall&#39;s TauB coefficient</Name>
+  <KeyName>Kendall</KeyName>
+  <ShortName>KEND</ShortName>
+  <Description>Value of TauB in &lt;-1;1&gt; (the farther is value from 0 the more dependant)</Description>
+ </Item>
+ <Item id="8">
+  <Name>Chi-square test</Name>
+  <KeyName>ChiSq</KeyName>
+  <ShortName>ChiSq</ShortName>
+  <Description>Chi-square test of similarity (the greater value the more dependant)</Description>
+ </Item>
+ <Item id="11">
+  <Name>Conditional entropy H(C|R)</Name>
+  <KeyName>ConditionalEntropy</KeyName>
+  <ShortName>H(C|R)</ShortName>
+  <Description>Conditional entropy of columns given rows (the lower value the more dependant &lt;0;log2(L)&gt;)</Description>
+ </Item>
+ <Item id="13">
+  <Name>Mutual information MI(R,C) normalized</Name>
+  <KeyName>MutualInformation</KeyName>
+  <ShortName>MI(R,C)</ShortName>
+  <Description>Mutual information between rows and columns (the greater value the more dependant &lt;0;1&gt;)</Description>
+ </Item>
+ <Item id="12">
+  <Name>Inf. dependence ID(R,C)</Name>
+  <KeyName>InformationDependence</KeyName>
+  <ShortName>ID(R,C)</ShortName>
+  <Description>Information dependence between rows and columns (the greater value the more dependant &lt;0;1&gt;)</Description>
+ </Item>
+ <Item id="15">
+  <Name>Asymetric information coefficient AIC(R,C)</Name>
+  <KeyName>AsymetricInformation</KeyName>
+  <ShortName>AIC(R,C)</ShortName>
+  <Description>Value of asymetric information coefficient Theta (the greater value the more dependant &lt;0;1&gt;)</Description>
+ </Item>
+</CodeTable>
+<CodeTable name="DKQuantifierValueType">
+ <Item id="4">
+  <Name>Absolute number</Name>
+  <KeyName>Abs</KeyName>
+  <ShortName>Abs</ShortName>
+  <Description>Absolute number. Threshold value is left as given.</Description>
+ </Item>
+ <Item id="1">
+  <Name>Relative [%] to act condition</Name>
+  <KeyName>RelCondition</KeyName>
+  <ShortName>%Cond</ShortName>
+  <Description>Relative to number of rows matching condition. Threshold value [%] is multiplied by (number of rows matching condition)/100</Description>
+ </Item>
+ <Item id="2">
+  <Name>Relative [%] to all objects</Name>
+  <KeyName>RelAll</KeyName>
+  <ShortName>%All</ShortName>
+  <Description>Relative to number of all rows in the data matrix. Threshold value [%] is multiplied by (number of rows in the whole matrix)/100</Description>
+ </Item>
+ <Item id="3">
+  <Name>Relative [%] to max frequency</Name>
+  <KeyName>RelFrequencyMax</KeyName>
+  <ShortName>%Max</ShortName>
+  <Description>Relative to maximal frequency in the current contingency table. Threshold value [%] is multiplied by (the highest frequency in the whole KL-table)/100</Description>
+ </Item>
+</CodeTable>
+<CodeTable name="FTQuantifierType">
+ <Item id="17">
+  <Name>Support</Name>
+  <KeyName>Support</KeyName>
+  <ShortName>SUPP</ShortName>
+  <Description>a/(a+b+c+d) &gt;= p ... at least 100*p [%] of objects satisfy both A and S</Description>
+ </Item>
+ <Item id="1">
+  <Name>p-Implication</Name>
+  <KeyName>PImplication</KeyName>
+  <ShortName>PIM</ShortName>
+  <Description>a/(a+b) &gt;= p ... at least 100*p [%] of objects satisfying A satisfy also S</Description>
+ </Item>
+ <Item id="15">
+  <Name>Above Average Dependence</Name>
+  <KeyName>AboveAverage</KeyName>
+  <ShortName>AAD</ShortName>
+  <Description>Among objects satisfying A, there is at least 100*p [%] more objects satisfying S than there are objects satisfying S in the whole data matrix. Parameter p in &lt;0;inf).</Description>
+ </Item>
+ <Item id="16">
+  <Name>Below Average Dependence</Name>
+  <KeyName>BelowAverage</KeyName>
+  <ShortName>BAD</ShortName>
+  <Description>Among objects satisfying A, there is at least 100*p [%] less objects satisfying S than there are objects satisfying S in the whole data matrix. Parameter p in &lt;0;1&gt;.</Description>
+ </Item>
+ <Item id="32">
+  <Name>Outside Average Dependence</Name>
+  <KeyName>OAD</KeyName>
+  <ShortName>OAD</ShortName>
+  <Description>Among objects satisfying A, there is at least 100*p [%] more or less objects satisfying S than there are objects satisfying S in the whole data matrix. Parameter p in &lt;0;1&gt;.</Description>
+ </Item>
+ <Item id="31">
+  <Name>Average Difference Dependence</Name>
+  <KeyName>AverageDifference</KeyName>
+  <ShortName>ADF</ShortName>
+  <Description>Relative difference in number of objects satisfying S among objects satisfying A to number objects saysfying S in the whole data matrix. Paramater p in &lt;-1;inf), similar to the Lift(X-&gt;Y)= P(Y|X)/P(Y). It holds p= P(Y|X)/P(Y)-1.</Description>
+ </Item>
+ <Item id="2">
+  <Name>Lower Critical Implication</Name>
+  <KeyName>LowerCriticalImplication</KeyName>
+  <ShortName>LCI</ShortName>
+  <Description>The binomical test rejects on the level alpha the null hypothesis P(S|A)&lt;=p in favour of alternative P(S|A)&gt;p</Description>
+ </Item>
+ <Item id="3">
+  <Name>Upper Critical Implication</Name>
+  <KeyName>UpperCriticalImplication</KeyName>
+  <ShortName>UCI</ShortName>
+  <Description>The binomical test does not reject on the level alpha the null hypothesis P(S|A)&lt;=p in favour of alternative P(S|A)&gt;p</Description>
+ </Item>
+ <Item id="4">
+  <Name>Double p-Implication</Name>
+  <KeyName>DoublePImplication</KeyName>
+  <ShortName>DPIM</ShortName>
+  <Description>a/(a+b+c) &gt;= p ... at least 100*p [%] of objects satisfying A or S satisfy both A and S</Description>
+ </Item>
+ <Item id="5">
+  <Name>Double Lower Critical Implication</Name>
+  <KeyName>DoubleLowerCriticalImplication</KeyName>
+  <ShortName>DLCI</ShortName>
+  <Description>The binomical test rejects on the level alpha the null hypothesis P(AandS|AorS)&lt;=p in favour of alternative P(AandS|AorS)&gt;p</Description>
+ </Item>
+ <Item id="6">
+  <Name>Double Upper Critical Implication</Name>
+  <KeyName>DoubleUpperCriticalImplication</KeyName>
+  <ShortName>DUCI</ShortName>
+  <Description>The binomical test does not reject on the level alpha the null hypothesis P(AandS|AorS)&lt;=p in favour of alternative P(AandS|AorS)&gt;p</Description>
+ </Item>
+ <Item id="7">
+  <Name>p-Equivalence</Name>
+  <KeyName>PEquivalence</KeyName>
+  <ShortName>PEQ</ShortName>
+  <Description>(a+d)/n &gt;= p ... at least 100*p [%] objects have the same truth value for A and S</Description>
+ </Item>
+ <Item id="8">
+  <Name>Lower Critical Equivalence</Name>
+  <KeyName>LowerCriticalEquivalence</KeyName>
+  <ShortName>LCE</ShortName>
+  <Description>The binomical test rejects on the level alpha the null hypothesis P(A and S have the same truth value)&lt;=p in favour of alternative P(A and S have the same truth value)&gt;p</Description>
+ </Item>
+ <Item id="9">
+  <Name>Upper Critical Equivalence</Name>
+  <KeyName>UpperCriticalEquivalence</KeyName>
+  <ShortName>UCE</ShortName>
+  <Description>The binomical test does not reject on the level alpha the null hypothesis P(A and S have the same truth value)&lt;=p in favour of alternative P(A and S have the same truth value)&gt;p</Description>
+ </Item>
+ <Item id="10">
+  <Name>Simple Deviation</Name>
+  <KeyName>SimpleDeviation</KeyName>
+  <ShortName>SID</ShortName>
+  <Description>a*d &gt; exp(delta)*b*c</Description>
+ </Item>
+ <Item id="11">
+  <Name>Fisher quantifier</Name>
+  <KeyName>Fisher</KeyName>
+  <ShortName>FSH</ShortName>
+  <Description>The one-sided Fisher test rejects on the level alpha the null hypothesis of independence of A and S in favour of the alternative of their positive logarithmic interaction</Description>
+ </Item>
+ <Item id="12">
+  <Name>Chi-Square quantifier</Name>
+  <KeyName>ChiSq</KeyName>
+  <ShortName>CHI</ShortName>
+  <Description>The Chi-Square test asymptotically rejects on the level alpha the null hypothesis of independence of A and S in favour of the alternative of their positive logarithmic interaction</Description>
+ </Item>
+ <Item id="14">
+  <Name>E-quantifier</Name>
+  <KeyName>EQ</KeyName>
+  <ShortName>E-Q</ShortName>
+  <Description>-</Description>
+ </Item>
+ <Item id="40">
+  <Name>Paraconsistent separation</Name>
+  <KeyName>ParaSeparation</KeyName>
+  <ShortName>PSep</ShortName>
+  <Description>Paraconsistent separation quantifier looking for (almost) separate A and S with truth-criterion of (1+p)*a&lt;=b+c. It is recommend also to set-up a simple-frequency quantifier for (b+c) to assure some minimal sample size.</Description>
+ </Item>
+ <Item id="18">
+  <Name>BASE</Name>
+  <KeyName>BASE</KeyName>
+  <ShortName>BASE</ShortName>
+  <Description>a &gt;= BASE ... at least BASE-number of objects for dependency to be statistically relevant</Description>
+ </Item>
+ <Item id="19">
+  <Name>Ceiling</Name>
+  <KeyName>CEIL</KeyName>
+  <ShortName>CEIL</ShortName>
+  <Description>a &lt;= CEIL ... not more than CEIL-number of objects (i.e. not too &#39;obvious&#39; dependency)</Description>
+ </Item>
+ <Item id="20">
+  <Name>a-frequency</Name>
+  <KeyName>afrequency</KeyName>
+  <ShortName>a</ShortName>
+  <Description>a-frequency from contingency table</Description>
+ </Item>
+ <Item id="21">
+  <Name>b-frequency</Name>
+  <KeyName>bfrequency</KeyName>
+  <ShortName>b</ShortName>
+  <Description>b-frequency from contingency table</Description>
+ </Item>
+ <Item id="22">
+  <Name>c-frequency</Name>
+  <KeyName>cfrequency</KeyName>
+  <ShortName>c</ShortName>
+  <Description>c-frequency from contingency table</Description>
+ </Item>
+ <Item id="23">
+  <Name>d-frequency</Name>
+  <KeyName>dfrequency</KeyName>
+  <ShortName>d</ShortName>
+  <Description>d-frequency from contingency table</Description>
+ </Item>
+ <Item id="24">
+  <Name>r-frequency</Name>
+  <KeyName>rfrequency</KeyName>
+  <ShortName>r</ShortName>
+  <Description>r-frequency (a+b) from contingency table</Description>
+ </Item>
+ <Item id="25">
+  <Name>s-frequency</Name>
+  <KeyName>sfrequency</KeyName>
+  <ShortName>s</ShortName>
+  <Description>s-frequency (c+d) from contingency table</Description>
+ </Item>
+ <Item id="26">
+  <Name>k-frequency</Name>
+  <KeyName>kfrequency</KeyName>
+  <ShortName>k</ShortName>
+  <Description>k-frequency (a+c) from contingency table</Description>
+ </Item>
+ <Item id="27">
+  <Name>l-frequency</Name>
+  <KeyName>lfrequency</KeyName>
+  <ShortName>l</ShortName>
+  <Description>l-frequency (b+d) from contingency table</Description>
+ </Item>
+ <Item id="41">
+  <Name>ad-frequency</Name>
+  <KeyName>adfrequency</KeyName>
+  <ShortName>ad</ShortName>
+  <Description>ad-frequency (a+d) from contingency table</Description>
+ </Item>
+ <Item id="42">
+  <Name>bc-frequency</Name>
+  <KeyName>bcfrequency</KeyName>
+  <ShortName>bc</ShortName>
+  <Description>bc-frequency (b+c) from contingency table</Description>
+ </Item>
+ <Item id="28">
+  <Name>Sum of values</Name>
+  <KeyName>Sum</KeyName>
+  <ShortName>SUM</ShortName>
+  <Description>Sum of frequencies (n) from contingency table</Description>
+ </Item>
+ <Item id="29">
+  <Name>Min value</Name>
+  <KeyName>Min</KeyName>
+  <ShortName>MIN</ShortName>
+  <Description>Minimal frequency from contingency table</Description>
+ </Item>
+ <Item id="30">
+  <Name>Max value</Name>
+  <KeyName>Max</KeyName>
+  <ShortName>MAX</ShortName>
+  <Description>Maximal frequency from contingency table</Description>
+ </Item>
+ <Item id="33">
+  <Name>Frequency difference</Name>
+  <KeyName>FreqDiffVal</KeyName>
+  <ShortName>FDVal</ShortName>
+  <Description>Frequency of corresponding category in histogram minus number of rows matching both antecedent and succedent</Description>
+ </Item>
+ <Item id="34">
+  <Name>Relative frequencies difference</Name>
+  <KeyName>FreqDiffRel</KeyName>
+  <ShortName>FDRel</ShortName>
+  <Description>Difference of relative frequency of a corresponding category in histogram and confidence</Description>
+ </Item>
+ <Item id="35">
+  <Name>Absolute value of relative frequencies difference</Name>
+  <KeyName>FreqDiffRelAbs</KeyName>
+  <ShortName>FDRelAbs</ShortName>
+  <Description>Absolute value of difference of relative frequency of a corresponding category in histogram and confidence</Description>
+ </Item>
+ <Item id="36">
+  <Name>Ratio of relative frequencies</Name>
+  <KeyName>FreqDiffRelRatio</KeyName>
+  <ShortName>FDRelRatio</ShortName>
+  <Description>Ratio of relative frequency in histogram to relative frequency of succedent in rows matching antecedent (i.e. &quot;inverse Lift&quot;)</Description>
+ </Item>
+ <Item id="37">
+  <Name>Relative frequencies of category difference</Name>
+  <KeyName>FreqDiffCat</KeyName>
+  <ShortName>FDCat</ShortName>
+  <Description>Difference of relative frequency of category in histogram to the frequency of this category in the whole data and relative frequency of rows matching both antecedent and succedent to frequency of category in the whole data</Description>
+ </Item>
+ <Item id="38">
+  <Name>Absolute value of relative frequencies of category difference</Name>
+  <KeyName>FreqDiffCatAbs</KeyName>
+  <ShortName>FDCatAbs</ShortName>
+  <Description>Absolute value of difference of relative frequency of category in histogram to the frequency of this category in the whole data and relative frequency of rows matching both antecedent and succedent to frequency of category in the whole data</Description>
+ </Item>
+ <Item id="39">
+  <Name>Ratio of relative frequencies of category</Name>
+  <KeyName>FreqDiffCatRatio</KeyName>
+  <ShortName>FDCatRatio</ShortName>
+  <Description>Ratio of relative frequency of category in histogram to the frequency of this category in the whole data and relative frequency of rows matching both antecedent and succedent to frequency of category in the whole data</Description>
+ </Item>
+</CodeTable>
+<CodeTable name="FTQuantifierValueType">
+ <Item id="4">
+  <Name>Absolute number</Name>
+  <KeyName>Abs</KeyName>
+  <ShortName>Abs</ShortName>
+  <Description>Absolute number. Threshold value is left as given.</Description>
+ </Item>
+ <Item id="1">
+  <Name>Relative [%] to act condition</Name>
+  <KeyName>RelCondition</KeyName>
+  <ShortName>%Cond</ShortName>
+  <Description>Relative to number of rows matching condition. Threshold value [%] is multiplied by (number of rows matching condition)/100</Description>
+ </Item>
+ <Item id="2">
+  <Name>Relative [%] to all objects</Name>
+  <KeyName>RelAll</KeyName>
+  <ShortName>%All</ShortName>
+  <Description>Relative to number of all rows in the data matrix. Threshold value [%] is multiplied by (number of rows in the whole matrix)/100</Description>
+ </Item>
+ <Item id="3">
+  <Name>Relative [%] to max frequency</Name>
+  <KeyName>RelFrequencyMax</KeyName>
+  <ShortName>%Max</ShortName>
+  <Description>Relative to maximal frequency in the current contingency table. Threshold value [%] is multiplied by (the highest frequency)/100</Description>
+ </Item>
+</CodeTable>
+<CodeTable name="GaceType">
+ <Item id="1">
+  <Name>Positive</Name>
+  <KeyName>Positive</KeyName>
+  <ShortName>pos</ShortName>
+  <Description>Positive gace</Description>
+ </Item>
+ <Item id="2">
+  <Name>Negative</Name>
+  <KeyName>Negative</KeyName>
+  <ShortName>neg</ShortName>
+  <Description>Negative gace (negation)</Description>
+ </Item>
+ <Item id="3">
+  <Name>Both</Name>
+  <KeyName>Both</KeyName>
+  <ShortName>both</ShortName>
+  <Description>Both (positive and negative)</Description>
+ </Item>
+</CodeTable>
+<CodeTable name="GeoColumnSubType">
+ <Item id="2">
+  <Name>In-Polygon name</Name>
+  <KeyName>InPolygonName</KeyName>
+  <ShortName>In</ShortName>
+  <Description>Name of the polygon the coordinates are within</Description>
+ </Item>
+ <Item id="3">
+  <Name>Closest-Point name</Name>
+  <KeyName>PointName</KeyName>
+  <ShortName>CPN</ShortName>
+  <Description>Name of the closest point to the coordinates</Description>
+ </Item>
+ <Item id="4">
+  <Name>Closest-Point distance</Name>
+  <KeyName>PointDistance</KeyName>
+  <ShortName>CPD</ShortName>
+  <Description>Distance [km] from the coordinates to the the closest point</Description>
+ </Item>
+ <Item id="5">
+  <Name>Point-number</Name>
+  <KeyName>PointCount</KeyName>
+  <ShortName>PC</ShortName>
+  <Description>Number of points within a distance [km] from the coordinates (distance given by a threshold value)</Description>
+ </Item>
+ <Item id="1">
+  <Name>Not set</Name>
+  <KeyName>NotSet</KeyName>
+  <ShortName>-</ShortName>
+  <Description>Not applicable to this attribute</Description>
+ </Item>
+</CodeTable>
+<CodeTable name="GeoDistanceType">
+ <Item id="2">
+  <Name>Euclidean</Name>
+  <KeyName>Euclidean</KeyName>
+  <ShortName>Eucl</ShortName>
+  <Description>Euclidean distance of cartesian planar coordinates.</Description>
+ </Item>
+ <Item id="3">
+  <Name>Cylindrical</Name>
+  <KeyName>Cylindrical</KeyName>
+  <ShortName>Cyl</ShortName>
+  <Description>Euclidean distance on cylindrical projection of geographical coordinates (WGS84) and transformed into kilometers. Applicable for points up to 500 km apart and within latitudes of 70N and 70S.</Description>
+ </Item>
+ <Item id="4">
+  <Name>Haversine</Name>
+  <KeyName>Haversine</KeyName>
+  <ShortName>Haver</ShortName>
+  <Description>Haversine formula for computing distances on the sphere for geographical coordinates (WGS84) and transformed into kilometers. The better precison for large distances on the Earth, but slowest.</Description>
+ </Item>
+ <Item id="1">
+  <Name>Not set</Name>
+  <KeyName>NotSet</KeyName>
+  <ShortName>-</ShortName>
+  <Description>Not applicable to this attribute</Description>
+ </Item>
+</CodeTable>
+<CodeTable name="InfinityType">
+ <Item id="1">
+  <Name>Finite value</Name>
+  <KeyName>Finite</KeyName>
+  <ShortName>fin</ShortName>
+  <Description>Finite value (not infinity)</Description>
+ </Item>
+ <Item id="2">
+  <Name>Plus infinity</Name>
+  <KeyName>PlusInfinity</KeyName>
+  <ShortName>+inf</ShortName>
+  <Description>Plus infinity value</Description>
+ </Item>
+ <Item id="3">
+  <Name>Minus infinity</Name>
+  <KeyName>MinusInfinity</KeyName>
+  <ShortName>-inf</ShortName>
+  <Description>Minus infinity value</Description>
+ </Item>
+</CodeTable>
+<CodeTable name="IntervalValueType">
+ <Item id="1">
+  <Name>From</Name>
+  <KeyName>From</KeyName>
+  <ShortName>FROM</ShortName>
+  <Description>Left border value</Description>
+ </Item>
+ <Item id="2">
+  <Name>To</Name>
+  <KeyName>To</KeyName>
+  <ShortName>TO</ShortName>
+  <Description>Right border value</Description>
+ </Item>
+ <Item id="3">
+  <Name>Fuzzy from (min)</Name>
+  <KeyName>FuzzyFromMin</KeyName>
+  <ShortName>FROMMin</ShortName>
+  <Description>First left fuzzy border value</Description>
+ </Item>
+ <Item id="4">
+  <Name>Fuzzy from (max)</Name>
+  <KeyName>FuzzyFromMax</KeyName>
+  <ShortName>FROMMax</ShortName>
+  <Description>Second left fuzzy border value</Description>
+ </Item>
+ <Item id="5">
+  <Name>Fuzzy to (min)</Name>
+  <KeyName>FuzzyToMin</KeyName>
+  <ShortName>TOMin</ShortName>
+  <Description>First right fuzzy border value</Description>
+ </Item>
+ <Item id="6">
+  <Name>Fuzzy to (max)</Name>
+  <KeyName>FuzzyToMax</KeyName>
+  <ShortName>TOMax</ShortName>
+  <Description>Second right fuzzy border value</Description>
+ </Item>
+</CodeTable>
+<CodeTable name="KLQuantifierKLTableValueType">
+ <Item id="1">
+  <Name>Absolute number</Name>
+  <KeyName>Abs</KeyName>
+  <ShortName>Abs</ShortName>
+  <Description>Absolute frequencies. Frequencies in histogram are left as given.</Description>
+ </Item>
+ <Item id="2">
+  <Name>Relative [%] to act condition</Name>
+  <KeyName>RelCondition</KeyName>
+  <ShortName>%Cond</ShortName>
+  <Description>Relative frequencies to number of rows matching condition. Frequencies are divided by number of rows matching condition and multiplied by 100.</Description>
+ </Item>
+ <Item id="3">
+  <Name>Relative [%] for each row</Name>
+  <KeyName>RelRow</KeyName>
+  <ShortName>%Row</ShortName>
+  <Description>Relative frequencies for each row. Each frequency is divided by the sum of frequencies in its row and multiplied by 100.</Description>
+ </Item>
+ <Item id="4">
+  <Name>Relative [%] for each column</Name>
+  <KeyName>RelCol</KeyName>
+  <ShortName>%Col</ShortName>
+  <Description>Relative frequencies for each column. Each frequency is divided by the sum of frequencies in its column and multiplied by 100.</Description>
+ </Item>
+</CodeTable>
+<CodeTable name="KLQuantifierType">
+ <Item id="1">
+  <Name>Sum of frequencies</Name>
+  <KeyName>Sum</KeyName>
+  <ShortName>SUM</ShortName>
+  <Description>Sum of frequencies from given part of contingency table</Description>
+ </Item>
+ <Item id="2">
+  <Name>Min frequency</Name>
+  <KeyName>Min</KeyName>
+  <ShortName>MIN</ShortName>
+  <Description>Minimal frequency from given part of contingency table</Description>
+ </Item>
+ <Item id="3">
+  <Name>Max frequency</Name>
+  <KeyName>Max</KeyName>
+  <ShortName>MAX</ShortName>
+  <Description>Maximal frequency from given part of contingency table</Description>
+ </Item>
+ <Item id="4">
+  <Name>Average frequency</Name>
+  <KeyName>Avg</KeyName>
+  <ShortName>AVG</ShortName>
+  <Description>Average frequency from given part of contingency table</Description>
+ </Item>
+ <Item id="5">
+  <Name>Some frequency</Name>
+  <KeyName>Some</KeyName>
+  <ShortName>SOME</ShortName>
+  <Description>At least one frequency from given part of contingency table</Description>
+ </Item>
+ <Item id="16">
+  <Name>Cramer&#39;s V coefficient</Name>
+  <KeyName>CramerV</KeyName>
+  <ShortName>CRAMV</ShortName>
+  <Description>Cramer&#39;s V (association of two nominal variables) in &lt;0;1&gt; (the farther is value from 0 the more dependant)</Description>
+ </Item>
+ <Item id="14">
+  <Name>Kendall&#39;s TauB coefficient</Name>
+  <KeyName>Kendall</KeyName>
+  <ShortName>KEND</ShortName>
+  <Description>Kendall&#39;s TauB (coefficient of ordinal correlation of two variables) in &lt;-1;1&gt; (the farther is value from 0 the more dependant)</Description>
+ </Item>
+ <Item id="7">
+  <Name>Chi-square test</Name>
+  <KeyName>ChiSq</KeyName>
+  <ShortName>ChiSq</ShortName>
+  <Description>Chi-square test of similarity (the greater value the more dependant)</Description>
+ </Item>
+ <Item id="6">
+  <Name>Variation from pattern</Name>
+  <KeyName>Variation</KeyName>
+  <ShortName>VAR</ShortName>
+  <Description>Total variation from pattern</Description>
+ </Item>
+ <Item id="10">
+  <Name>Conditional entropy H(C|R)</Name>
+  <KeyName>ConditionalEntropy</KeyName>
+  <ShortName>H(C|R)</ShortName>
+  <Description>Conditional entropy of columns given rows (the lower value the more dependant &lt;0;log2(L)&gt;)</Description>
+ </Item>
+ <Item id="13">
+  <Name>Mutual information MI(R,C) normalized</Name>
+  <KeyName>MutualInformation</KeyName>
+  <ShortName>MI(R,C)</ShortName>
+  <Description>Mutual information between rows and columns (the greater value the more dependant &lt;0;1&gt;)</Description>
+ </Item>
+ <Item id="11">
+  <Name>Inf. dependence ID(R,C)</Name>
+  <KeyName>InformationDependence</KeyName>
+  <ShortName>ID(R,C)</ShortName>
+  <Description>Information dependence between rows and columns (the greater value the more dependant &lt;0;1&gt;)</Description>
+ </Item>
+ <Item id="15">
+  <Name>Asymetric information coefficient AIC(R,C)</Name>
+  <KeyName>AsymetricInformation</KeyName>
+  <ShortName>AIC(R,C)</ShortName>
+  <Description>Value of asymetric information coefficient Theta (the greater value the more dependant &lt;0;1&gt;)</Description>
+ </Item>
+ <Item id="17">
+  <Name>PattDiffSum</Name>
+  <KeyName>PattDiffSum</KeyName>
+  <ShortName>PDSUM</ShortName>
+  <Description>Sum of absolute values of differences of frequencies in the contingency table and a given pattern</Description>
+ </Item>
+ <Item id="18">
+  <Name>PattDiffMin</Name>
+  <KeyName>PattDiffMin</KeyName>
+  <ShortName>PDMIN</ShortName>
+  <Description>The minimal of absolute values of differences of frequencies in the contingency table and a given pattern</Description>
+ </Item>
+ <Item id="19">
+  <Name>PattDiffMax</Name>
+  <KeyName>PattDiffMax</KeyName>
+  <ShortName>PDMAX</ShortName>
+  <Description>The maximal of absolute values of differences of frequencies in the contingency table and a given pattern</Description>
+ </Item>
+</CodeTable>
+<CodeTable name="KLQuantifierValueType">
+ <Item id="4">
+  <Name>Absolute number</Name>
+  <KeyName>Abs</KeyName>
+  <ShortName>Abs</ShortName>
+  <Description>Absolute number. Threshold value is left as given.</Description>
+ </Item>
+ <Item id="1">
+  <Name>Relative [%] to act condition</Name>
+  <KeyName>RelCondition</KeyName>
+  <ShortName>%Cond</ShortName>
+  <Description>Relative to number of rows matching condition. Threshold value [%] is multiplied by (number of rows matching condition)/100</Description>
+ </Item>
+ <Item id="2">
+  <Name>Relative [%] to all objects</Name>
+  <KeyName>RelAll</KeyName>
+  <ShortName>%All</ShortName>
+  <Description>Relative to number of all rows in the data matrix. Threshold value [%] is multiplied by (number of rows in the whole matrix)/100</Description>
+ </Item>
+ <Item id="3">
+  <Name>Relative [%] to max frequency</Name>
+  <KeyName>RelFrequencyMax</KeyName>
+  <ShortName>%Max</ShortName>
+  <Description>Relative to maximal frequency in the whole contingency table. Threshold value [%] is multiplied by (the highest frequency in the whole KL-table)/100</Description>
+ </Item>
+</CodeTable>
+<CodeTable name="LaqMapType">
+ <Item id="1">
+  <Name>Antecedent</Name>
+  <KeyName>Antecedent</KeyName>
+  <ShortName>ANT</ShortName>
+  <Description>Mapping attributes to antecedent</Description>
+ </Item>
+ <Item id="2">
+  <Name>Succedent</Name>
+  <KeyName>Succedent</KeyName>
+  <ShortName>SUC</ShortName>
+  <Description>Mapping attributes to succedent</Description>
+ </Item>
+ <Item id="3">
+  <Name>Condition</Name>
+  <KeyName>Condition</KeyName>
+  <ShortName>CON</ShortName>
+  <Description>Mapping attributes to condition</Description>
+ </Item>
+ <Item id="4">
+  <Name>FirstSet</Name>
+  <KeyName>FirstSet</KeyName>
+  <ShortName>SD1</ShortName>
+  <Description>Mapping attributes to the firstset</Description>
+ </Item>
+ <Item id="5">
+  <Name>SecondSet</Name>
+  <KeyName>SecondSet</KeyName>
+  <ShortName>SD2</ShortName>
+  <Description>Mapping attributes to the secondset</Description>
+ </Item>
+ <Item id="6">
+  <Name>Quantifier</Name>
+  <KeyName>Quantifier</KeyName>
+  <ShortName>QUANT</ShortName>
+  <Description>Mapping of quantifier</Description>
+ </Item>
+ <Item id="7">
+  <Name>Filter</Name>
+  <KeyName>Filter</KeyName>
+  <ShortName>FILT</ShortName>
+  <Description>Mapping of filtering</Description>
+ </Item>
+</CodeTable>
+<CodeTable name="LaqPatternGridFlagType">
+ <Item id="1">
+  <Name>Not set</Name>
+  <KeyName>NotSet</KeyName>
+  <ShortName>Not set</ShortName>
+  <Description>Influence not set yet</Description>
+ </Item>
+ <Item id="2">
+  <Name>Don&#39;t care</Name>
+  <KeyName>DontCare</KeyName>
+  <ShortName>Don&#39;t care</ShortName>
+  <Description>Not interested in this combination</Description>
+ </Item>
+ <Item id="3">
+  <Name>To be mined</Name>
+  <KeyName>ToBeMined</KeyName>
+  <ShortName>ToDo</ShortName>
+  <Description>Waiting for to be mined</Description>
+ </Item>
+ <Item id="4">
+  <Name>Being processed</Name>
+  <KeyName>Processed</KeyName>
+  <ShortName>Processed</ShortName>
+  <Description>Beeing processed</Description>
+ </Item>
+ <Item id="5">
+  <Name>Solved</Name>
+  <KeyName>Solved</KeyName>
+  <ShortName>Solved</ShortName>
+  <Description>Results obtained</Description>
+ </Item>
+</CodeTable>
+<CodeTable name="LaqTaskType">
+ <Item id="1">
+  <Name>4ftMiner</Name>
+  <KeyName>FTMiner</KeyName>
+  <ShortName>4ft</ShortName>
+  <Description>4ftMiner Task</Description>
+ </Item>
+ <Item id="2">
+  <Name>CF-Miner</Name>
+  <KeyName>CFMiner</KeyName>
+  <ShortName>CF</ShortName>
+  <Description>CF-Miner Task</Description>
+ </Item>
+ <Item id="3">
+  <Name>KL-Miner</Name>
+  <KeyName>KLMiner</KeyName>
+  <ShortName>KL</ShortName>
+  <Description>KL-Miner Task</Description>
+ </Item>
+ <Item id="4">
+  <Name>SD4ft-Miner</Name>
+  <KeyName>SD4ftMiner</KeyName>
+  <ShortName>SD4ft</ShortName>
+  <Description>SD4ft-Miner Task</Description>
+ </Item>
+ <Item id="5">
+  <Name>SDCF-Miner</Name>
+  <KeyName>SDCFMiner</KeyName>
+  <ShortName>SDCF</ShortName>
+  <Description>SDCF-Miner Task</Description>
+ </Item>
+ <Item id="6">
+  <Name>SDKL-Miner</Name>
+  <KeyName>SDKLMiner</KeyName>
+  <ShortName>SDKL</ShortName>
+  <Description>SDKL-Miner Task</Description>
+ </Item>
+</CodeTable>
+<CodeTable name="LiteralType">
+ <Item id="1">
+  <Name>Basic</Name>
+  <KeyName>Basic</KeyName>
+  <ShortName>B</ShortName>
+  <Description>Literal must be included in every cedent</Description>
+ </Item>
+ <Item id="2">
+  <Name>Remaining</Name>
+  <KeyName>Remaining</KeyName>
+  <ShortName>R</ShortName>
+  <Description>Literal is obligatory in cedent</Description>
+ </Item>
+</CodeTable>
+<CodeTable name="MCAlgorithmType">
+ <Item id="1">
+  <Name>k-Means / k-Mode</Name>
+  <KeyName>KMeans</KeyName>
+  <ShortName>KM</ShortName>
+  <Description>Flat level k-Means or k-Mode clustering</Description>
+ </Item>
+ <Item id="2">
+  <Name>Repeated bisection k-Means / k-Mode</Name>
+  <KeyName>RBKMeans</KeyName>
+  <ShortName>RBKM</ShortName>
+  <Description>Top-down recursive bi-section clustering producing a tree of clusters</Description>
+ </Item>
+ <Item id="3">
+  <Name>Hierarchical Agglomerative Clustering</Name>
+  <KeyName>HAC</KeyName>
+  <ShortName>HAC</ShortName>
+  <Description>Bottom-up hierarchical agglomerative clustering using distance matrix</Description>
+ </Item>
+</CodeTable>
+<CodeTable name="MCCenterType">
+ <Item id="1">
+  <Name>Mean</Name>
+  <KeyName>CatMean</KeyName>
+  <ShortName>MEAN</ShortName>
+  <Description>Mean of category-index values</Description>
+ </Item>
+ <Item id="2">
+  <Name>Modus</Name>
+  <KeyName>CatModus</KeyName>
+  <ShortName>MODUS</ShortName>
+  <Description>The most frequent category</Description>
+ </Item>
+</CodeTable>
+<CodeTable name="MCDistanceType">
+ <Item id="1">
+  <Name>Euclidean distance</Name>
+  <KeyName>Euclidean</KeyName>
+  <ShortName>ED</ShortName>
+  <Description>Euclidean measure of distance between two objects</Description>
+ </Item>
+ <Item id="2">
+  <Name>Cosinus similarity</Name>
+  <KeyName>Cosinus</KeyName>
+  <ShortName>COS</ShortName>
+  <Description>Cosinus measure of similarity between two objects</Description>
+ </Item>
+ <Item id="3">
+  <Name>Simple match</Name>
+  <KeyName>SimpleMatch</KeyName>
+  <ShortName>SM</ShortName>
+  <Description>Simple match of categories (Sokal and Michener)</Description>
+ </Item>
+ <Item id="4">
+  <Name>Eskin measure</Name>
+  <KeyName>Eskin</KeyName>
+  <ShortName>ES</ShortName>
+  <Description>Esking similarity for nominal variables (Eskin et al.)</Description>
+ </Item>
+ <Item id="5">
+  <Name>Variable Entropy</Name>
+  <KeyName>VariableEntropy</KeyName>
+  <ShortName>VE</ShortName>
+  <Description>Variable Entropy similarity measure of nominal variables (Sulc)</Description>
+ </Item>
+ <Item id="6">
+  <Name>Variable Mutability</Name>
+  <KeyName>VariableMutability</KeyName>
+  <ShortName>VM</ShortName>
+  <Description>Variable Mutability similarity measure of nominal variables (Sulc)</Description>
+ </Item>
+</CodeTable>
+<CodeTable name="MCLinkageType">
+ <Item id="1">
+  <Name>Simple</Name>
+  <KeyName>Simple</KeyName>
+  <ShortName>SIM</ShortName>
+  <Description>Simple linkage of clusters (the minimal distance)</Description>
+ </Item>
+ <Item id="2">
+  <Name>Complete</Name>
+  <KeyName>Complete</KeyName>
+  <ShortName>COMPL</ShortName>
+  <Description>Complete linkage of clusters (the maximal distance)</Description>
+ </Item>
+ <Item id="3">
+  <Name>Average</Name>
+  <KeyName>Average</KeyName>
+  <ShortName>AVG</ShortName>
+  <Description>Average linkage of clusters (the average distance)</Description>
+ </Item>
+</CodeTable>
+<CodeTable name="MissingsType">
+ <Item id="1">
+  <Name>Delete</Name>
+  <KeyName>Deleting</KeyName>
+  <ShortName>Del</ShortName>
+  <Description>Not including missing values</Description>
+ </Item>
+ <Item id="2">
+  <Name>Pesimistic fill up</Name>
+  <KeyName>Pesimistic</KeyName>
+  <ShortName>Pes</ShortName>
+  <Description>Pesimistic fill up of missing values</Description>
+ </Item>
+ <Item id="3">
+  <Name>Optimistic fill up</Name>
+  <KeyName>Optimistic</KeyName>
+  <ShortName>Opt</ShortName>
+  <Description>Pesimistic fill up of missing values</Description>
+ </Item>
+ <Item id="4">
+  <Name>Ignore X-categories</Name>
+  <KeyName>Ignore</KeyName>
+  <ShortName>Ign</ShortName>
+  <Description>Ignoring X-categories</Description>
+ </Item>
+</CodeTable>
+<CodeTable name="MutualInfluenceScopeType">
+ <Item id="1">
+  <Name>Not set</Name>
+  <KeyName>NotSet</KeyName>
+  <ShortName>.</ShortName>
+  <Description>Scope not set yet</Description>
+ </Item>
+ <Item id="3">
+  <Name>Background knowledge</Name>
+  <KeyName>BackgroundKnowledge</KeyName>
+  <ShortName>Bkgrnd</ShortName>
+  <Description>Dependency follows from the domain background knowledge</Description>
+ </Item>
+ <Item id="4">
+  <Name>Data specific</Name>
+  <KeyName>DataSpecific</KeyName>
+  <ShortName>Data</ShortName>
+  <Description>Dependency follows from data anomalies</Description>
+ </Item>
+ <Item id="2">
+  <Name>Unknown</Name>
+  <KeyName>Unknown</KeyName>
+  <ShortName>?</ShortName>
+  <Description>Scope is unknown</Description>
+ </Item>
+</CodeTable>
+<CodeTable name="MutualInfluenceType">
+ <Item id="1">
+  <Name>Not set</Name>
+  <KeyName>NotSet</KeyName>
+  <ShortName>.</ShortName>
+  <Description>Influence not set yet</Description>
+ </Item>
+ <Item id="5">
+  <Name>Some influence</Name>
+  <KeyName>SomeInfluence</KeyName>
+  <ShortName>Some</ShortName>
+  <Description>There is some influence but not examined in detail</Description>
+ </Item>
+ <Item id="6">
+  <Name>Positive influence</Name>
+  <KeyName>PositiveInfluence</KeyName>
+  <ShortName>Pos</ShortName>
+  <Description>If the row attribute increases then the column attribute increases too</Description>
+ </Item>
+ <Item id="7">
+  <Name>Negative influence</Name>
+  <KeyName>NegativeInfluence</KeyName>
+  <ShortName>Neg</ShortName>
+  <Description>If the row attribute increases then the column attribute decreases</Description>
+ </Item>
+ <Item id="8">
+  <Name>Positive frequency</Name>
+  <KeyName>PositiveFrequency</KeyName>
+  <ShortName>FreqPos</ShortName>
+  <Description>If the row attribute increases then the relative frequency of objects satisfying column attribute increases</Description>
+ </Item>
+ <Item id="9">
+  <Name>Negative frequency</Name>
+  <KeyName>NegativeFrequency</KeyName>
+  <ShortName>FreqNeg</ShortName>
+  <Description>If the row attribute increases then the relative frequency of objects satisfying column attribute decreases</Description>
+ </Item>
+ <Item id="10">
+  <Name>Positive boolean</Name>
+  <KeyName>PositiveBoolean</KeyName>
+  <ShortName>BoolPos</ShortName>
+  <Description>If truthfulness of the row attribute increases then relative frequency of true values of column attribute increases too</Description>
+ </Item>
+ <Item id="11">
+  <Name>Negative boolean</Name>
+  <KeyName>NegativeBoolean</KeyName>
+  <ShortName>BoolNeg</ShortName>
+  <Description>If truthfulness of the row attribute increases then relative frequency of true values of column attribute decreases</Description>
+ </Item>
+ <Item id="12">
+  <Name>Functional</Name>
+  <KeyName>Functional</KeyName>
+  <ShortName>Func</ShortName>
+  <Description>There is a strong function-like dependency</Description>
+ </Item>
+ <Item id="2">
+  <Name>None</Name>
+  <KeyName>None</KeyName>
+  <ShortName>--</ShortName>
+  <Description>No influence at all</Description>
+ </Item>
+ <Item id="3">
+  <Name>Don&#39;t care about influence</Name>
+  <KeyName>DontCare</KeyName>
+  <ShortName>x</ShortName>
+  <Description>There maybe some influence but we don&#39;t care</Description>
+ </Item>
+ <Item id="4">
+  <Name>Unknown</Name>
+  <KeyName>Unknown</KeyName>
+  <ShortName>?</ShortName>
+  <Description>There could be an influence, no details are known</Description>
+ </Item>
+</CodeTable>
+<CodeTable name="MutualInfluenceValidityType">
+ <Item id="1">
+  <Name>Not set</Name>
+  <KeyName>NotSet</KeyName>
+  <ShortName>.</ShortName>
+  <Description>Validity not set yet</Description>
+ </Item>
+ <Item id="3">
+  <Name>Proven</Name>
+  <KeyName>Proven</KeyName>
+  <ShortName>Prvn</ShortName>
+  <Description>Dependency proven</Description>
+ </Item>
+ <Item id="4">
+  <Name>Rejected</Name>
+  <KeyName>Rejected</KeyName>
+  <ShortName>Rjctd</ShortName>
+  <Description>Dependency was rejected</Description>
+ </Item>
+ <Item id="2">
+  <Name>Unknown</Name>
+  <KeyName>Unknown</KeyName>
+  <ShortName>?</ShortName>
+  <Description>Validity not know</Description>
+ </Item>
+</CodeTable>
+<CodeTable name="QuantityBinarizeType">
+ <Item id="1">
+  <Name>None</Name>
+  <KeyName>None</KeyName>
+  <ShortName>None</ShortName>
+  <Description>Not set</Description>
+ </Item>
+ <Item id="2">
+  <Name>Equal versus Not-equal</Name>
+  <KeyName>EqualNotEqual</KeyName>
+  <ShortName>=,&lt;&gt;</ShortName>
+  <Description>One category against all others. As many dichotimized attributes with categories &#39;=&#39; and &#39;&lt;&gt;&#39; as there is categories in the original attribute. Suitable for nominal attributes.</Description>
+ </Item>
+ <Item id="3">
+  <Name>Up-to versus Above</Name>
+  <KeyName>UpToAbove</KeyName>
+  <ShortName>&lt;=,&gt;</ShortName>
+  <Description>Disjunction of all categories up to a certain category against all other categories. As many dichotomized attributes with categories &#39;&lt;=&#39; and &#39;&gt;&#39; as there is categories in the original attribute minus one. Suitable for ordinal and cardinal attributes.</Description>
+ </Item>
+</CodeTable>
+<CodeTable name="RMAssignType">
+ <Item id="1">
+  <Name>Random</Name>
+  <KeyName>Random</KeyName>
+  <ShortName>Rand</ShortName>
+  <Description>Column values generated randomly</Description>
+ </Item>
+ <Item id="2">
+  <Name>Initialized by formula</Name>
+  <KeyName>Init</KeyName>
+  <ShortName>Init</ShortName>
+  <Description>Column values initially computed by a mathematical formula</Description>
+ </Item>
+ <Item id="3">
+  <Name>Updated by formula</Name>
+  <KeyName>Update</KeyName>
+  <ShortName>Upd</ShortName>
+  <Description>Column values continuously updated by a mathematical formula</Description>
+ </Item>
+ <Item id="4">
+  <Name>Copied from the underlying data</Name>
+  <KeyName>Copy</KeyName>
+  <ShortName>Copy</ShortName>
+  <Description>Column values initialized by copying values from the underlying data</Description>
+ </Item>
+</CodeTable>
+<CodeTable name="RMCaseType">
+ <Item id="1">
+  <Name>Evolution</Name>
+  <KeyName>Evolution</KeyName>
+  <ShortName>Evo</ShortName>
+  <Description>Generating artificial data using evolutionary algorithm</Description>
+ </Item>
+ <Item id="2">
+  <Name>Randomizer</Name>
+  <KeyName>Randomizer</KeyName>
+  <ShortName>Rnd</ShortName>
+  <Description>Randomization of previously generated data using evolution algorithm</Description>
+ </Item>
+</CodeTable>
+<CodeTable name="RMDistributionType">
+ <Item id="1">
+  <Name>Uniform</Name>
+  <KeyName>Uniform</KeyName>
+  <ShortName>Uni</ShortName>
+  <Description>Uniform distribution of values across possible range</Description>
+ </Item>
+ <Item id="2">
+  <Name>Gaussian</Name>
+  <KeyName>Gaussian</KeyName>
+  <ShortName>Gauss</ShortName>
+  <Description>A bell-shaped distribution with defined mean value and standard deviation</Description>
+ </Item>
+ <Item id="3">
+  <Name>Manually user-specified</Name>
+  <KeyName>Manually</KeyName>
+  <ShortName>Manually</ShortName>
+  <Description>Manually specified frequencies (for enumerations only)</Description>
+ </Item>
+</CodeTable>
+<CodeTable name="RMDiversityType">
+ <Item id="1">
+  <Name>Random</Name>
+  <KeyName>Random</KeyName>
+  <ShortName>Rnd</ShortName>
+  <Description>Randomly generated values for each individual</Description>
+ </Item>
+ <Item id="2">
+  <Name>Permutation</Name>
+  <KeyName>Permutation</KeyName>
+  <ShortName>Permut</ShortName>
+  <Description>Permutation of a one-time pregenerated random values</Description>
+ </Item>
+</CodeTable>
+<CodeTable name="RMCharibType">
+ <Item id="1">
+  <Name>Enumeration</Name>
+  <KeyName>Enumeration</KeyName>
+  <ShortName>ENUM</ShortName>
+  <Description>Column could contain values only from a pre-defined list</Description>
+ </Item>
+ <Item id="2">
+  <Name>Range of values</Name>
+  <KeyName>Range</KeyName>
+  <ShortName>RANGE</ShortName>
+  <Description>Column with any value within a given range</Description>
+ </Item>
+ <Item id="3">
+  <Name>Range with predefined values</Name>
+  <KeyName>RangeEnum</KeyName>
+  <ShortName>RANGE_ENUM</ShortName>
+  <Description>Column with any value within a given range with some predefined values</Description>
+ </Item>
+</CodeTable>
+<CodeTable name="SDConstructionType">
+ <Item id="1">
+  <Name>FirstSet versus SecondSet</Name>
+  <KeyName>Simple</KeyName>
+  <ShortName>FSxSS</ShortName>
+  <Description>Comparison of the first set versus the second set</Description>
+ </Item>
+ <Item id="2">
+  <Name>FirstSet versus FirstSet and SecondSet</Name>
+  <KeyName>JoinedSet</KeyName>
+  <ShortName>FSxFS&amp;SS</ShortName>
+  <Description>The second set is treated as a subset specification to the first set</Description>
+ </Item>
+ <Item id="3">
+  <Name>FirstSet versus not FirstSet</Name>
+  <KeyName>InverseSet</KeyName>
+  <ShortName>FSxNotFS</ShortName>
+  <Description>The second set is inverse of the first set</Description>
+ </Item>
+</CodeTable>
+<CodeTable name="SDQuantifierSourceType">
+ <Item id="1">
+  <Name>First set frequencies</Name>
+  <KeyName>FirstSet</KeyName>
+  <ShortName>FirstSet</ShortName>
+  <Description>Quantifier test applied to the first set data only</Description>
+ </Item>
+ <Item id="2">
+  <Name>Second set frequencies</Name>
+  <KeyName>SecondSet</KeyName>
+  <ShortName>SecondSet</ShortName>
+  <Description>Quantifier test applied to the second set data only</Description>
+ </Item>
+ <Item id="3">
+  <Name>Delta of absolute frequencies values</Name>
+  <KeyName>DiffAbs</KeyName>
+  <ShortName>FreqDeltaAbs</ShortName>
+  <Description>Quantifier test applied to the frequency table computed by substracting of corresponding frequencies</Description>
+ </Item>
+ <Item id="4">
+  <Name>Delta of relative frequencies values</Name>
+  <KeyName>DiffRel</KeyName>
+  <ShortName>FreqDeltaRel</ShortName>
+  <Description>Quantifier test applied to the frequency table computed by substracting of corresponding relative frequencies</Description>
+ </Item>
+ <Item id="5">
+  <Name>Difference of interest-measures</Name>
+  <KeyName>ValDiff</KeyName>
+  <ShortName>DiffVal</ShortName>
+  <Description>Test applied to the difference of quantifier values computed separately from each frequency table</Description>
+ </Item>
+ <Item id="6">
+  <Name>Absolute difference of interest-measures</Name>
+  <KeyName>ValDiffAbs</KeyName>
+  <ShortName>DiffValAbs</ShortName>
+  <Description>Test applied to the absolute difference of interest-measures computed separately from each frequency table</Description>
+ </Item>
+ <Item id="7">
+  <Name>Ratio of interest-measures</Name>
+  <KeyName>ValRation</KeyName>
+  <ShortName>RatioVal</ShortName>
+  <Description>Test applied to the ratio of interest-measures computed separately from each frequency table</Description>
+ </Item>
+ <Item id="8">
+  <Name>Higher of ratios of interest-measures</Name>
+  <KeyName>ValRatioMax</KeyName>
+  <ShortName>RatioValMax</ShortName>
+  <Description>Test applied to the higher of two ratios of interest-measures (im1/im2 or im2/im1)</Description>
+ </Item>
+</CodeTable>
+<CodeTable name="TaskSubType">
+ <Item id="1">
+  <Name>4ft-Miner</Name>
+  <KeyName>FTMiner</KeyName>
+  <ShortName>4ft</ShortName>
+  <Description>4ft-Miner task for 4ft-association rules with rich syntax</Description>
+ </Item>
+ <Item id="7">
+  <Name>CF-Miner</Name>
+  <KeyName>CFMiner</KeyName>
+  <ShortName>CF</ShortName>
+  <Description>CF-Miner task for conditonal frequencies of a single multi-categorical attribute</Description>
+ </Item>
+ <Item id="6">
+  <Name>KL-Miner</Name>
+  <KeyName>KLMiner</KeyName>
+  <ShortName>KL</ShortName>
+  <Description>KL-Miner task for conditional frequencies of two multi-categorical attributes</Description>
+ </Item>
+ <Item id="9">
+  <Name>SD4ft-Miner</Name>
+  <KeyName>SD4ftMiner</KeyName>
+  <ShortName>DF</ShortName>
+  <Description>SD4ft-Miner task for set difference in terms of two 4ft-association rules</Description>
+ </Item>
+ <Item id="10">
+  <Name>SDCF-Miner</Name>
+  <KeyName>SDCFMiner</KeyName>
+  <ShortName>DC</ShortName>
+  <Description>SDCF-Miner task for set difference in terms of two frequencies of a single attribute</Description>
+ </Item>
+ <Item id="8">
+  <Name>SDKL-Miner</Name>
+  <KeyName>SDKLMiner</KeyName>
+  <ShortName>DK</ShortName>
+  <Description>SDKL-Miner task for set difference in terms of two frequencies of two multi-categorical attributes</Description>
+ </Item>
+ <Item id="11">
+  <Name>Ac4ft-Miner</Name>
+  <KeyName>Ac4ftMiner</KeyName>
+  <ShortName>AF</ShortName>
+  <Description>Ac4ft-Miner task for 4ft-action rules</Description>
+ </Item>
+ <Item id="12">
+  <Name>ETree-Miner</Name>
+  <KeyName>ETreeMiner</KeyName>
+  <ShortName>ET</ShortName>
+  <Description>ETree-Miner task for decision and exploration trees</Description>
+ </Item>
+ <Item id="13">
+  <Name>MCluster-Miner</Name>
+  <KeyName>MClusterMiner</KeyName>
+  <ShortName>MC</ShortName>
+  <Description>MCluster-Miner task for clustering analysis</Description>
+ </Item>
+ <Item id="3">
+  <Name>Knowledge Explorer</Name>
+  <KeyName>KEx</KeyName>
+  <ShortName>KEx</ShortName>
+  <Description>Knowledge Explorer (KEx) task for classifications using machine learning</Description>
+ </Item>
+</CodeTable>
+<CodeTable name="TestingType">
+ <Item id="1">
+  <Name>Use training set</Name>
+  <KeyName>TrainingSet</KeyName>
+  <ShortName>TS</ShortName>
+  <Description>Use same records as for training</Description>
+ </Item>
+ <Item id="2">
+  <Name>Cross-validation</Name>
+  <KeyName>CrossValidation</KeyName>
+  <ShortName>CV</ShortName>
+  <Description>Cross-validating each of n-folds</Description>
+ </Item>
+ <Item id="3">
+  <Name>Random split</Name>
+  <KeyName>RandomSplit</KeyName>
+  <ShortName>PS</ShortName>
+  <Description>Random split of available data in given ration</Description>
+ </Item>
+</CodeTable>
+<CodeTable name="ValueSubType">
+ <Item id="1">
+  <Name>Integer number</Name>
+  <KeyName>Integer</KeyName>
+  <ShortName>long</ShortName>
+  <Description>Integer number between -2E09 and 2E09</Description>
+ </Item>
+ <Item id="2">
+  <Name>Decimal number</Name>
+  <KeyName>Float</KeyName>
+  <ShortName>float</ShortName>
+  <Description>Floating-point number with double precision</Description>
+ </Item>
+ <Item id="3">
+  <Name>Text</Name>
+  <KeyName>String</KeyName>
+  <ShortName>text</ShortName>
+  <Description>String of characters</Description>
+ </Item>
+ <Item id="4">
+  <Name>Boolean</Name>
+  <KeyName>Boolean</KeyName>
+  <ShortName>bool</ShortName>
+  <Description>Boolean value of TRUE/FALSE</Description>
+ </Item>
+ <Item id="5">
+  <Name>Date/Time</Name>
+  <KeyName>DateTime</KeyName>
+  <ShortName>date</ShortName>
+  <Description>Value with date, time or both</Description>
+ </Item>
+</CodeTable>

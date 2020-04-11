@@ -1,0 +1,80 @@
+      <!-- Include Template: Task.FTCedentSettings.Include.Template -->
+      <!-- Version: 2012-11-04 -->
+
+//    <!-- FTLiteralD -->
+      <BBASettings>
+        <?LM:Loop:Task.FTCedentSettings?>
+        <?LM:Loop:Task.FTCedentSettings.FTLiteralSettings?>
+        <BBASetting 
+           id="Basic_FTLiteralD_<?LM:MB:Task.FTCedentSettings.FTLiteralSettings.LiteralDID?>">         
+          <Name><?LM:MB:Task.FTCedentSettings.FTLiteralSettings?></Name>
+          <FieldRef><?LM:MB:Task.FTCedentSettings.FTLiteralSettings.Quantity?></FieldRef>
+//          <FieldRef><?LM:MB:Task.FTCedentSettings.FTLiteralSettings.Quantity.Attribute?></FieldRef>
+          <Coefficient>
+            <Type><?LM:MB:Task.FTCedentSettings.FTLiteralSettings.CoefficientType?></Type>
+            <?LM:IFF:Task.FTCedentSettings.FTLiteralSettings.CoefficientType:One category:Not?>
+            <MinimalLength><?LM:MB:Task.FTCedentSettings.FTLiteralSettings.MinLen?></MinimalLength>
+            <MaximalLength><?LM:MB:Task.FTCedentSettings.FTLiteralSettings.MaxLen?></MaximalLength>
+            <?LM:EndIFF:Task.FTCedentSettings.FTLiteralSettings.CoefficientType?>
+            <?LM:IFF:Task.FTCedentSettings.FTLiteralSettings.CoefficientType:One category?>
+            <Category><?LM:MB:Task.FTCedentSettings.FTLiteralSettings.Category?></Category>
+            <?LM:EndIFF:Task.FTCedentSettings.FTLiteralSettings.CoefficientType?>
+          </Coefficient>
+//          <Extension name="CedentType" value="<?LM:MB:Task.FTCedentSettings.CedentType?>"/>
+//          <Extension name="LiteralPosition" value="<?LM:MB:Task.FTCedentSettings.FTLiteralSettings.Ord?>"/>
+        </BBASetting>
+        <?LM:EndLoop:Task.FTCedentSettings.FTLiteralSettings?>
+        <?LM:EndLoop:Task.FTCedentSettings?>
+      </BBASettings>
+
+//    <!-- FTLiteralD: Sign (Gace) -->
+      <DBASettings>
+        <?LM:Loop:Task.FTCedentSettings?>      
+        <?LM:Loop:Task.FTCedentSettings.FTLiteralSettings?>
+        <DBASetting id="Derived_FTLiteralD_Sign_<?LM:MB:Task.FTCedentSettings.FTLiteralSettings.LiteralDID?>" 
+          type="Literal"
+        >
+          <Name><?LM:MB:Task.FTCedentSettings.FTLiteralSettings?></Name>
+          <BASettingRef>Basic_FTLiteralD_<?LM:MB:Task.FTCedentSettings.FTLiteralSettings.LiteralDID?></BASettingRef>
+          <LiteralSign><?LM:MB:Task.FTCedentSettings.FTLiteralSettings.GaceType?></LiteralSign>
+          <LiteralType><?LM:MB:Task.FTCedentSettings.FTLiteralSettings.LiteralType?></LiteralType>
+          <?LM:IFF:Task.FTCedentSettings.FTLiteralSettings.EquivalenceClass:NULL:Not?>
+          <EquivalenceClass><?LM:MB:Task.FTCedentSettings.FTLiteralSettings.EquivalenceClass?></EquivalenceClass>           
+          <?LM:EndIFF:Task.FTCedentSettings.FTLiteralSettings.EquivalenceClass?>
+        </DBASetting>
+        <?LM:EndLoop:Task.FTCedentSettings.FTLiteralSettings?>
+        <?LM:EndLoop:Task.FTCedentSettings?>
+
+//      <!-- FTCedentD: Conj, Disj, Len -->
+        <?LM:Loop:Task.FTCedentSettings?>
+        <?LM:IFF:Task.FTCedentSettings.FTLiteralSettings#Count:0:Not?>
+        <DBASetting id="Derived_FTCedentD_<?LM:MB:Task.FTCedentSettings.CedentDID?>"
+          type="<?LM:MB:Task.FTCedentSettings.BoolOpType?>"
+        >
+          <Name><?LM:MB:Task.FTCedentSettings?></Name>
+          <?LM:Loop:Task.FTCedentSettings.FTLiteralSettings?>
+          <BASettingRef>Derived_FTLiteralD_Sign_<?LM:MB:Task.FTCedentSettings.FTLiteralSettings.LiteralDID?></BASettingRef>
+          <?LM:EndLoop:Task.FTCedentSettings.FTLiteralSettings?>
+          <MinimalLength><?LM:MB:Task.FTCedentSettings.MinLen?></MinimalLength>
+          <MaximalLength><?LM:MB:Task.FTCedentSettings.MaxLen?></MaximalLength>
+        </DBASetting>
+        <?LM:EndIFF:Task.FTCedentSettings.FTLiteralSettings#Count?>
+        <?LM:EndLoop:Task.FTCedentSettings?>
+
+//      <!-- FTCedentBagD: TotalLen -->
+        <?LM:Loop:Task.FTCedentBagSettings?>
+        <?LM:IFF:Task.FTCedentBagSettings.LiteralCount:0:Not?>
+        <DBASetting id="Derived_FTCedentBagD_<?LM:MB:Task.FTCedentBagSettings.FTCedentBagDID?>" 
+          type="Conjunction"
+        >
+          <Name><?LM:MB:Task.FTCedentBagSettings?></Name>
+          <?LM:Loop:Task.FTCedentBagSettings.FTCedentSettings?>
+          <BASettingRef>Derived_FTCedentD_<?LM:MB:Task.FTCedentBagSettings.FTCedentSettings.CedentDID?></BASettingRef>
+          <?LM:EndLoop:Task.FTCedentBagSettings.FTCedentSettings?>
+          <MinimalLength><?LM:MB:Task.FTCedentBagSettings.MinLen?></MinimalLength>
+          <MaximalLength><?LM:MB:Task.FTCedentBagSettings.MaxLen?></MaximalLength>
+        </DBASetting>
+        <?LM:EndIFF:Task.FTCedentBagSettings.LiteralCount?>
+        <?LM:EndLoop:Task.FTCedentBagSettings?>
+
+      </DBASettings>

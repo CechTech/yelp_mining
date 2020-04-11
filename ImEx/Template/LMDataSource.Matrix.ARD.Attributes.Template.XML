@@ -1,0 +1,9 @@
+<!-- LMDataSource.Matrix.ARD.Attributes.XML.Template, version of 2013-03-06 -->
+
+<Attributes>
+  <?LM:Loop:Matrix.Attribute?>
+  <?LM:Loop:Matrix.Attribute.Quantity?>
+  <Attribute><?LM:MB:Matrix.Attribute.Quantity?></Attribute>
+  <?LM:EndLoop:Matrix.Attribute.Quantity?>
+  <?LM:EndLoop:Matrix.Attribute?>
+</Attributes>

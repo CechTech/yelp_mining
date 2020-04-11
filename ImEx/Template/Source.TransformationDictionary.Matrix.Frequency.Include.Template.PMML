@@ -1,0 +1,97 @@
+  <!-- Include Template: Source.TransformationDictionary.Matrix.Include.Template -->
+  <!-- Version: 2015-08-01 -->
+
+  <TransformationDictionary>
+    <?LM:Loop:Matrix.Attribute?>
+    <?LM:Loop:Matrix.Attribute.Quantity?>
+    <DerivedField 
+      name= "<?LM:MB:Matrix.Attribute.Quantity?>"
+      dataType="string" 
+      <?LM:IFF:Matrix.Attribute.Quantity.DerivedFieldTransformation:MapValues?>
+      optype="ordinal"
+      <?LM:EndIFF:Matrix.Attribute.Quantity.DerivedFieldTransformation?>
+      <?LM:IFF:Matrix.Attribute.Quantity.DerivedFieldTransformation:Discretize?>
+      optype="continuous"
+      <?LM:EndIFF:Matrix.Attribute.Quantity.DerivedFieldTransformation?>
+    >
+      <Extension name="ParentGroup" value="<?LM:MB:Matrix.Attribute.Quantity.ParentGroup?>"/>
+      <Extension name="ShortName" value="<?LM:MB:Matrix.Attribute.Quantity.ShortName?>"/>
+//      <!-- MapValue -->
+      <?LM:IFF:Matrix.Attribute.Quantity.DerivedFieldTransformation:MapValues?>
+      <MapValues outputColumn="field"
+        <?LM:IFF:Matrix.Attribute.Quantity.IncludeNULLCategory::Not?>
+        mapMissingTo="<?LM:MB:Matrix.Attribute.Quantity.IncludeNULLCategory?>"
+        <?LM:EndIFF:Matrix.Attribute.Quantity.IncludeNULLCategory?>
+      >
+        <FieldColumnPair column="column" field="<?LM:MB:Matrix.Attribute.Quantity.Attribute?>"/>
+        <InlineTable>
+          <?LM:Loop:Matrix.Attribute.Quantity.Category?>
+          <Extension name="Frequency" value="<?LM:MB:Matrix.Attribute.Quantity.Category.Frequency?>" extender="<?LM:MB:Matrix.Attribute.Quantity.Category?>"/>
+          <?LM:EndLoop:Matrix.Attribute.Quantity.Category?>
+          <?LM:Loop:Matrix.Attribute.Quantity.Category?>
+          <?LM:Loop:Matrix.Attribute.Quantity.Category.Enum?>
+          <row>
+            <column><?LM:MB:Matrix.Attribute.Quantity.Category.Enum?></column>
+            <field><?LM:MB:Matrix.Attribute.Quantity.Category?></field>
+          </row>
+          <?LM:EndLoop:Matrix.Attribute.Quantity.Category.Enum?>
+//          <!-- NULL -->
+          <?LM:IFF:Matrix.Attribute.Quantity.Category.IncludeNULL:Yes?>
+          <row>
+            <column>NULL</column>
+            <field><?LM:MB:Matrix.Attribute.Quantity.Category?></field>
+          </row>
+          <?LM:EndIFF:Matrix.Attribute.Quantity.Category.IncludeNULL?>
+          <?LM:EndLoop:Matrix.Attribute.Quantity.Category?>
+        </InlineTable>
+      </MapValues>
+      <?LM:EndIFF:Matrix.Attribute.Quantity.DerivedFieldTransformation?>
+//      <!-- Discretize -->
+      <?LM:IFF:Matrix.Attribute.Quantity.DerivedFieldTransformation:Discretize?>
+      <Discretize field="<?LM:MB:Matrix.Attribute.Quantity.Attribute?>"
+        <?LM:IFF:Matrix.Attribute.Quantity.IncludeNULLCategory::Not?>
+        mapMissingTo="<?LM:MB:Matrix.Attribute.Quantity.IncludeNULLCategory?>"
+        <?LM:EndIFF:Matrix.Attribute.Quantity.IncludeNULLCategory?>
+      >
+//      <!-- Frequencies -->
+        <?LM:Loop:Matrix.Attribute.Quantity.Category?>
+        <Extension name="Frequency" value="<?LM:MB:Matrix.Attribute.Quantity.Category.Frequency?>" extender="<?LM:MB:Matrix.Attribute.Quantity.Category?>"/>
+        <?LM:EndLoop:Matrix.Attribute.Quantity.Category?>
+//      <!-- DiscretizeBin -->
+        <?LM:Loop:Matrix.Attribute.Quantity.Category?>
+//      <!-- Interval -->
+        <?LM:IFF:Matrix.Attribute.Quantity.Category.CategorySubType:Interval?>
+        <?LM:Loop:Matrix.Attribute.Quantity.Category.Interval?>
+        <DiscretizeBin binValue="<?LM:MB:Matrix.Attribute.Quantity.Category?>">
+            <Interval 
+              closure="<?LM:MB:Matrix.Attribute.Quantity.Category.Interval.Closure?>" 
+              leftMargin="<?LM:MB:Matrix.Attribute.Quantity.Category.Interval.FromValue?>" 
+              rightMargin="<?LM:MB:Matrix.Attribute.Quantity.Category.Interval.ToValue?>" 
+            />
+        </DiscretizeBin>
+        <?LM:EndLoop:Matrix.Attribute.Quantity.Category.Interval?>
+        <?LM:EndIFF:Matrix.Attribute.Quantity.Category.CategorySubType?>
+//      <!-- Enum -->
+        <?LM:IFF:Matrix.Attribute.Quantity.Category.CategorySubType:Enumeration?>
+        <?LM:Loop:Matrix.Attribute.Quantity.Category.Enum?>
+        <DiscretizeBin binValue="<?LM:MB:Matrix.Attribute.Quantity.Category?>">
+//          <Extension name="Enumeration" value="<?LM:MB:Matrix.Attribute.Quantity.Category.Enum?>"/>
+          <Interval closure="closedClosed" leftMargin="<?LM:MB:Matrix.Attribute.Quantity.Category.Enum?>" rightMargin="<?LM:MB:Matrix.Attribute.Quantity.Category.Enum?>"/>
+        </DiscretizeBin>
+        <?LM:EndLoop:Matrix.Attribute.Quantity.Category.Enum?>
+        <?LM:EndIFF:Matrix.Attribute.Quantity.Category.CategorySubType?>
+//       <!-- NULL -->
+        <?LM:IFF:Matrix.Attribute.Quantity.Category.IncludeNULL:Yes?>
+        <DiscretizeBin binValue="<?LM:MB:Matrix.Attribute.Quantity.Category?>">
+          <Extension name="Enumeration" value="NULL"/>
+        </DiscretizeBin>
+        <?LM:EndIFF:Matrix.Attribute.Quantity.Category.IncludeNULL?>
+        <?LM:EndLoop:Matrix.Attribute.Quantity.Category?>
+      </Discretize>
+      <?LM:EndIFF:Matrix.Attribute.Quantity.DerivedFieldTransformation?>
+
+    </DerivedField>
+    <?LM:EndLoop:Matrix.Attribute.Quantity?>
+    <?LM:EndLoop:Matrix.Attribute?>
+  </TransformationDictionary>
+//

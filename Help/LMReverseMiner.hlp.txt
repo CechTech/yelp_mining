@@ -1,0 +1,42 @@
+Title	Wiki page identifikator	URL	Label
+; Fallback title
+Default	mrm:start
+; Pre-application windows
+LISp-Miner working set selection	mrm:ui:start&#spusteni_modulu
+; *** List ***
+1 List	mrm:ui:list
+; *** RMCase ***
+2 RM Case	mrm:ui:rmcase
+RM Case basic parameters	mrm:ui:rmcase#zakladni_parametry
+RM Case evolution parameters	mrm:ea:eo
+RM Case list	mrm:ui:rmcase
+Select a data matrix...	mrm:ui:rmcase
+; *** Columns ***
+3 Columns	mrm:ui:columns
+Column	mrm:ui:rmcharib
+Column characteristics settings	mrm:ui:rmcharib
+Enumeration Value	mrm:ui:rmcharib#povoleny_vycet_hodnot
+Frequency guiding rules list	mrm:ui:rmcharib#frequency_guiding_rules
+New Frequency guiding rules setup	mrm:ui:rmcharib#frequency_guiding_rules
+Select a column...	mrm:ui:rmcharib
+List of all columns definitions on the specified data matrix	mrm:ui:rmcharib
+; *** Prepro ***
+4 Prepro	mrm:ui:prepro
+; *** Prepro ***
+5 DM Tasks	mrm:ui:dmtasks
+Select a data-mining task...	mrm:ui:dmtasks
+Task included in fitness evaluation	mrm:ui:dmtasks&#parametry_pozadavku_na_data
+New Task	mrm:ui:dmtasks&#pridani_noveho_pozadavku_v_podobe_ulohy_dzd
+Basic task parameters	mrm:ui:dmtasks
+; *** Data Presets ***
+6 Data Presets	mrm:ui:datapresets
+Data Preset Definition	mrm:ui:datapresets#parametry_data_preset
+; *** Evolution ***
+7 Evolution	mrm:ui:evolution
+Cleaning unused files	mrm:ui:evolution
+; *** Results ***
+8 Results	mrm:ui:results
+Export Destination	mrm:ui:results#export_dat
+; *** Prepro ***
+; *** Misc ***
+RM Miscellaneous Parameters	mrm:ui:start&#uzivatelska_nastaveni

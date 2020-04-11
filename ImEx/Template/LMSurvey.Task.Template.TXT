@@ -1,0 +1,9 @@
+<!-- LMTaskSurvey.Template.txt, version of 2012-06-05 -->
+
+Generated: <?LM:System:DateTime?>
+
+TaskID	TaskName	SubType	State	Running	Finished	Hypotheses	GenerationStartTime	GenerationTime
+<?LM:Loop:Task?>
+<?LM:MB:Task.Task.ID?>	<?LM:MB:Task?>	<?LM:MB:Task.TaskSubType?>	<?LM:MB:Task.GenerationStatus?>	<?LM:MB:Task.IsGenerationInProcess?>	<?LM:MB:Task.IsGenerationFinished?>	<?LM:MB:Task.Hypothesis#Count?>	<?LM:MB:Task.GenerationStartTime?>	<?LM:MB:Task.GenerationTime?>
+<?LM:EndLoop:Task?>
+

@@ -1,0 +1,42 @@
+  <!-- Include Template: Source.DatabaseDictionary.Task.Include.Template -->
+  <!-- Version: 2013-01-12 -->
+
+  <MiningBuildTask>
+    <Extension name="DatabaseDictionary">
+      <Table name="<?LM:MB:Task.Matrix?>" localDataCache="<?LM:MB:Task.Matrix.LocalDataCache?>">
+        <Columns>
+          <?LM:Loop:Task.Matrix.Attribute?>
+          <?LM:IFF:Task.Matrix.Attribute.DerivedColumn:No?>
+          <Column name="<?LM:MB:Task.Matrix.Attribute?>" dataType="<?LM:MB:Task.Matrix.Attribute.ValueSubType?>"/>
+//            <?LM:IFF:Task.Matrix.Attribute.PrimaryKey:Yes?>
+//            <PrimaryKey primaryKeyPosition="<?LM:MB:Task.Matrix.Attribute.PrimaryKeyPosition?>"/>
+//            <?LM:EndIFF:Task.Matrix.Attribute.PrimaryKey?>
+//          </Column>
+          <?LM:EndIFF:Task.Matrix.Attribute.DerivedColumn?>
+          <?LM:EndLoop:Task.Matrix.Attribute?>
+        </Columns>
+        <DerivedColumns>
+          <?LM:Loop:Task.Matrix.Attribute?>
+          <?LM:IFF:Task.Matrix.Attribute.DerivedColumn:Yes?>
+          <DerivedColumn name="<?LM:MB:Task.Matrix.Attribute?>" dataType="<?LM:MB:Task.Matrix.Attribute.ValueSubType?>"
+                columnType="<?LM:MB:Task.Matrix.Attribute.AttributeSubType?>"
+                formula="<?LM:MB:Task.Matrix.Attribute.Formula?>"
+                datePartSubType="<?LM:MB:Task.Matrix.Attribute.DatePartSubType?>"
+                MCPosition="<?LM:MB:Task.Matrix.Attribute.MCPosition?>"
+                MCLength="<?LM:MB:Task.Matrix.Attribute.MCLength?>"
+                MCDelimiter="<?LM:MB:Task.Matrix.Attribute.MCDelimiter?>"
+          />
+          <?LM:EndIFF:Task.Matrix.Attribute.DerivedColumn?>
+          <?LM:EndLoop:Task.Matrix.Attribute?>
+        </DerivedColumns>
+        <PrimaryKey>
+          <?LM:Loop:Task.Matrix.Attribute?>
+          <?LM:IFF:Task.Matrix.Attribute.PrimaryKey:Yes?>
+          <Column name="<?LM:MB:Task.Matrix.Attribute?>" primaryKeyPosition="<?LM:MB:Task.Matrix.Attribute.PrimaryKeyPosition?>"/>
+          <?LM:EndIFF:Task.Matrix.Attribute.PrimaryKey?>
+          <?LM:EndLoop:Task.Matrix.Attribute?>
+        </PrimaryKey>
+      </Table>
+    </Extension>
+  </MiningBuildTask>
+//

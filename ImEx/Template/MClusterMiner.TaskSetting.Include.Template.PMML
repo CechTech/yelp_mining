@@ -1,0 +1,66 @@
+    <!-- Include Template: MClusterMiner.TaskSetting.Include.Template -->
+    <!-- Version: 2017-12-14 -->
+
+    <TaskSetting>
+      <Extension name="LISp-Miner">
+        <TaskGroup><?LM:MB:Task.TaskGroup?></TaskGroup>
+        <TaskState><?LM:MB:Task.GenerationStatus?></TaskState>
+        <NumberOfVerifications><?LM:MB:Task.GenerationNrOfTests?></NumberOfVerifications>
+        <GenerationClusterCountTotal><?LM:MB:Task.GenerationClusterCountTotal?></GenerationClusterCountTotal>
+        <TaskStartTime><?LM:MB:Task.GenerationStartTime?></TaskStartTime>
+        <TaskDuration><?LM:MB:Task.GenerationTime?></TaskDuration>
+//      <FTMissingsType><?LM:MB:Task.MissingsType?></FTMissingsType>
+        <MCTaskParamMCAlgorithmType><?LM:MB:Task.MCAlgorithmType?></MCTaskParamMCAlgorithmType>
+        <MCTaskParamMCDistanceType><?LM:MB:Task.MCDistanceType?></MCTaskParamMCDistanceType>
+        <MCTaskParamIterationCountMax><?LM:MB:Task.IterationCountMax?></MCTaskParamIterationCountMax>
+        <MCTaskParamRandSeedInit><?LM:MB:Task.RandSeedInit?></MCTaskParamRandSeedInit>
+        <MCTaskParamClusterCountMax><?LM:MB:Task.ClusterCountMax?></MCTaskParamClusterCountMax>
+        <HypothesesCountMax><?LM:MB:Task.HypothesesCountMax?></HypothesesCountMax>
+        <TaskNotice><?LM:MB:Task.Notice?></TaskNotice>
+      </Extension>
+//
+      <!-- MCLiteralD -->
+      <MCAttributesSettings>
+        <?LM:Loop:Task.MCAntecedentD?>
+        <MCPartialGroupSetting
+             id="MCCedentD_<?LM:MB:Task.MCAntecedentD.MCCedentDID?>">
+          <Name><?LM:MB:Task.MCAntecedentD.Name?></Name>
+          <MinimalLength><?LM:MB:Task.MCAntecedentD.MinLen?></MinimalLength>
+          <MaximalLength><?LM:MB:Task.MCAntecedentD.MaxLen?></MaximalLength>
+//        <Extension name="GroupPosition" value="<?LM:MB:Task.MCAntecedentD.Ord?>"/>
+          <?LM:Loop:Task.MCAntecedentD.MCLiteralSettings?>
+          <MCAttributeSetting 
+             id="MCLiteralD_<?LM:MB:Task.MCAntecedentD.MCLiteralSettings.MCLiteralDID?>">         
+//          <Name><?LM:MB:Task.MCAntecedentD.MCLiteralSettings?></Name>
+            <FieldRef><?LM:MB:Task.MCAntecedentD.MCLiteralSettings.Quantity?></FieldRef>
+	    <MCCenterType><?LM:MB:Task.MCAntecedentD.MCLiteralSettings.MCCenterType?></MCCenterType>
+	    <CategoryFractionFlag><?LM:MB:Task.MCAntecedentD.MCLiteralSettings.CategoryFractionFlag?></CategoryFractionFlag>
+	    <Weight><?LM:MB:Task.MCAntecedentD.MCLiteralSettings.Weight?></Weight>
+//          <FieldRef><?LM:MB:Task.MCAntecedentD.MCLiteralSettings.Quantity.Attribute?></FieldRef>
+//          <Extension name="CedentType" value="<?LM:MB:Task.FTCedentSettings.CedentType?>"/>
+//          <Extension name="LiteralPosition" value="<?LM:MB:Task.MCAntecedentD.MCLiteralSettings.Ord?>"/>
+          </MCAttributeSetting>
+          <?LM:EndLoop:Task.MCAntecedentD.MCLiteralSettings?>
+        </MCPartialGroupSetting>
+        <?LM:EndLoop:Task.MCAntecedentD?>
+      </MCAttributesSettings>
+//
+      <!-- TargetSettings -->
+      <TargetSettings>
+        <TargetClusterMin><?LM:MB:Task.TargetClusterMin?></TargetClusterMin>
+        <TargetClusterMax><?LM:MB:Task.TargetClusterMax?></TargetClusterMax>
+      </TargetSettings>
+//
+      <!-- Condition -->
+      <?LM:IFF:Task.FTConditionBagSettings.LiteralCount:0:Not?>
+      <?LM:Include:Task.FTCedentSettings.Include.Template.PMML?>
+      <ConditionSetting>Derived_FTCedentBagD_<?LM:MB:Task.FTConditionBagSettings.FTCedentBagDID?></ConditionSetting>
+      <?LM:EndIFF:Task.FTConditionBagSettings.LiteralCount?>
+//
+      <!-- Quantifier Settings -->
+      <InterestMeasureSetting>
+        <FreqTotalMin><?LM:MB:Task.FreqTotalMin?></FreqTotalMin>
+        <FreqClusterMin><?LM:MB:Task.FreqClusterMin?></FreqClusterMin>
+        <IntraExtraDistanceRatioMax><?LM:MB:Task.IntraExtraDistanceRatioMax?></IntraExtraDistanceRatioMax>
+      </InterestMeasureSetting>
+    </TaskSetting>

@@ -1,0 +1,110 @@
+<?xml version="1.0"?>
+<PMML version="4.0" xmlns="http://www.dmg.org/PMML-4_0" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:pmml="http://www.dmg.org/PMML-4_0"
+    xsi:schemaLocation="http://www.dmg.org/PMML-4_0 http://sewebar.vse.cz/schemas/PMML4.0+GUHA0.1.xsd">
+>
+
+<!-- SD4ftMiner.HypoInGroup.PMML.Template, for version see below -->
+
+  <Header copyright="Copyright (c) KIZI UEP">
+    <Extension name="metabase" value="<?LM:System:Metabase?>"/>
+    <Extension name="dataset" value="<?LM:MB:Task.Matrix?>"/>
+    <Extension name="author" value="<?LM:System:User?>"/>
+    <Extension name="subsystem" value="<?LM:System:Subsystem?>"/>
+    <Extension name="module" value="<?LM:System:Module?>"/>
+    <Extension name="format" value="ETreeMiner.Task"/>    
+    <Extension name="version" value="2012-02-24"/>
+    <Application name="LISp-Miner" version="<?LM:System:Version?>"/>
+    <Annotation><?LM:MB:Task.Description?></Annotation>
+    <Timestamp><?LM:MB:Task.GenerationStartTime?></Timestamp>
+  </Header>
+
+<!-- Table -->
+
+  <?LM:Include:Source.DatabaseDictionary.Task.Include.Template.PMML?>
+
+<!-- Matrix -->
+
+  <?LM:Include:Source.DataDictionary.Task.Include.Template.PMML?>
+
+<!-- Attributes -->
+
+  <?LM:Include:Source.TransformationDictionary.Task.Include.Template.PMML?>
+
+<!-- Task -->
+
+  <guha:SD4ftModel xmlns="" xsi:schemaLocation="http://keg.vse.cz/ns/GUHA0.1rev1 http://sewebar.vse.cz/schemas/GUHA0.1rev1.xsd"
+        xmlns:guha="http://keg.vse.cz/ns/GUHA0.1rev1"
+        modelName="<?LM:MB:Task?>" 
+        functionName="associationRules" 
+        algorithmName="SD4ft"
+        numberOfTransactions="<?LM:MB:Task.Matrix.RecordCount?>" 
+        numberOfCategories="<?LM:MB:Task.TotalCategories?>" 
+        numberOfRules="<?LM:MB:Task.Hypothesis#Count?>"
+   >
+    <?LM:Include:SD4ftMiner.TaskSetting.Include.Template.PMML?>
+
+  <!-- MiningSchema -->
+
+    <pmml:MiningSchema>
+    <?LM:Loop:Task.HypothesisAttribute?>
+      <pmml:MiningField name="<?LM:MB:Task.HypothesisAttribute?>"/>
+    <?LM:EndLoop:Task.HypothesisAttribute?>
+    </pmml:MiningSchema>
+
+    <SD4ftRules>
+
+      <?LM:Include:Task.FTCedentI.Include.Template.PMML?>
+
+  <!-- Hypothesis -->
+
+      <?LM:Loop:HypothesisInGroup?>
+      <SD4ftRule id="<?LM:MB:HypothesisInGroup.HypothesisID?>"
+        <?LM:IFF:HypothesisInGroup.FTAntecedentBagI#Count:0:Not?>
+        antecedent="DBA_Antecedent_<?LM:MB:HypothesisInGroup.HypothesisID?>"
+        <?LM:EndIFF:HypothesisInGroup.FTAntecedentBagI#Count?>
+        <?LM:IFF:HypothesisInGroup.FTSuccedentBagI#Count:0:Not?>
+        consequent="DBA_Succedent_<?LM:MB:HypothesisInGroup.HypothesisID?>"
+        <?LM:EndIFF:HypothesisInGroup.FTSuccedentBagI#Count?>
+        <?LM:IFF:HypothesisInGroup.FTConditionBagI#Count:0:Not?>
+        condition="DBA_Condition_<?LM:MB:HypothesisInGroup.HypothesisID?>"
+        <?LM:EndIFF:HypothesisInGroup.FTConditionBagI#Count?>
+      >
+        <Text><?LM:MB:HypothesisInGroup.Name?></Text>
+  
+//      <!-- InterestMeasures -->
+        <?LM:Loop:HypothesisInGroup.InterestMeasure?>
+        <IMValue imSettingRef="<?LM:MB:HypothesisInGroup.InterestMeasure.QuantifierID?>" name="<?LM:MB:HypothesisInGroup.InterestMeasure.ShortName?>" sourceMode="<?LM:MB:HypothesisInGroup.InterestMeasure.SDQuantifierSourceType?>"><?LM:MB:HypothesisInGroup.InterestMeasure.Value?></IMValue>
+        <?LM:EndLoop:HypothesisInGroup.InterestMeasure?>
+
+        <FirstSet 
+          <?LM:IFF:HypothesisInGroup.FTFirstSetBagI#Count:0:Not?>
+          FirstSet="DBA_FirstSet_<?LM:MB:HypothesisInGroup.HypothesisID?>"
+          <?LM:EndIFF:HypothesisInGroup.FTFirstSetBagI#Count?>
+        >
+          <Text><?LM:MB:HypothesisInGroup.FirstSet.Name?></Text>        
+//        <!-- Quantifier values -->
+          <?LM:Loop:HypothesisInGroup.FirstSet.QuantifierValue?>
+          <IMValue name="<?LM:MB:HypothesisInGroup.FirstSet.QuantifierValue.Name?>"><?LM:MB:HypothesisInGroup.FirstSet.QuantifierValue.Value?></IMValue>
+          <?LM:EndLoop:HypothesisInGroup.FirstSet.QuantifierValue?>
+          <FourFtTable a="<?LM:MB:HypothesisInGroup.FirstSet.FreqA?>" b="<?LM:MB:HypothesisInGroup.FirstSet.FreqB?>" c="<?LM:MB:HypothesisInGroup.FirstSet.FreqC?>" d="<?LM:MB:HypothesisInGroup.FirstSet.FreqD?>"/>
+        </FirstSet>
+
+        <SecondSet 
+          <?LM:IFF:HypothesisInGroup.FTSecondSetBagI#Count:0:Not?>
+          SecondSet="DBA_SecondSet_<?LM:MB:HypothesisInGroup.HypothesisID?>"
+          <?LM:EndIFF:HypothesisInGroup.FTSecondSetBagI#Count?>
+        >
+          <Text><?LM:MB:HypothesisInGroup.SecondSet.Name?></Text>        
+//        <!-- Quantifier values -->
+          <?LM:Loop:HypothesisInGroup.SecondSet.QuantifierValue?>
+          <IMValue name="<?LM:MB:HypothesisInGroup.SecondSet.QuantifierValue.Name?>"><?LM:MB:HypothesisInGroup.SecondSet.QuantifierValue.Value?></IMValue>
+          <?LM:EndLoop:HypothesisInGroup.SecondSet.QuantifierValue?>
+          <FourFtTable a="<?LM:MB:HypothesisInGroup.SecondSet.FreqA?>" b="<?LM:MB:HypothesisInGroup.SecondSet.FreqB?>" c="<?LM:MB:HypothesisInGroup.SecondSet.FreqC?>" d="<?LM:MB:HypothesisInGroup.SecondSet.FreqD?>"/>
+        </SecondSet>
+      </SD4ftRule>
+      <?LM:EndLoop:HypothesisInGroup?>
+    </SD4ftRules>
+  </guha:SD4ftModel>
+</PMML>

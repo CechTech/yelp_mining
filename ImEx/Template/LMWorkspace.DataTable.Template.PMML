@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<?oxygen SCHSchema="http://sewebar.vse.cz/schemas/GUHARestr0_1.sch"?>
+<PMML version="4.0" xmlns="http://www.dmg.org/PMML-4_0" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+    xmlns:pmml="http://www.dmg.org/PMML-4_0"
+    xsi:schemaLocation="http://www.dmg.org/PMML-4_0 http://sewebar.vse.cz/schemas/PMML4.0+GUHA0.1.xsd"
+>
+
+<!-- LMWorkspace.DataTable.PMML.Template, version of 2017-01-16 -->
+
+  <Header copyright="Copyright (c) KIZI UEP">
+    <Extension name="metabase" value="<?LM:System:Metabase?>"/>
+    <Extension name="dataset" value="<?LM:MB:Matrix?>"/>
+    <Extension name="author" value="<?LM:System:User?>"/>
+    <Extension name="subsystem" value="<?LM:System:Subsystem?>"/>
+    <Extension name="module" value="<?LM:System:Module?>"/>
+    <Extension name="format" value="LMDataSource.Matrix"/>    
+    <Extension name="version" value="2012-11-16"/>
+    <Application name="LISp-Miner" version="<?LM:System:Version?>"/>
+//  <Annotation><?LM:MB:Task.Description?></Annotation>
+    <Timestamp><?LM:System:DateTime?></Timestamp>
+  </Header>
+
+<!-- Table -->
+
+  <?LM:Include:Source.DatabaseDictionary.DataTable.Include.Template.PMML?>
+
+<!-- Matrix -->
+
+  <?LM:Include:Source.DataDictionary.Matrix.Include.Template.PMML?>
+
+<!-- Attribute -->
+
+  <?LM:Include:Source.TransformationDictionary.Attribute.Include.Template.PMML?>
+
+</PMML>

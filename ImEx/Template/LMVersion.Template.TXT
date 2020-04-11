@@ -1,0 +1,4 @@
+<!-- LMVersion.Template.txt, version of 2012-04-19 -->
+
+<Version><?LM:System:Version?>"</Version>
+<Timestamp><?LM:System:DateTime?></Timestamp>

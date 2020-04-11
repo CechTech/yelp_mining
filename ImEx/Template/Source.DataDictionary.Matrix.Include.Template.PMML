@@ -1,0 +1,22 @@
+  <!-- Include Template: Source.DataDictionary.Matrix.Include.Template -->
+  <!-- Version: 2012-11-16 -->
+
+  <DataDictionary numberOfFields="<?LM:MB:Matrix.Attribute#Count?>">
+    <?LM:Loop:Matrix.Attribute?>
+    <DataField 
+      name="<?LM:MB:Matrix.Attribute?>" 
+      optype="<?LM:MB:Matrix.Attribute.Cardinality?>" 
+//      columnType="<?LM:MB:Matrix.Attribute.AttributeSubType?>"
+      dataType="<?LM:MB:Matrix.Attribute.ValueSubType?>"
+    >
+      <?LM:IFF:Matrix.Attribute.Cardinality:Cardinal?>
+      <Extension name="Avg" value="<?LM:MB:Matrix.Attribute.ValueAvg?>" extender="Avg"/>
+      <?LM:IFF:Matrix.Attribute.ValueVariability:-1:Not?>
+      <Extension name="StDev" value="<?LM:MB:Matrix.Attribute.ValueVariability?>" extender="StDev"/>
+      <?LM:EndIFF:Matrix.Attribute.ValueVariability?>
+      <Interval leftMargin="<?LM:MB:Matrix.Attribute.ValueMin?>" rightMargin="<?LM:MB:Matrix.Attribute.ValueMax?>" closure="closedClosed"/>      
+      <?LM:EndIFF:Matrix.Attribute.Cardinality?>
+    </DataField>
+    <?LM:EndLoop:Matrix.Attribute?>
+  </DataDictionary>
+//

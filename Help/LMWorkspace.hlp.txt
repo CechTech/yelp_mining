@@ -1,0 +1,160 @@
+Title	Wiki page identifikator	URL	Label
+; Fallback title
+Default	lmbase:lmworkspace
+; Pre-application windows
+New version of the LISp-Miner System	lmbase:instalace#aktualizace_systemu
+LISp-Miner working set selection	lmbase:lmworkspace#uvodni_dialogove_okno
+Associating existing metabase	lmexplore:import#pripojeni_existujici_dvojice_data_metabaze
+Associating existing metabase 64-bit version	lmexplore:import#pripojeni_existujici_dvojice_data_metabaze
+Simple Metabase initialisation (data as an ODBC DSN)	lmexplore:newfromdsn
+Simple Metabase initialisation (data as an MDB file)	lmexplore:newfrommdb
+Text file import into database	lmexplore:importtxt
+Import Column settings	lmexplore:importtxt#nazvy_a_datove_typy_sloupcu
+Data statistical overview	lmexplore:importtxt#zobrazeni_statistickeho_prehledu_dat
+; *** Explore ***
+Tables	lmexplore:tables
+Table	lmexplore:table
+Database table	lmexplore:table
+Database table basic parameters	lmexplore:table#zakladni_parametry_tabulky
+Table Data	lmexplore:tabledata
+Table Column	lmexplore:column
+Database column basic parameters	lmexplore:column#oprava_zakladnich_parametru_o_sloupci
+Derived column by expression definition	lmexplore:columnexpr
+Derived column by SQL query definition	lmexplore:columnquery
+Derived column by geographical data	lmexplore:columngeo&#hodnoty_vypoctene_z_geografickych_dat
+Dynamic view source definition	lmexplore:tableview#vyber_pouzitych_relaci
+Select a data matrix	lmexplore:table
+Select a database column	lmexplore:column
+Select one or more database columns to create an attribute upon...	lmprepro:attribute:add#vyber_sloupce
+Relations between tables in database	lmexplore:relationships
+Relation	lmexplore:relationships
+Relation column link	lmexplore:relationships
+Relation between two of tables	lmexplore:relationships
+; *** Prepro ***
+Attributes	lmprepro:attributes
+Attribute list	
+Attribute	lmprepro:attribute
+Attribute basic parameters	lmprepro:attribute:basicparameters
+Attribute main Parent group and membership in other groups	lmprepro:attribute#prirazeni_atributu_do_jedne_nebo_vice_skupin
+Attributes to group assignment	lmprepro:attributes#rychle_prirazeni_atributu_do_skupiny
+Category basic parameters settings	lmprepro:attribute:category&#zakladni_parametry_kategorie
+Category - intervals	lmprepro:attribute:category#kategorie_definovane_intervalem
+Category - enumeration of selected values	lmprepro:attribute:category&#kategorie_definovane_vyctem_hodnot
+Interval	lmprepro:attribute:category&#dialogove_okno_pro_zadani_intervalu
+Group of attributes	lmprepro:attributes#skupiny_atributu
+Dichotomization of attribute	lmprepro:attribute:dichotomize#vytvoreni_dichotomickych_atributu
+Discretized Data Matrix
+Select an attribute...	lmtask:settings:cedent##vyber_atributu
+Select an attribute from list...	lmtask:settings:cedent#seznam_atributu
+; *** IAnalysis ***
+Scatter Plot	lmianalysis:scatterplot
+PCA		lmianalysis:pca
+New derived data column based on Principal component analysis	lmianalysis:pca#vytvoreni_odvozenych_sloupcu
+Frequency analysis	lmianalysis:fa
+4ft analysis	lmianalysis:ft
+CF analysis	lmianalysis:cf
+KL analysis	lmianalysis:kl
+KL Attributes correlations	lmianalysis:klcorrelations
+ET analysis	lmianalysis:et
+Geodata XY analysis	lmianalysis:geodata2d
+Geodata CF analysis	lmianalysis:geodatacf
+Geodata settings	lmbase:geodata&#uzivatelska_nastaveni_mapovych_funkci
+List of Geodata vector layers settings	lmbase:geodata#definice_vektorovych_vrstev
+Geodata vector layer settings	lmbase:geodata&#pridani_definice_vektorove_vrstvy
+List of Geodata raster background images settings	lmbase:geodata&#definice_rastrovych_vrstev
+Geodata raster background image settings	lmbase:geodata&#pridani_definice_rastrove_vrstvy
+Map Vector Layers and Background selection	lmianalysis:geodata2d#nastaveni_mapovych_vrstev
+Map layers selection	lmianalysis:geodatacf#vyber_mapove_vrstvy_oblasti
+; *** Tasks ***
+Tasks Overview	lmtask:tasks
+Groups of tasks	lmtask:taskgroup
+Group of tasks	lmtask:taskgroup#definice_skupin_uloh
+New Task	lmtask:add#dialogove_okno_pro_vyber_typu_ulohy
+Task Settings	lmtask:settings
+Basic task parameters	lmtask:settings#zakladni_parametry_ulohy
+Task Checklist	lmtask:validate
+Task Processing Protocol	lmtask:run#protokol_o_prubehu_vypoctu
+Task Results	lmtask:results
+Hypothesis	lmtask:hypothesis
+New derived data column based on hypothesis	lmexplore:columnhypothesis
+Results (aggregated)	lmtask:resultsaggregated
+; *** Task FT ***
+4ft Task Settings	mft:settings
+4ft Cedent Settings	lmtask:settings:ftcedent#dialogove_okno_pro_zadani_cedentu
+4ft Cedent basic parameters settings	lmtask:settings:ftcedent#parametry_zadani_cedentu
+4ft Partial cedent Settings	lmtask:settings:ftpartialcedent#dialogove_okno_pro_zadani_dilciho_cedentu
+4ft Partial cedent basic parameters settings	lmtask:settings:ftpartialcedent#parametry_zadani_dilciho_cedentu
+Classes of equivalence	lmtask:settings:ftpartialcedent#zadani_trid_ekvivalence
+4ft Literal settings	lmtask:settings:ftliteral#dialogove_okno_pro_zadani_literalu
+4ft Literal coefficient settings	lmtask:settings:ftliteral#dialogove_okno_pro_zadani_literalu
+4ft List of quantifiers settings	mft:settings:ftquantifier&#dialogove_okno_pro_zadani_kvantifikatoru
+4ft Statistical quantifier settings	mft:settings:ftquantifierfnc#dialogove_okno_pro_zadani_kvantifikatoru
+4ft Simple frequencies quantifier settings	mft:settings:ftquantifiersimple#dialogove_okno_pro_zadani_kvantifikatoru
+4ft BASE/CEIL quantifier settings	mft:settings:ftquantifierbase#dialogove_okno_pro_zadani_kvantifikatoru
+4ft Task Parameters	mft:settings#parametry_ulohy
+4ft Task Results	mft:results
+4ft Hypothesis	mft:hypothesis
+; *** Task CF ***
+CF Task Settings	mcf:settings
+CF Partial groups of attributes settings	mcf:settings:cfcedent#dialogove_okno_pro_zadani_seznamu_atributu
+CF Partial group of attributes settings	mcf:settings:cfpartialcedent#dialogove_okno_pro_zadani_dilci_skupiny_atributu
+CF Partial group of attributes attributes basic parameters settings	mcf:settings:cfpartialcedent#parametry_zadani_dilci_skupiny_atributu
+CF Histogram Attribute settings	mcf:settings:cfliteral#dialogove_okno_pro_zadani_atributu
+CF List of quantifiers settings	mcf:settings:cfquantifier&#dialogove_okno_pro_zadani_kvantifikatoru
+CF Distribution quantifier settings	mcf:settings:cfquantifierfnc#dialogove_okno_pro_zadani_kvantifikatoru
+CF Simple frequencies quantifier settings	mcf:settings:cfquantifiersimple#dialogove_okno_pro_zadani_kvantifikatoru
+CF Step up/down quantifier settings	mcf:settings:cfquantifierstep#dialogove_okno_pro_zadani_kvantifikatoru
+CF Aggregate function settings	mcf:settings&#zadani_agregacni_funkce
+CF Task Parameters	mcf:settings#dalsi_parametry_ulohy
+CF Task Results	mcf:results
+CF Hypothesis	mcf:hypothesis
+; *** Task KL ***
+KL Task Settings	mkl:settings
+KL Partial groups of attributes settings	mkl:settings:klcedent#dialogove_okno_pro_zadani_seznamu_atributu
+KL Partial group of attributes settings	mkl:settings:klpartialcedent#dialogove_okno_pro_zadani_dilci_skupiny_atributu
+KL Partial group of attributes attributes basic parameters settings	mkl:settings:klpartialcedent#parametry_zadani_dilci_skupiny_atributu
+KL Attribute settings	mkl:settings:klliteral#dialogove_okno_pro_zadani_atributu
+KL List of quantifiers settings	mkl:settings:klquantifier&#dialogove_okno_pro_zadani_kvantifikatoru
+KL Statistical quantifier settings	mkl:settings:klquantifierfnc#dialogove_okno_pro_zadani_kvantifikatoru
+KL Simple frequencies quantifier settings	mkl:settings:klquantifiersimple#dialogove_okno_pro_zadani_kvantifikatoru
+KL Aggregate function settings	mkl:settings&#zadani_agregacni_funkce
+KL Task Parameters	lmtask:settings#parametry_ulohy
+KL Task Results	lmtask:results
+KL Hypothesis	lmtask:results
+; *** Task MC ***
+MC Task Settings	mmc:settings
+MC Partial groups of attributes Settings	mmc:settings:mccedent#dialogove_okno_pro_zadani_seznamu_atributu
+MC Partial group of attributes Settings	mmc:settings:mcpartialcedent#dialogove_okno_pro_zadani_dilci_skupiny_atributu
+MC Partial group of attributes basic parameters settings	mmc:settings:mcpartialcedent#parametry_zadani_dilci_skupiny_atributu
+MC Attribute settings	mmc:settings:mcliteral#dialogove_okno_pro_zadani_atributu
+MC Criterions settings	mmc:settings:mccriterions
+MC Target settings	mmc:settings:mctarget
+MC Task Parameters	mmc:settings#dalsi_parametry_ulohy
+MC Task Results	mmc:results
+MC Hypothesis	mmc:hypothesis
+; *** Task ET ***
+ET Task Settings	met:settings
+ET Partial groups of attributes Settings	met:settings:etcedent#dialogove_okno_pro_zadani_seznamu_atributu
+ET Partial group of attributes Settings	met:settings:etpartialcedent#dialogove_okno_pro_zadani_dilci_skupiny_atributu
+ET Partial group of attributes basic parameters settings	met:settings:etpartialcedent#parametry_zadani_dilci_skupiny_atributu
+ET Attribute settings	met:settings:etliteral#dialogove_okno_pro_zadani_atributu
+ET Criterions settings	met:settings:etcriterions
+ET Class attribute settings	met:settings:etclass
+ET Testing parameters	met:testing
+ET Task Parameters	met:settings#dalsi_parametry_ulohy
+ET Task Results	met:results
+ET Hypothesis	met:hypothesis
+ET Decision rules
+; *** BK ***
+Mutual influence
+; *** Workspace ***
+About LISp-Miner Workspace module	lmbase:lmworkspace
+Activity log	lmbase:start#zaznam_historie_prace
+Activity Log Entry	lmbase:start#zaznam_historie_prace
+Activity log export	lmbase:start&#export_historie_prace
+Miscellaneus settings	lmbase:lmworkspace#ostatni_nastaveni
+PC Grid Setup	lmbase:lmworkspace#vypocet_na_gridu
+LISp-Miner UI font settings	lmbase:lmworkspace#velikost_pisma
+Metabase Content Verification Templates	lmbase:mbcv
+Metabase Content Verification Report	lmbase:mbcv&#zprava_o_overeni_obsahu_metabaze
+

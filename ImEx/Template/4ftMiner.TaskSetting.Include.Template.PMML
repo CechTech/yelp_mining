@@ -1,0 +1,53 @@
+    <!-- Include Template: 4ftMiner.TaskSetting.Include.Template -->
+    <!-- Version: 2017-12-14 -->
+
+    <TaskSetting>
+      <Extension name="LISp-Miner">
+        <TaskGroup><?LM:MB:Task.TaskGroup?></TaskGroup>
+        <TaskState><?LM:MB:Task.GenerationStatus?></TaskState>
+        <NumberOfVerifications><?LM:MB:Task.GenerationNrOfTests?></NumberOfVerifications>
+        <TaskStartTime><?LM:MB:Task.GenerationStartTime?></TaskStartTime>
+        <TaskDuration><?LM:MB:Task.GenerationTime?></TaskDuration>
+        <FTMissingsType><?LM:MB:Task.MissingsType?></FTMissingsType>
+        <FTTaskParamProlong100AFlag><?LM:MB:Task.Prolong100A?></FTTaskParamProlong100AFlag>
+        <FTTaskParamProlong100SFlag><?LM:MB:Task.Prolong100S?></FTTaskParamProlong100SFlag>
+        <FTTaskParamPrimeCheckMinLen><?LM:MB:Task.PrimeCheckMinLen?></FTTaskParamPrimeCheckMinLen>
+        <FTTaskParamPrimeCheck><?LM:MB:Task.PrimeCheck?></FTTaskParamPrimeCheck>
+        <FTTaskParamIncludeSymetricFlag><?LM:MB:Task.IncludeSymetric?></FTTaskParamIncludeSymetricFlag>
+        <HypothesesCountMax><?LM:MB:Task.HypothesesCountMax?></HypothesesCountMax>
+        <TaskNotice><?LM:MB:Task.Notice?></TaskNotice>
+      </Extension>
+
+      <?LM:Include:Task.FTCedentSettings.Include.Template.PMML?>
+
+//    <!-- Antecedent, Succedent, AntecedentVar, SuccedentVar, Condition -->
+      <?LM:IFF:Task.FTAntecedentBagSettings.LiteralCount:0:Not?>
+      <AntecedentSetting>Derived_FTCedentBagD_<?LM:MB:Task.FTAntecedentBagSettings.FTCedentBagDID?></AntecedentSetting>
+      <?LM:EndIFF:Task.FTAntecedentBagSettings.LiteralCount?>
+      <?LM:IFF:Task.FTSuccedentBagSettings.LiteralCount:0:Not?>
+      <ConsequentSetting>Derived_FTCedentBagD_<?LM:MB:Task.FTSuccedentBagSettings.FTCedentBagDID?></ConsequentSetting>
+      <?LM:EndIFF:Task.FTSuccedentBagSettings.LiteralCount?>
+      <?LM:IFF:Task.FTConditionBagSettings.LiteralCount:0:Not?>
+      <ConditionSetting>Derived_FTCedentBagD_<?LM:MB:Task.FTConditionBagSettings.FTCedentBagDID?></ConditionSetting>
+      <?LM:EndIFF:Task.FTConditionBagSettings.LiteralCount?>
+
+//    <!-- Quantifier Settings -->
+      <InterestMeasureSetting>
+        <?LM:Loop:Task.Quantifier?>
+        <InterestMeasureThreshold id="<?LM:MB:Task.Quantifier.FTQuantifierID?>">
+          <Extension name="LongName"><?LM:MB:Task.Quantifier.FTQuantifierType?></Extension>
+          <Extension name="Description"><?LM:MB:Task.Quantifier.FTQuantifierType.Notice?></Extension>
+          <Extension name="Order"><?LM:MB:Task.Quantifier.Ord?></Extension>
+          <InterestMeasure><?LM:MB:Task.Quantifier.FTQuantifierType.ShortName?></InterestMeasure>
+          <CompareType><?LM:MB:Task.Quantifier.CompareType?></CompareType>
+          <?LM:IFF:Task.Quantifier.Threshold:N/A:Not?>
+          <Threshold type="<?LM:MB:Task.Quantifier.FTQuantifierValueType.ShortName?>"><?LM:MB:Task.Quantifier.Threshold?></Threshold>
+          <?LM:EndIFF:Task.Quantifier.Threshold?>
+          <?LM:IFF:Task.Quantifier.SignificanceLevel:N/A:Not?>
+          <SignificanceLevel><?LM:MB:Task.Quantifier.SignificanceLevel?></SignificanceLevel>
+          <?LM:EndIFF:Task.Quantifier.SignificanceLevel?>
+        </InterestMeasureThreshold>    
+        <?LM:EndLoop:Task.Quantifier?>
+      </InterestMeasureSetting>
+
+    </TaskSetting>

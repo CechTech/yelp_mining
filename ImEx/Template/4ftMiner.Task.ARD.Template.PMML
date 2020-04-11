@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<?oxygen SCHSchema="http://sewebar.vse.cz/schemas/GUHARestr0_1.sch"?>
+<PMML version="4.0" xmlns="http://www.dmg.org/PMML-4_0" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+    xmlns:pmml="http://www.dmg.org/PMML-4_0"
+    xsi:schemaLocation="http://www.dmg.org/PMML-4_0 http://sewebar.vse.cz/schemas/PMML4.0+GUHA0.1.xsd"
+>
+
+<!-- 4ftMiner.Task.ARD.PMML.Template, for version see below -->
+
+  <Header copyright="Copyright (c) KIZI UEP">
+    <Extension name="metabase" value="<?LM:System:Metabase?>"/>
+    <Extension name="dataset" value="<?LM:MB:Task.Matrix?>"/>
+    <Extension name="author" value="<?LM:System:User?>"/>
+    <Extension name="subsystem" value="<?LM:System:Subsystem?>"/>
+    <Extension name="module" value="<?LM:System:Module?>"/>
+    <Extension name="format" value="4ftMiner.Task"/>    
+    <Extension name="version" value="2012-05-09"/>
+    <Extension name="taskState" value="<?LM:MB:Task.GenerationStatus?>"/>
+    <Application name="LISp-Miner" version="<?LM:System:Version?>"/>
+    <Annotation><?LM:MB:Task.Description?></Annotation>
+    <Timestamp><?LM:MB:Task.GenerationStartTime?></Timestamp>
+    
+  </Header>
+
+<!-- DataDictionary is here only formally for validity reasons-->
+
+<DataDictionary>
+<DataField optype="categorical" name="dummy" dataType="string"/>
+</DataDictionary>
+
+<!-- Task -->
+
+  <guha:AssociationModel  xmlns="" xsi:schemaLocation="http://keg.vse.cz/ns/GUHA0.1rev1 http://sewebar.vse.cz/schemas/GUHA0.1rev1.xsd"
+        xmlns:guha="http://keg.vse.cz/ns/GUHA0.1rev1"
+        modelName="<?LM:MB:Task?>" 
+        functionName="associationRules" 
+        algorithmName="4ft" 
+        numberOfTransactions="<?LM:MB:Task.Matrix.RecordCount?>" 
+        numberOfCategories="<?LM:MB:Task.TotalCategories?>" 
+        numberOfRules="<?LM:MB:Task.Hypothesis#Count?>"
+  >
+
+    <?LM:Include:4ftMiner.TaskSetting.Include.Template.PMML?>
+
+  <!-- MiningSchema -->
+
+    <pmml:MiningSchema>
+    <?LM:Loop:Task.HypothesisAttribute?>
+      <pmml:MiningField name="<?LM:MB:Task.HypothesisAttribute?>"/>
+    <?LM:EndLoop:Task.HypothesisAttribute?>
+    </pmml:MiningSchema>
+
+    <AssociationRules>
+
+      <?LM:Include:Task.FTCedentI.Include.Template.PMML?>
+
+      <?LM:Include:Task.FTHypothesis.Include.Template.PMML?>
+    </AssociationRules>
+  </guha:AssociationModel>
+</PMML>

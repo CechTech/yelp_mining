@@ -1,0 +1,33 @@
+    <!-- Include Template: 4ftMiner.Task.Hypothesis.Include.Template -->
+    <!-- Version: 2012-07-09 -->
+
+    <!-- Hypothesis -->
+
+      <?LM:Loop:Task.Hypothesis?>
+      <AssociationRule id="<?LM:MB:Task.Hypothesis.HypothesisID?>"
+        <?LM:IFF:Task.Hypothesis.FTAntecedentBagI#Count:0:Not?>
+        antecedent="DBA_Antecedent_<?LM:MB:Task.Hypothesis.HypothesisID?>"
+        <?LM:EndIFF:Task.Hypothesis.FTAntecedentBagI#Count?>
+//      <?LM:IFF:Task.Hypothesis.FTSuccedentBagI#Count:0:Not?>
+        consequent="DBA_Succedent_<?LM:MB:Task.Hypothesis.HypothesisID?>"
+//      <?LM:EndIFF:Task.Hypothesis.FTSuccedentBagI#Count?>
+        <?LM:IFF:Task.Hypothesis.FTConditionBagI#Count:0:Not?>
+        condition="DBA_Condition_<?LM:MB:Task.Hypothesis.HypothesisID?>"
+        <?LM:EndIFF:Task.Hypothesis.FTConditionBagI#Count?>
+      >
+        <Text><?LM:MB:Task.Hypothesis.Name?></Text>
+  
+//      <!-- InterestMeasures -->
+        <?LM:Loop:Task.Hypothesis.InterestMeasure?>
+        <IMValue imSettingRef="<?LM:MB:Task.Hypothesis.InterestMeasure.FTQuantifierID?>" name="<?LM:MB:Task.Hypothesis.InterestMeasure.FTQuantifierType.ShortName?>" type="<?LM:MB:Task.Hypothesis.InterestMeasure.FTQuantifierValueType.ShortName?>"><?LM:MB:Task.Hypothesis.InterestMeasure.Value?></IMValue>
+        <?LM:EndLoop:Task.Hypothesis.InterestMeasure?>
+
+//      <!-- Quantifier values -->
+        <?LM:Loop:Task.Hypothesis.QuantifierValue?>
+        <IMValue name="<?LM:MB:Task.Hypothesis.QuantifierValue.Name?>"><?LM:MB:Task.Hypothesis.QuantifierValue.Value?></IMValue>
+        <?LM:EndLoop:Task.Hypothesis.QuantifierValue?>
+
+//      <!-- Frequency table -->
+        <FourFtTable a="<?LM:MB:Task.Hypothesis.FreqA?>" b="<?LM:MB:Task.Hypothesis.FreqB?>" c="<?LM:MB:Task.Hypothesis.FreqC?>" d="<?LM:MB:Task.Hypothesis.FreqD?>"/>
+       </AssociationRule>
+       <?LM:EndLoop:Task.Hypothesis?>
