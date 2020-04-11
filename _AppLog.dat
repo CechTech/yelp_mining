@@ -1,0 +1,138 @@
+11.4.2020 14:31:31	ODBCBase::CreateMDBDataSourceODBC - Component not found in the registry (6, Microsoft Access Driver (*.mdb, *.accdb))
+11.4.2020 14:31:31	ODBCBase::CreateMDBDataSourceODBC - Component not found in the registry (6, Driver do Microsoft Access (*.mdb, *.accdb))
+11.4.2020 14:31:31	ODBCBase::CreateMDBDataSourceODBC - Component not found in the registry (6, Microsoft Access Driver (*.mdb, *.accdb))
+11.4.2020 14:31:31	ODBCBase::CreateMDBDataSourceODBC - Component not found in the registry (6, Driver do Microsoft Access (*.mdb, *.accdb))
+11.4.2020 14:32:27	Duplicit values found in the primary key of the matrix 'yelp_data_review'!
+11.4.2020 14:33:07	Duplicit values found in the primary key of the matrix 'yelp_data_review'!
+11.4.2020 14:34:41		Row 289 not imported (C:\Users\jiric\Code\yelp_mining\Analyza\yelp_data_business.csv, DB error: Too few parameters. Expected 1.
+)!
+11.4.2020 14:34:58			SQL: INSERT INTO yelp_data_business (business_id, business_name, address, city, postal_code, latitude, longitude, business_stars, is_open, serveBurger, serveSandwich, servePizza, serveBreakfast, serveMexican, serveAmerican, serveItalian, serveJapanese, serveHotDrink, god_for_kids, price_range, accepts_credit_card, outdoor_seating, dress_code, reservations, good_for_groups, alcohol, has_tv, wifi, noise_level, smoking, reservations_only, dogs_allowed) VALUES ('JoRU1WoBjPZgO_K2rqzCQw', 'Wawel Patisserie', '7070 Henri-Julien Avenue', 'Montreal', 'H2S 3S3', 45.5363632, -73.6146289, 3.5, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, NULL, None, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)
+11.4.2020 14:34:58	Error inserting rows into database ('C:\Users\jiric\Code\yelp_mining\Analyza\yelp_data_business.Data.mdb')!
+11.4.2020 14:35:41		Row 289 not imported (C:\Users\jiric\Code\yelp_mining\Analyza\yelp_data_business.csv, DB error: Too few parameters. Expected 1.
+)!
+11.4.2020 14:35:44		Row 897 not imported (C:\Users\jiric\Code\yelp_mining\Analyza\yelp_data_business.csv, DB error: Too few parameters. Expected 1.
+)!
+11.4.2020 14:35:46		Row 1374 not imported (C:\Users\jiric\Code\yelp_mining\Analyza\yelp_data_business.csv, DB error: Too few parameters. Expected 1.
+)!
+11.4.2020 14:35:47		Row 1445 not imported (C:\Users\jiric\Code\yelp_mining\Analyza\yelp_data_business.csv, DB error: Too few parameters. Expected 1.
+)!
+11.4.2020 14:35:54		Row 1497 not imported (C:\Users\jiric\Code\yelp_mining\Analyza\yelp_data_business.csv, DB error: Too few parameters. Expected 1.
+)!
+11.4.2020 14:35:55		Row 1541 not imported (C:\Users\jiric\Code\yelp_mining\Analyza\yelp_data_business.csv, DB error: Too few parameters. Expected 1.
+)!
+11.4.2020 14:35:56		Row 2669 not imported (C:\Users\jiric\Code\yelp_mining\Analyza\yelp_data_business.csv, DB error: Too few parameters. Expected 1.
+)!
+11.4.2020 14:35:57		Row 3129 not imported (C:\Users\jiric\Code\yelp_mining\Analyza\yelp_data_business.csv, DB error: Too few parameters. Expected 1.
+)!
+11.4.2020 14:35:57		Row 3340 not imported (C:\Users\jiric\Code\yelp_mining\Analyza\yelp_data_business.csv, DB error: Too few parameters. Expected 1.
+)!
+11.4.2020 14:35:58		Row 3904 not imported (C:\Users\jiric\Code\yelp_mining\Analyza\yelp_data_business.csv, DB error: Too few parameters. Expected 1.
+)!
+11.4.2020 14:35:59		Row 3992 not imported (C:\Users\jiric\Code\yelp_mining\Analyza\yelp_data_business.csv, DB error: Too few parameters. Expected 1.
+)!
+11.4.2020 14:36:00			SQL: INSERT INTO yelp_data_business (business_id, business_name, address, city, postal_code, latitude, longitude, business_stars, is_open, serveBurger, serveSandwich, servePizza, serveBreakfast, serveMexican, serveAmerican, serveItalian, serveJapanese, serveHotDrink, god_for_kids, price_range, accepts_credit_card, outdoor_seating, dress_code, reservations, good_for_groups, alcohol, has_tv, wifi, noise_level, smoking, reservations_only, dogs_allowed) VALUES ('FpnVjd9yS0DECRT9wCXCcA', 'La Baia Dei Formaggi', '1715 Jean-Talon Est', 'Montreal', 'H2E 1T2', 45.5475363, -73.6076594, 3, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'None', None, NULL, 'None', 'None', 'None', 'None', 'None', 'None', 'None', 'None', NULL, NULL, NULL)
+11.4.2020 14:36:00	Error inserting rows into database ('C:\Users\jiric\Code\yelp_mining\Analyza\yelp_data_business.Data.mdb')!
+11.4.2020 14:39:11		Row 289 not imported (C:\Users\jiric\Code\yelp_mining\Analyza\yelp_data_business.csv, DB error: Too few parameters. Expected 1.
+)!
+11.4.2020 14:39:29			SQL: INSERT INTO yelp_data_business (business_id, name_, address, city, postal_code, latitude, longitude, business_stars, is_open, serveBurger, serveSandwich, servePizza, serveBreakfast, serveMexican, serveAmerican, serveItalian, serveJapanese, serveHotDrink, god_for_kids, price_range, accepts_credit_card, outdoor_seating, dress_code, reservations, good_for_groups, alcohol, has_tv, wifi, noise_level, smoking, reservations_only, dogs_allowed) VALUES ('JoRU1WoBjPZgO_K2rqzCQw', 'Wawel Patisserie', '7070 Henri-Julien Avenue', 'Montreal', 'H2S 3S3', 45.5363632, -73.6146289, 3.5, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, NULL, None, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)
+11.4.2020 14:39:29	Error inserting rows into database ('C:\Users\jiric\Code\yelp_mining\Analyza\yelp_data_business.Data.mdb')!
+11.4.2020 14:41:44	ODBCBase::CreateMDBDataSourceODBC - Component not found in the registry (6, Microsoft Access Driver (*.mdb, *.accdb))
+11.4.2020 14:41:44	ODBCBase::CreateMDBDataSourceODBC - Component not found in the registry (6, Driver do Microsoft Access (*.mdb, *.accdb))
+11.4.2020 14:41:44	ODBCBase::CreateMDBDataSourceODBC - Component not found in the registry (6, Microsoft Access Driver (*.mdb, *.accdb))
+11.4.2020 14:41:44	ODBCBase::CreateMDBDataSourceODBC - Component not found in the registry (6, Driver do Microsoft Access (*.mdb, *.accdb))
+11.4.2020 14:42:16	Duplicit values found in the primary key of the matrix 'yelp_data_user'!
+11.4.2020 14:42:33	Duplicit values found in the primary key of the matrix 'yelp_data_user'!
+11.4.2020 14:44:15	ODBCBase::CreateMDBDataSourceODBC - Component not found in the registry (6, Microsoft Access Driver (*.mdb, *.accdb))
+11.4.2020 14:44:15	ODBCBase::CreateMDBDataSourceODBC - Component not found in the registry (6, Driver do Microsoft Access (*.mdb, *.accdb))
+11.4.2020 14:44:15	ODBCBase::CreateMDBDataSourceODBC - Component not found in the registry (6, Microsoft Access Driver (*.mdb, *.accdb))
+11.4.2020 14:44:15	ODBCBase::CreateMDBDataSourceODBC - Component not found in the registry (6, Driver do Microsoft Access (*.mdb, *.accdb))
+11.4.2020 14:44:35	Too many distinct values in 'user_id' to create list! Consider creating a derived column to decrease number of distinct values.
+11.4.2020 14:53:58		Row 897 not imported (C:\Users\jiric\Code\yelp_mining\Analyza\yelp_data_business.csv, DB error: Too few parameters. Expected 1.
+)!
+11.4.2020 14:54:08		Row 1374 not imported (C:\Users\jiric\Code\yelp_mining\Analyza\yelp_data_business.csv, DB error: Too few parameters. Expected 1.
+)!
+11.4.2020 14:54:08		Row 1445 not imported (C:\Users\jiric\Code\yelp_mining\Analyza\yelp_data_business.csv, DB error: Too few parameters. Expected 1.
+)!
+11.4.2020 14:54:09		Row 1497 not imported (C:\Users\jiric\Code\yelp_mining\Analyza\yelp_data_business.csv, DB error: Too few parameters. Expected 1.
+)!
+11.4.2020 14:54:09		Row 1541 not imported (C:\Users\jiric\Code\yelp_mining\Analyza\yelp_data_business.csv, DB error: Too few parameters. Expected 1.
+)!
+11.4.2020 14:54:10		Row 2669 not imported (C:\Users\jiric\Code\yelp_mining\Analyza\yelp_data_business.csv, DB error: Too few parameters. Expected 1.
+)!
+11.4.2020 14:54:11		Row 3129 not imported (C:\Users\jiric\Code\yelp_mining\Analyza\yelp_data_business.csv, DB error: Too few parameters. Expected 1.
+)!
+11.4.2020 14:54:11		Row 3340 not imported (C:\Users\jiric\Code\yelp_mining\Analyza\yelp_data_business.csv, DB error: Too few parameters. Expected 1.
+)!
+11.4.2020 14:54:12		Row 3904 not imported (C:\Users\jiric\Code\yelp_mining\Analyza\yelp_data_business.csv, DB error: Too few parameters. Expected 1.
+)!
+11.4.2020 14:54:12		Row 3992 not imported (C:\Users\jiric\Code\yelp_mining\Analyza\yelp_data_business.csv, DB error: Too few parameters. Expected 1.
+)!
+11.4.2020 14:54:13		Row 4122 not imported (C:\Users\jiric\Code\yelp_mining\Analyza\yelp_data_business.csv, DB error: Too few parameters. Expected 1.
+)!
+11.4.2020 14:54:13		Row 4874 not imported (C:\Users\jiric\Code\yelp_mining\Analyza\yelp_data_business.csv, DB error: Too few parameters. Expected 1.
+)!
+11.4.2020 14:54:14			SQL: INSERT INTO yelp (business_id, business_name, address, city, postal_code, latitude, longitude, business_stars, is_open, serveBurger, serveSandwich, servePizza, serveBreakfast, serveMexican, serveAmerican, serveItalian, serveJapanese, serveHotDrink, god_for_kids, price_range, accepts_credit_card, outdoor_seating, dress_code, reservations, good_for_groups, alcohol, has_tv, wifi, noise_level, smoking, reservations_only, dogs_allowed) VALUES ('xudDfg1S_hIfzUX6j-R2Lw', 'L''Écarté Café', '2525 De Rouen', 'Montreal', 'H2K 1M5', 45.5341564, -73.5560646, 4.5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'None', None, NULL, 'None', 'None', NULL, NULL, 'None', 'None', 'None', 'None', NULL, NULL, NULL)
+11.4.2020 14:54:14	Error inserting rows into database ('C:\Users\jiric\Code\yelp_mining\Analyza\yelp_data_business.Data.mdb')!
+11.4.2020 14:55:24		Row 289 not imported (C:\Users\jiric\Code\yelp_mining\Analyza\yelp_data_business.csv, DB error: Too few parameters. Expected 1.
+)!
+11.4.2020 14:55:28			SQL: INSERT INTO yelp_data_business (business_id, name_, address, city, postal_code, latitude, longitude, business_stars, is_open, serveBurger, serveSandwich, servePizza, serveBreakfast, serveMexican, serveAmerican, serveItalian, serveJapanese, serveHotDrink, god_for_kids, price_range, accepts_credit_card, outdoor_seating, dress_code, reservations, good_for_groups, alcohol, has_tv, wifi, noise_level, smoking, reservations_only, dogs_allowed, ID_LM) VALUES ('JoRU1WoBjPZgO_K2rqzCQw', 'Wawel Patisserie', '7070 Henri-Julien Avenue', 'Montreal', 'H2S 3S3', 45.5363632, -73.6146289, 3.5, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, NULL, None, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 289)
+11.4.2020 14:55:28	Error inserting rows into database ('C:\Users\jiric\Code\yelp_mining\Analyza\yelp_data_business.Data.mdb')!
+11.4.2020 14:55:37		Row 289 not imported (C:\Users\jiric\Code\yelp_mining\Analyza\yelp_data_business.csv, DB error: Too few parameters. Expected 1.
+)!
+11.4.2020 14:55:38		Row 897 not imported (C:\Users\jiric\Code\yelp_mining\Analyza\yelp_data_business.csv, DB error: Too few parameters. Expected 1.
+)!
+11.4.2020 14:55:39		Row 1374 not imported (C:\Users\jiric\Code\yelp_mining\Analyza\yelp_data_business.csv, DB error: Too few parameters. Expected 1.
+)!
+11.4.2020 14:55:39		Row 1445 not imported (C:\Users\jiric\Code\yelp_mining\Analyza\yelp_data_business.csv, DB error: Too few parameters. Expected 1.
+)!
+11.4.2020 14:55:40		Row 1497 not imported (C:\Users\jiric\Code\yelp_mining\Analyza\yelp_data_business.csv, DB error: Too few parameters. Expected 1.
+)!
+11.4.2020 14:55:40		Row 1541 not imported (C:\Users\jiric\Code\yelp_mining\Analyza\yelp_data_business.csv, DB error: Too few parameters. Expected 1.
+)!
+11.4.2020 14:55:40		Row 2669 not imported (C:\Users\jiric\Code\yelp_mining\Analyza\yelp_data_business.csv, DB error: Too few parameters. Expected 1.
+)!
+11.4.2020 14:55:41		Row 3129 not imported (C:\Users\jiric\Code\yelp_mining\Analyza\yelp_data_business.csv, DB error: Too few parameters. Expected 1.
+)!
+11.4.2020 14:55:41		Row 3340 not imported (C:\Users\jiric\Code\yelp_mining\Analyza\yelp_data_business.csv, DB error: Too few parameters. Expected 1.
+)!
+11.4.2020 14:55:42		Row 3904 not imported (C:\Users\jiric\Code\yelp_mining\Analyza\yelp_data_business.csv, DB error: Too few parameters. Expected 1.
+)!
+11.4.2020 14:55:42		Row 3992 not imported (C:\Users\jiric\Code\yelp_mining\Analyza\yelp_data_business.csv, DB error: Too few parameters. Expected 1.
+)!
+11.4.2020 14:55:42		Row 4122 not imported (C:\Users\jiric\Code\yelp_mining\Analyza\yelp_data_business.csv, DB error: Too few parameters. Expected 1.
+)!
+11.4.2020 14:55:43		Row 4874 not imported (C:\Users\jiric\Code\yelp_mining\Analyza\yelp_data_business.csv, DB error: Too few parameters. Expected 1.
+)!
+11.4.2020 14:55:43		Row 5232 not imported (C:\Users\jiric\Code\yelp_mining\Analyza\yelp_data_business.csv, DB error: Too few parameters. Expected 1.
+)!
+11.4.2020 14:55:43		Row 5957 not imported (C:\Users\jiric\Code\yelp_mining\Analyza\yelp_data_business.csv, DB error: Too few parameters. Expected 1.
+)!
+11.4.2020 14:55:44		Row 6107 not imported (C:\Users\jiric\Code\yelp_mining\Analyza\yelp_data_business.csv, DB error: Too few parameters. Expected 1.
+)!
+11.4.2020 14:55:44		Row 7523 not imported (C:\Users\jiric\Code\yelp_mining\Analyza\yelp_data_business.csv, DB error: Too few parameters. Expected 1.
+)!
+11.4.2020 14:55:45		Row 8240 not imported (C:\Users\jiric\Code\yelp_mining\Analyza\yelp_data_business.csv, DB error: Too few parameters. Expected 1.
+)!
+11.4.2020 14:55:45		Row 8646 not imported (C:\Users\jiric\Code\yelp_mining\Analyza\yelp_data_business.csv, DB error: Too few parameters. Expected 1.
+)!
+11.4.2020 14:55:45		Row 9018 not imported (C:\Users\jiric\Code\yelp_mining\Analyza\yelp_data_business.csv, DB error: Too few parameters. Expected 1.
+)!
+11.4.2020 14:55:46		Row 9560 not imported (C:\Users\jiric\Code\yelp_mining\Analyza\yelp_data_business.csv, DB error: Too few parameters. Expected 1.
+)!
+11.4.2020 15:04:23	ODBCBase::CreateMDBDataSourceODBC - Component not found in the registry (6, Microsoft Access Driver (*.mdb, *.accdb))
+11.4.2020 15:04:23	ODBCBase::CreateMDBDataSourceODBC - Component not found in the registry (6, Driver do Microsoft Access (*.mdb, *.accdb))
+11.4.2020 15:04:23	ODBCBase::CreateMDBDataSourceODBC - Component not found in the registry (6, Microsoft Access Driver (*.mdb, *.accdb))
+11.4.2020 15:04:23	ODBCBase::CreateMDBDataSourceODBC - Component not found in the registry (6, Driver do Microsoft Access (*.mdb, *.accdb))
+11.4.2020 15:06:17	ODBCBase::CreateMDBDataSourceODBC - Component not found in the registry (6, Microsoft Access Driver (*.mdb, *.accdb))
+11.4.2020 15:06:17	ODBCBase::CreateMDBDataSourceODBC - Component not found in the registry (6, Driver do Microsoft Access (*.mdb, *.accdb))
+11.4.2020 15:06:17	ODBCBase::CreateMDBDataSourceODBC - Component not found in the registry (6, Microsoft Access Driver (*.mdb, *.accdb))
+11.4.2020 15:06:17	ODBCBase::CreateMDBDataSourceODBC - Component not found in the registry (6, Driver do Microsoft Access (*.mdb, *.accdb))
+11.4.2020 15:10:39	ODBCBase::CreateMDBDataSourceODBC - Component not found in the registry (6, Microsoft Access Driver (*.mdb, *.accdb))
+11.4.2020 15:10:39	ODBCBase::CreateMDBDataSourceODBC - Component not found in the registry (6, Driver do Microsoft Access (*.mdb, *.accdb))
+11.4.2020 15:10:39	ODBCBase::CreateMDBDataSourceODBC - Component not found in the registry (6, Microsoft Access Driver (*.mdb, *.accdb))
+11.4.2020 15:10:39	ODBCBase::CreateMDBDataSourceODBC - Component not found in the registry (6, Driver do Microsoft Access (*.mdb, *.accdb))
+11.4.2020 15:29:06	ODBCBase::CreateMDBDataSourceODBC - Component not found in the registry (6, Microsoft Access Driver (*.mdb, *.accdb))
+11.4.2020 15:29:06	ODBCBase::CreateMDBDataSourceODBC - Component not found in the registry (6, Driver do Microsoft Access (*.mdb, *.accdb))
+11.4.2020 15:29:06	ODBCBase::CreateMDBDataSourceODBC - Component not found in the registry (6, Microsoft Access Driver (*.mdb, *.accdb))
+11.4.2020 15:29:06	ODBCBase::CreateMDBDataSourceODBC - Component not found in the registry (6, Driver do Microsoft Access (*.mdb, *.accdb))
+11.4.2020 15:50:05	Too many distinct values in 'yelping_since' to create list! Consider creating a derived column to decrease number of distinct values.
