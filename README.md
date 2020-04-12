@@ -33,7 +33,9 @@ Seznam analytických otázek k řešení v LISp-Mineru
 
 ### **CF - 1. Otazka**
 
-- **Priklad**: Existuje segment hostu s rostouci urovni spokojenosti? [Prezentace ZDE](https://lispminer.vse.cz/guhadi/lib/exe/fetch.php?media=cf_miner_03_hotel_rostouci_histogram.pdf)
+- **Priklad**: Existuje segment hostu s rostouci urovni spokojenosti?
+    - [Prezentace pro rostouci trend ZDE](https://lispminer.vse.cz/guhadi/lib/exe/fetch.php?media=cf_miner_03_hotel_rostouci_histogram.pdf)
+    - [Prezentace pro klesajici trend ZDE](https://lispminer.vse.cz/guhadi/lib/exe/fetch.php?media=cf_miner_04_hotel_klesajici_histogram.pdf)
 - **Otazka**: Existuje segment podniku u kterych je rostouci/klesajici hodnoceni spokojenosti?
 
 ### **CF - 2. Otazka**
