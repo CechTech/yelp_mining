@@ -1,6 +1,6 @@
 ## Analytické otázky
 Seznam analytických otázek k řešení v LISp-Mineru
-### 4ft-Miner [2 (1 PIM, 1 AA]
+### 4ft-Miner [2 (1 PIM, 1 AA)]
 ### CF-Miner [2]
 ### SD4ft-Miner [2]
 ### SDCF-Miner [2]
@@ -10,8 +10,12 @@ Seznam analytických otázek k řešení v LISp-Mineru
 ### Ac4ft-Miner [1]
 - Změna čeho a u kterých podniků zvýší hodnocení?
 ## Podmínky
-- Na použití každé z procedur 4ft-Miner, CF-Miner,  SD4ft-Miner, SDCF-Miner  vedou nejméně 2 otázky.
-- Na použití každé z procedur KL-Miner,  a Ac4ft-Miner musí vést nejméně jedna z analytických otázek.
+### Obecné
+- Dvě nebo tři analytické otázky vedou na řešení typových úloh týkajících se důležitých a silných vztahů popsaných [zde](https://lispminer.vse.cz/guhadi/doku.php?id=lm_guha_di_typy_uloh_dulezite_silne).
+- Další otázky vedou na řešení typových úloh týkajících se hledání výjimek a odlišností popsaných [zde](https://lispminer.vse.cz/guhadi/doku.php?id=lm_guha_di_typy_uloh_vyjimky) a typových úloh týkajících se hledání skupin objektů s podobným chováním popsaných [zde](https://lispminer.vse.cz/guhadi/doku.php?id=lm_guha_di_typy_uloh_podobne).
+### Technické
+- Na použití každé z procedur 4ft-Miner, CF-Miner, SD4ft-Miner, SDCF-Miner vedou nejméně 2 otázky.
+- Na použití každé z procedur KL-Miner, a Ac4ft-Miner musí vést nejméně jedna z analytických otázek.
 - Při aplikacích procedury 4ft-Miner je třeba nejméně jednou použít kvantifikátor PIM (p-implikace) a nejméně jednou AA-kvantifikátor.
 - Nejméně dvě aplikace procedur CF-Miner  a SDCF-Miner  vedou na použití kvantifikátorů týkajících se schodů v histogramu
 - Nejméně tři z aplikací GUHA procedur vedou na použití koeficientů typu sequence a/nebo cuts, každý z typů koeficientů je třeba použít alespoň jednou.   
