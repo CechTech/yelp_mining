@@ -26,8 +26,6 @@ Seznam analytických otázek k řešení v LISp-Mineru
 - [Typove ulohy v lisp mineru](https://lispminer.vse.cz/guhadi/doku.php?id=lm_guha_di_typy_uloh_procedury)
 - vyhledat takove vztahy, ktere by zlepsili recommendation algoritmus
 
----
-
 ## **CF-Miner [2]**
 
 - [**Cf Miner - priklady**](https://lispminer.vse.cz/guhadi/doku.php?id=lm_guha_di_typul_cf#data_hotel_-_jedna_kategorie_vyrazne_prevazuje)
@@ -43,8 +41,6 @@ Seznam analytických otázek k řešení v LISp-Mineru
 - **Priklad**: Existuje skupina klientu a den v týdnu ve kterém převažují příjezdy klientů z této skupiny?
 - **Otazka**: Existuje skupina podniku a den v tydnu ve kterem prevazuji review z toho podniku?
 
----
-
 ## **4ft-Miner [2 (1 PIM, 1 AA)]**
 
 - [**Popis Metody**](https://lispminer.vse.cz/guhate/doku.php?id=lm_guha_te_sd4ft_proc)
@@ -58,35 +54,23 @@ Seznam analytických otázek k řešení v LISp-Mineru
 - **Priklad:** Existuje skupina pacientů definovaná pomocí osobních údajů, spotřeby alkoholu, cukru, kávy a čaje taková, že relativní četnost pacientů s rizikem obezity je v této skupině o 50 % větší než v celém souboru a zároveň počet pacientů ze skupiny s rizikem obezity je minimálně 30? ***[Podrobnosti k příkladu jsou zde.](https://lispminer.vse.cz/guhadi/lib/exe/fetch.php?media=4ft_03_stulong_above_average.pdf)***
 - **Otazka:** Existuje nejaka kombinace typu rezervace, dress code, price range, ze jeji relativni cetnost je o X % vetsi nez v celem souboru a pocet podniku je vetsi nez X.
 
----
-
 ## **SD4ft-Miner [2]**
 
 - Mezi kterými městskými částmi jsou významné rozdíly ohledně vztahů mezi charakteristikami zákazníků a parametry podniků?
-
----
 
 ## **SDCF-Miner [2]**
 
 - Existuje segment podniků a dvojice městských částí tak, že pro tento segment jsou pro jednotlivé části měst trendy hodnocení opačné?
 - Existuje segment zákazníků a dvojice městských částí tak, že pro tento segment jsou pro jednotlivé části měst trendy hodnocení opačné?
 
----
-
 ## **KL-Miner [1]**
 
 - Segmentace podniku s cilem doporucovani podobnych podniku zakaznikum.
-
----
 
 ## **Ac4ft-Miner [1]**
 
 - Změna čeho a u kterých podniků zvýší hodnocení?
 
----
-
 # **Poznámky**
 
 - Segmentace zákazníku vypývající z vazeb na podniky, které hodnotily. Preference drahé/levné podniky? Kuřák/nekuřák, pije/nepije alkohol, preference kuchyně, vyžaduje platbu karto, atd...
-
----
