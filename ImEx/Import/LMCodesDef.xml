@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<LMVersion>27.18.07 of 9 Oct 2019</LMVersion>
+<LMVersion>27.18.08 of 20 Apr 2020</LMVersion>
 <CodeTable name="ACQuantifierSourceType">
  <Item id="1">
   <Name>&#39;State before&#39; frequencies</Name>
